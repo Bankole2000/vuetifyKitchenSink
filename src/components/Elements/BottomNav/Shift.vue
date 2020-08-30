@@ -1,5 +1,5 @@
 <template>
-  <v-bottom-navigation v-model="bottomNav" dark shift>
+  <v-bottom-navigation v-model="bottomNav" :color="color" dark shift>
     <v-btn>
       <span>Video</span>
       <v-icon>mdi-television-play</v-icon>
@@ -34,13 +34,15 @@ export default {
     color() {
       switch (this.bottomNav) {
         case 0:
-          return 'blue-grey';
+          return 'red';
         case 1:
           return 'teal';
         case 2:
-          return 'brown';
+          return 'yellow';
         case 3:
-          return 'indigo';
+          return 'orange';
+        default:
+          return 'blue-grey';
       }
     }
   }

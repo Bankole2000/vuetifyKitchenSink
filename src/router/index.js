@@ -11,7 +11,11 @@ import DoubleSideBar from '../views/DoubleSideBar.vue';
 import SimpleApp from '../views/SimpleApp.vue';
 import Alerts from '../components/Elements/Alerts/All.vue';
 import AppBars from '../components/Elements/AppBars/All.vue';
-
+import Autocomplete from '../components/Elements/Autocomplete/All.vue';
+import Avatars from '../components/Elements/Avatars/All.vue';
+import Badges from '../components/Elements/Badges/All.vue';
+import Banners from '../components/Elements/Banners/All.vue';
+import BottomNav from '../components/Elements/BottomNav/All.vue';
 Vue.use(VueRouter);
 
 const routes = [
@@ -123,27 +127,27 @@ const routes = [
   {
     path: '/elements/autocomplete',
     name: 'Autocomplete',
-    component: Home
+    component: Autocomplete
   },
   {
     path: '/elements/avatars',
     name: 'Avatars',
-    component: Home
+    component: Avatars
   },
   {
     path: '/elements/badges',
     name: 'Badges',
-    component: Home
+    component: Badges
   },
   {
     path: '/elements/banners',
     name: 'Banners',
-    component: Home
+    component: Banners
   },
   {
-    path: '/elements/bottomNavs',
+    path: '/elements/bottomnavs',
     name: 'BottomNav',
-    component: Home
+    component: BottomNav
   },
   {
     path: '/elements/bottomSheets',

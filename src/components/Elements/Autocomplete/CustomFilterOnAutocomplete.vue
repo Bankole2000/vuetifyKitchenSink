@@ -10,8 +10,19 @@
       </v-btn>
     </v-toolbar>
     <v-card-text>
-      <v-text-field :disabled="!isEditing" color="white" label="Name"></v-text-field>
-      <v-autocomplete :disabled="!isEditing" :items="states" :filter="customFilter" color="white" item-text="name" label="State"></v-autocomplete>
+      <v-text-field
+        :disabled="!isEditing"
+        color="white"
+        label="Name"
+      ></v-text-field>
+      <v-autocomplete
+        :disabled="!isEditing"
+        :items="states"
+        :filter="customFilter"
+        color="white"
+        item-text="name"
+        label="State"
+      ></v-autocomplete>
     </v-card-text>
     <v-divider></v-divider>
     <v-card-actions>
@@ -44,12 +55,15 @@ export default {
   },
 
   methods: {
+    // eslint-disable-next-line
     customFilter(item, queryText, itemText) {
       const textOne = item.name.toLowerCase();
       const textTwo = item.abbr.toLowerCase();
       const searchText = queryText.toLowerCase();
 
-      return textOne.indexOf(searchText) > -1 || textTwo.indexOf(searchText) > -1;
+      return (
+        textOne.indexOf(searchText) > -1 || textTwo.indexOf(searchText) > -1
+      );
     },
     save() {
       this.isEditing = !this.isEditing;

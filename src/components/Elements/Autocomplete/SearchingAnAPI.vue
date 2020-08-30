@@ -4,8 +4,14 @@
       Search for Public APIs
     </v-card-title>
     <v-card-text>
-      Explore hundreds of free API's ready for consumption! For more information visit
-      <a class="grey--text text--lighten-3" href="https://github.com/toddmotto/public-apis" target="_blank">the Github repository</a>.
+      Explore hundreds of free API's ready for consumption! For more information
+      visit
+      <a
+        class="grey--text text--lighten-3"
+        href="https://github.com/toddmotto/public-apis"
+        target="_blank"
+        >the Github repository</a
+      >.
     </v-card-text>
     <v-card-text>
       <v-autocomplete
@@ -68,7 +74,10 @@ export default {
     },
     items() {
       return this.entries.map((entry) => {
-        const Description = entry.Description.length > this.descriptionLimit ? entry.Description.slice(0, this.descriptionLimit) + '...' : entry.Description;
+        const Description =
+          entry.Description.length > this.descriptionLimit
+            ? entry.Description.slice(0, this.descriptionLimit) + '...'
+            : entry.Description;
 
         return Object.assign({}, entry, { Description });
       });
@@ -76,6 +85,7 @@ export default {
   },
 
   watch: {
+    // eslint-disable-next-line
     search(val) {
       // Items have already been loaded
       if (this.items.length > 0) return;
