@@ -1,7 +1,22 @@
 <template>
-  <v-combobox v-model="chips" :items="items" chips clearable label="Your favorite hobbies" multiple prepend-icon="filter_list" solo>
+  <v-combobox
+    v-model="chips"
+    :items="items"
+    chips
+    clearable
+    label="Your favorite hobbies"
+    multiple
+    prepend-icon="filter_list"
+    solo
+  >
     <template v-slot:selection="{ attrs, item, select, selected }">
-      <v-chip v-bind="attrs" :input-value="selected" close @click="select" @click:close="remove(item)">
+      <v-chip
+        v-bind="attrs"
+        :input-value="selected"
+        close
+        @click="select"
+        @click:close="remove(item)"
+      >
         <strong>{{ item }}</strong
         >&nbsp;
         <span>(interest)</span>
@@ -14,8 +29,13 @@
 export default {
   data() {
     return {
-      chips: ['Programming', 'Playing video games', 'Watching movies', 'Sleeping'],
-      items: ['Streaming', 'Eating']
+      chips: [
+        "Programming",
+        "Playing video games",
+        "Watching movies",
+        "Sleeping"
+      ],
+      items: ["Streaming", "Eating"]
     };
   },
 

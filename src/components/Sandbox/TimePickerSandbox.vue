@@ -5,8 +5,16 @@
       <v-switch v-model="readonly" class="mx-2" label="Readonly"></v-switch>
       <v-switch v-model="flat" class="mx-2" label="Flat"></v-switch>
       <v-switch v-model="landscape" class="mx-2" label="Landscape"></v-switch>
-      <v-switch v-model="ampmInTitle" class="mx-2" label="AM/PM in title"></v-switch>
-      <v-switch v-model="useSeconds" class="mx-2" label="Use seconds"></v-switch>
+      <v-switch
+        v-model="ampmInTitle"
+        class="mx-2"
+        label="AM/PM in title"
+      ></v-switch>
+      <v-switch
+        v-model="useSeconds"
+        class="mx-2"
+        label="Use seconds"
+      ></v-switch>
       <v-switch v-model="fullWidth" class="mx-2" label="Full-width"></v-switch>
       <v-switch v-model="noTitle" class="mx-2" label="No title"></v-switch>
       <v-switch v-model="scrollable" class="mx-2" label="Scrollable"></v-switch>
@@ -46,7 +54,7 @@ export default {
       landscape: false,
       ampmInTitle: false,
       useSeconds: false,
-      format: 'ampm',
+      format: "ampm",
       fullWidth: false,
       noTitle: false,
       scrollable: false

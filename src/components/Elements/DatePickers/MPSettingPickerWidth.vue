@@ -16,11 +16,10 @@
   </v-row>
 </template>
 
-
 <script>
-  export default {
-    data: () => ({
-      date: new Date().toISOString().substr(0, 7),
-    }),
-  }
+export default {
+  data: () => ({
+    date: new Date().toISOString().substr(0, 7)
+  })
+};
 </script>

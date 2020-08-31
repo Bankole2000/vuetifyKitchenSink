@@ -3,7 +3,11 @@
     <v-container>
       <v-row justify="space-between">
         <v-col cols="auto">
-          <v-img height="200" width="200" src="https://cdn.vuetifyjs.com/images/cards/store.jpg"></v-img>
+          <v-img
+            height="200"
+            width="200"
+            src="https://cdn.vuetifyjs.com/images/cards/store.jpg"
+          ></v-img>
         </v-col>
 
         <v-col cols="auto" class="text-center pl-0">

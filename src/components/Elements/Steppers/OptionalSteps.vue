@@ -19,7 +19,9 @@
 
     <v-stepper value="2" class="mt-12">
       <v-stepper-header>
-        <v-stepper-step step="1" complete>Select campaign settings</v-stepper-step>
+        <v-stepper-step step="1" complete
+          >Select campaign settings</v-stepper-step
+        >
 
         <v-divider></v-divider>
 

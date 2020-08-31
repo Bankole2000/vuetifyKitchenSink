@@ -11,17 +11,16 @@
   </v-row>
 </template>
 
-
 <script>
-  export default {
-    data () {
-      return {
-        date: '2017-12',
-      }
-    },
+export default {
+  data() {
+    return {
+      date: "2017-12"
+    };
+  },
 
-    methods: {
-      allowedMonths: val => parseInt(val.split('-')[1], 10) % 2 === 0,
-    },
+  methods: {
+    allowedMonths: val => parseInt(val.split("-")[1], 10) % 2 === 0
   }
+};
 </script>

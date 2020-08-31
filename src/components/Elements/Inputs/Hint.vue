@@ -1,7 +1,9 @@
 <template>
   <v-row>
     <v-switch v-model="showMessages" label="Show messages"></v-switch>
-    <v-input hint="I am hint" persistent-hint :messages="messages">Input</v-input>
+    <v-input hint="I am hint" persistent-hint :messages="messages"
+      >Input</v-input
+    >
   </v-row>
 </template>
 
@@ -13,7 +15,7 @@ export default {
 
   computed: {
     messages() {
-      return this.showMessages ? ['Message'] : undefined;
+      return this.showMessages ? ["Message"] : undefined;
     }
   }
 };

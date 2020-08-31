@@ -34,15 +34,15 @@ export default {
     color() {
       switch (this.bottomNav) {
         case 0:
-          return 'red';
+          return "red";
         case 1:
-          return 'teal';
+          return "teal";
         case 2:
-          return 'yellow';
+          return "yellow";
         case 3:
-          return 'orange';
+          return "orange";
         default:
-          return 'blue-grey';
+          return "blue-grey";
       }
     }
   }

@@ -101,9 +101,20 @@
     </v-row>
     <v-row class="mt-12" align="center" justify="center">
       <v-col cols="12" md="8">
-        <v-select v-model="variant" :items="items" clearable label="Variant" light></v-select>
+        <v-select
+          v-model="variant"
+          :items="items"
+          clearable
+          label="Variant"
+          light
+        ></v-select>
         <template>
-          <v-checkbox v-model="inset" hide-details label="Inset" light></v-checkbox>
+          <v-checkbox
+            v-model="inset"
+            hide-details
+            label="Inset"
+            light
+          ></v-checkbox>
         </template>
       </v-col>
     </v-row>
@@ -114,8 +125,8 @@
 export default {
   data: () => ({
     inset: false,
-    items: ['default', 'vertical'],
-    variant: 'default'
+    items: ["default", "vertical"],
+    variant: "default"
   })
 };
 </script>

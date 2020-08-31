@@ -1,6 +1,9 @@
 <template>
   <div class="text-center">
-    <v-switch v-model="closeOnContentClick" label="Close on content click"></v-switch>
+    <v-switch
+      v-model="closeOnContentClick"
+      label="Close on content click"
+    ></v-switch>
     <v-menu top :close-on-content-click="closeOnContentClick">
       <template v-slot:activator="{ on, attrs }">
         <v-btn color="primary" dark v-bind="attrs" v-on="on">
@@ -20,7 +23,12 @@
 <script>
 export default {
   data: () => ({
-    items: [{ title: 'Click Me' }, { title: 'Click Me' }, { title: 'Click Me' }, { title: 'Click Me 2' }],
+    items: [
+      { title: "Click Me" },
+      { title: "Click Me" },
+      { title: "Click Me" },
+      { title: "Click Me 2" }
+    ],
     closeOnContentClick: true
   })
 };

@@ -38,11 +38,28 @@
 <script>
 export default {
   data: () => ({
-    focus: '',
+    focus: "",
     events: [],
-    colors: ['blue', 'indigo', 'deep-purple', 'cyan', 'green', 'orange', 'grey darken-1'],
-    names: ['Meeting', 'Holiday', 'PTO', 'Travel', 'Event', 'Birthday', 'Conference', 'Party'],
-    categories: ['John Smith', 'Tori Walker']
+    colors: [
+      "blue",
+      "indigo",
+      "deep-purple",
+      "cyan",
+      "green",
+      "orange",
+      "grey darken-1"
+    ],
+    names: [
+      "Meeting",
+      "Holiday",
+      "PTO",
+      "Travel",
+      "Event",
+      "Birthday",
+      "Conference",
+      "Party"
+    ],
+    categories: ["John Smith", "Tori Walker"]
   }),
   mounted() {
     this.$refs.calendar.checkChange();
@@ -52,7 +69,7 @@ export default {
       return event.color;
     },
     setToday() {
-      this.focus = '';
+      this.focus = "";
     },
     prev() {
       this.$refs.calendar.prev();

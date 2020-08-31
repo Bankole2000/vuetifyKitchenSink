@@ -5,7 +5,18 @@
         <v-row>
           <v-col cols="12">
             <v-radio-group v-model="color" row>
-              <v-radio v-for="(colorValue, i) in ['success', 'info', 'error', 'cyan darken-2']" :key="i" :color="colorValue" :label="colorValue" :value="colorValue"></v-radio>
+              <v-radio
+                v-for="(colorValue, i) in [
+                  'success',
+                  'info',
+                  'error',
+                  'cyan darken-2'
+                ]"
+                :key="i"
+                :color="colorValue"
+                :label="colorValue"
+                :value="colorValue"
+              ></v-radio>
             </v-radio-group>
           </v-col>
           <v-col cols="12" sm="3">
@@ -25,19 +36,37 @@
           </v-col>
 
           <v-col cols="12" sm="3">
-            <v-checkbox v-model="mode" label="Multi-line (mobile)" value="multi-line"></v-checkbox>
+            <v-checkbox
+              v-model="mode"
+              label="Multi-line (mobile)"
+              value="multi-line"
+            ></v-checkbox>
           </v-col>
 
           <v-col cols="12" sm="3">
-            <v-checkbox v-model="mode" label="Vertical (mobile)" value="vertical"></v-checkbox>
+            <v-checkbox
+              v-model="mode"
+              label="Vertical (mobile)"
+              value="vertical"
+            ></v-checkbox>
           </v-col>
 
           <v-col cols="12" sm="4">
-            <v-text-field v-model="text" class="px-4" label="Text" type="text"></v-text-field>
+            <v-text-field
+              v-model="text"
+              class="px-4"
+              label="Text"
+              type="text"
+            ></v-text-field>
           </v-col>
 
           <v-col cols="12" sm="4">
-            <v-text-field v-model.number="timeout" class="px-4" label="Timeout" type="number"></v-text-field>
+            <v-text-field
+              v-model.number="timeout"
+              class="px-4"
+              label="Timeout"
+              type="number"
+            ></v-text-field>
           </v-col>
         </v-row>
       </v-container>
@@ -72,13 +101,13 @@
 export default {
   data() {
     return {
-      color: '',
-      mode: '',
+      color: "",
+      mode: "",
       snackbar: false,
       text: "Hello, I'm a snackbar",
       timeout: 6000,
       x: null,
-      y: 'top'
+      y: "top"
     };
   }
 };

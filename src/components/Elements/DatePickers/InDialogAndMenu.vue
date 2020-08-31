@@ -49,7 +49,9 @@
         <v-date-picker v-model="date" scrollable>
           <v-spacer></v-spacer>
           <v-btn text color="primary" @click="modal = false">Cancel</v-btn>
-          <v-btn text color="primary" @click="$refs.dialog.save(date)">OK</v-btn>
+          <v-btn text color="primary" @click="$refs.dialog.save(date)"
+            >OK</v-btn
+          >
         </v-date-picker>
       </v-dialog>
     </v-col>
@@ -79,14 +81,13 @@
   </v-row>
 </template>
 
-
 <script>
-  export default {
-    data: () => ({
-      date: new Date().toISOString().substr(0, 10),
-      menu: false,
-      modal: false,
-      menu2: false,
-    }),
-  }
+export default {
+  data: () => ({
+    date: new Date().toISOString().substr(0, 10),
+    menu: false,
+    modal: false,
+    menu2: false
+  })
+};
 </script>

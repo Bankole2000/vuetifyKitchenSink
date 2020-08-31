@@ -746,17 +746,17 @@
 </template>
 
 <script>
-import Border from './Border';
-import ColoredBorder from './ColoredBorder';
-import DenseAlert from './Dense';
-import Dismissible from './Dismissible';
-import IconAlert from './Icon';
-import OutlinedAlert from './Outlined';
-import ProminentAlert from './Prominent';
-import TextAlert from './Text';
-import TransitionAlert from './Transition';
-import TwitterAlert from './TwitterAlert';
-import TypeAlert from './Type';
+import Border from "./Border";
+import ColoredBorder from "./ColoredBorder";
+import DenseAlert from "./Dense";
+import Dismissible from "./Dismissible";
+import IconAlert from "./Icon";
+import OutlinedAlert from "./Outlined";
+import ProminentAlert from "./Prominent";
+import TextAlert from "./Text";
+import TransitionAlert from "./Transition";
+import TwitterAlert from "./TwitterAlert";
+import TypeAlert from "./Type";
 
 export default {
   components: {
@@ -1004,18 +1004,18 @@ export default {
 </template>`,
         showCode: false
       },
-      tooltipText: 'Copy Code'
+      tooltipText: "Copy Code"
     };
   },
 
   methods: {
     copy(text) {
       this.$copyText(text).then(
-        (e) => {
-          this.tooltipText = 'Copied!';
+        e => {
+          this.tooltipText = "Copied!";
           console.log(`copied`, e);
         },
-        (e) => {
+        e => {
           console.log(`could not copy`, e);
         }
       );

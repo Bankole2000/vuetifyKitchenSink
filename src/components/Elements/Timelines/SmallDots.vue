@@ -11,7 +11,9 @@
         <v-container>
           <v-row>
             <v-col cols="12" md="10">
-              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
+              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
+              scaevola imperdiet nec ut, sed euismod convenire principes at. Est
+              et nobis iisque percipit.
             </v-col>
             <v-col class="hidden-sm-and-down text-right" md="2">
               <v-icon size="64">mdi-calendar-text</v-icon>
@@ -30,7 +32,9 @@
         <v-container>
           <v-row>
             <v-col cols="12" md="8">
-              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
+              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
+              scaevola imperdiet nec ut, sed euismod convenire principes at. Est
+              et nobis iisque percipit.
             </v-col>
             <v-col cols="12" md="4">
               Lorem ipsum dolor sit amet, no nam oblique veritus.
@@ -72,8 +76,9 @@
               <v-icon size="64">mdi-server-network</v-icon>
             </v-col>
             <v-col cols="12" md="10">
-              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando
-              voluptatibus.
+              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
+              scaevola imperdiet nec ut, sed euismod convenire principes at. Est
+              et nobis iisque percipit, an vim zril disputando voluptatibus.
             </v-col>
           </v-row>
         </v-container>
@@ -91,8 +96,10 @@
         <v-container>
           <v-row>
             <v-col>
-              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando
-              voluptatibus, vix an salutandi sententiae.
+              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
+              scaevola imperdiet nec ut, sed euismod convenire principes at. Est
+              et nobis iisque percipit, an vim zril disputando voluptatibus, vix
+              an salutandi sententiae.
             </v-col>
           </v-row>
         </v-container>

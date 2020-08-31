@@ -1,6 +1,11 @@
 <template>
   <div class="text-center">
-    <v-menu v-model="menu" :close-on-content-click="false" :nudge-width="200" offset-x>
+    <v-menu
+      v-model="menu"
+      :close-on-content-click="false"
+      :nudge-width="200"
+      offset-x
+    >
       <template v-slot:activator="{ on, attrs }">
         <v-btn color="indigo" dark v-bind="attrs" v-on="on">
           Menu as Popover

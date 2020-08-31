@@ -2,7 +2,10 @@
   <v-container fluid>
     <v-slider v-model="width" min="200" max="500" step="1"></v-slider>
     <v-navigation-drawer :width="width" :value="true" stateless>
-      <v-img :aspect-ratio="16 / 9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
+      <v-img
+        :aspect-ratio="16 / 9"
+        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+      >
         <v-row align="end" class="lightbox white--text pa-2 fill-height">
           <v-col>
             <div class="subheading">Jonathan Lee</div>
@@ -31,14 +34,14 @@ export default {
   data: () => ({
     width: 300,
     items: [
-      { icon: 'inbox', title: 'Inbox' },
-      { icon: 'star', title: 'Starred' },
-      { icon: 'send', title: 'Sent mail' },
-      { icon: 'drafts', title: 'Drafts' },
+      { icon: "inbox", title: "Inbox" },
+      { icon: "star", title: "Starred" },
+      { icon: "send", title: "Sent mail" },
+      { icon: "drafts", title: "Drafts" },
       { divider: true },
-      { icon: 'mail', title: 'All mail' },
-      { icon: 'delete', title: 'Trash' },
-      { icon: 'error', title: 'Spam' }
+      { icon: "mail", title: "All mail" },
+      { icon: "delete", title: "Trash" },
+      { icon: "error", title: "Spam" }
     ]
   })
 };
@@ -51,6 +54,10 @@ export default {
 
 .lightbox {
   box-shadow: 0 0 20px inset rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 72px);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4) 0%,
+    transparent 72px
+  );
 }
 </style>

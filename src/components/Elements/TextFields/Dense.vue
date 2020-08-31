@@ -11,7 +11,13 @@
         </v-col>
 
         <v-col cols="12" sm="6" md="4">
-          <v-text-field label="Filled" placeholder="Dense & Rounded" filled rounded dense></v-text-field>
+          <v-text-field
+            label="Filled"
+            placeholder="Dense & Rounded"
+            filled
+            rounded
+            dense
+          ></v-text-field>
         </v-col>
 
         <v-col cols="12" sm="6" md="4">
@@ -23,7 +29,12 @@
         </v-col>
 
         <v-col cols="12" sm="6" md="4">
-          <v-text-field label="Outlined" placeholder="Placeholder" outlined dense></v-text-field>
+          <v-text-field
+            label="Outlined"
+            placeholder="Placeholder"
+            outlined
+            dense
+          ></v-text-field>
         </v-col>
       </v-row>
     </v-container>

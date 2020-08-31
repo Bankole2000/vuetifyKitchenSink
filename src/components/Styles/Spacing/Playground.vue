@@ -63,18 +63,18 @@ export default {
   data() {
     const spacers = Array.from({ length: 17 }, (val, i) => `${i}`);
     const nspacers = Array.from({ length: 16 }, (val, i) => `n${i + 1}`);
-    const defaults = ['auto', ...spacers];
+    const defaults = ["auto", ...spacers];
 
     return {
-      directions: ['t', 'b', 'l', 'r', 's', 'e', 'x', 'y', 'a'],
-      marginDirection: 'a',
-      marginSize: '2',
+      directions: ["t", "b", "l", "r", "s", "e", "x", "y", "a"],
+      marginDirection: "a",
+      marginSize: "2",
       marginSizes: [...defaults, ...nspacers],
-      paddingDirection: 'a',
-      paddingSize: '6',
+      paddingDirection: "a",
+      paddingSize: "6",
       paddingSizes: defaults,
       playgroundText:
-        'Use the controls above to try out the different spacing helpers.'
+        "Use the controls above to try out the different spacing helpers."
     };
   },
 

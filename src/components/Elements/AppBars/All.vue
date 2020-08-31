@@ -749,17 +749,17 @@
 </template>
 
 <script>
-import Collapsible from './CollapsibleBars';
-import Dense from './Dense';
-import ElevateOnScroll from './ElevateOnScroll';
-import HideOnScroll from './HideOnScroll';
-import InvertedScrolling from './InvertedScrolling';
-import ProminentWithScrollShrink from './ProminentWScrollShrink';
-import ProminentWithScrollShrinkAndImage from './ProminentWScrollShrinkAndImage';
-import ProminentWithScrollShrinkAndImageFadeOnScroll from './ProminentWScrollShrinkAndImageFadeOnScroll';
-import ScrollThreshold from './ScrollThreshold';
-import ToggleNavDrawers from './ToggleNavDrawers';
-import WithMenu from './WithMenu';
+import Collapsible from "./CollapsibleBars";
+import Dense from "./Dense";
+import ElevateOnScroll from "./ElevateOnScroll";
+import HideOnScroll from "./HideOnScroll";
+import InvertedScrolling from "./InvertedScrolling";
+import ProminentWithScrollShrink from "./ProminentWScrollShrink";
+import ProminentWithScrollShrinkAndImage from "./ProminentWScrollShrinkAndImage";
+import ProminentWithScrollShrinkAndImageFadeOnScroll from "./ProminentWScrollShrinkAndImageFadeOnScroll";
+import ScrollThreshold from "./ScrollThreshold";
+import ToggleNavDrawers from "./ToggleNavDrawers";
+import WithMenu from "./WithMenu";
 
 export default {
   components: {
@@ -1144,7 +1144,7 @@ export default {
         showCode: false,
         window: 0
       },
-      tooltipText: 'Copy Code'
+      tooltipText: "Copy Code"
     };
   },
 
@@ -1153,10 +1153,10 @@ export default {
       this.$copyText(text).then(
         // eslint-disable-next-line
         (e) => {
-          this.tooltipText = 'Copied!';
+          this.tooltipText = "Copied!";
           console.log(`copied successfully`);
         },
-        (e) => {
+        e => {
           console.log(`could not copy`, e);
         }
       );

@@ -4,13 +4,12 @@
   </v-row>
 </template>
 
-
 <script>
-  export default {
-    data () {
-      return {
-        picker: null,
-      }
-    },
+export default {
+  data() {
+    return {
+      picker: null
+    };
   }
+};
 </script>

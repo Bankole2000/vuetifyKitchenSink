@@ -11,11 +11,15 @@
         <v-icon dark right>mdi-cancel</v-icon>
       </v-btn>
 
-      <v-btn class="ma-2" dark> <v-icon dark left>mdi-minus_circle</v-icon>Cancel </v-btn>
+      <v-btn class="ma-2" dark>
+        <v-icon dark left>mdi-minus_circle</v-icon>Cancel
+      </v-btn>
     </div>
 
     <div>
-      <v-btn class="ma-2" color="orange darken-2" dark> <v-icon dark left>mdi-arrow-left</v-icon>Back </v-btn>
+      <v-btn class="ma-2" color="orange darken-2" dark>
+        <v-icon dark left>mdi-arrow-left</v-icon>Back
+      </v-btn>
 
       <v-btn class="ma-2" color="purple" dark>
         <v-icon dark>mdi-wrench</v-icon>

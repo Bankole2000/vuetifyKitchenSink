@@ -21,52 +21,52 @@ export default {
     return {
       headers: [
         {
-          text: 'Dessert (100g serving)',
-          align: 'start',
-          value: 'name'
+          text: "Dessert (100g serving)",
+          align: "start",
+          value: "name"
         },
-        { text: 'Category', value: 'category' }
+        { text: "Category", value: "category" }
       ],
       desserts: [
         {
-          name: 'Frozen Yogurt',
-          category: 'Ice cream'
+          name: "Frozen Yogurt",
+          category: "Ice cream"
         },
         {
-          name: 'Ice cream sandwich',
-          category: 'Ice cream'
+          name: "Ice cream sandwich",
+          category: "Ice cream"
         },
         {
-          name: 'Eclair',
-          category: 'Cookie'
+          name: "Eclair",
+          category: "Cookie"
         },
         {
-          name: 'Cupcake',
-          category: 'Pastry'
+          name: "Cupcake",
+          category: "Pastry"
         },
         {
-          name: 'Gingerbread',
-          category: 'Cookie'
+          name: "Gingerbread",
+          category: "Cookie"
         },
         {
-          name: 'Jelly bean',
-          category: 'Candy'
+          name: "Jelly bean",
+          category: "Candy"
         },
         {
-          name: 'Lollipop',
-          category: 'Candy'
+          name: "Lollipop",
+          category: "Candy"
         },
         {
-          name: 'Honeycomb',
-          category: 'Toffee'
+          name: "Honeycomb",
+          category: "Toffee"
         },
         {
-          name: 'Donut',
-          category: 'Pastry'
+          name: "Donut",
+          category: "Pastry"
         },
         {
-          name: 'KitKat',
-          category: 'Candy'
+          name: "KitKat",
+          category: "Candy"
         }
       ]
     };

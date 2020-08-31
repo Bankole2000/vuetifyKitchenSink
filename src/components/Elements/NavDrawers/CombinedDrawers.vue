@@ -2,10 +2,17 @@
   <v-card class="mx-auto" height="300" width="330">
     <v-navigation-drawer permanent width="100%">
       <v-row class="fill-height" no-gutters>
-        <v-navigation-drawer dark mini-variant mini-variant-width="56" permanent>
+        <v-navigation-drawer
+          dark
+          mini-variant
+          mini-variant-width="56"
+          permanent
+        >
           <v-list-item class="px-2">
             <v-list-item-avatar>
-              <v-img src="https://randomuser.me/api/portraits/women/75.jpg"></v-img>
+              <v-img
+                src="https://randomuser.me/api/portraits/women/75.jpg"
+              ></v-img>
             </v-list-item-avatar>
           </v-list-item>
 
@@ -39,10 +46,10 @@ export default {
   data() {
     return {
       items: [
-        { title: 'Home', icon: 'dashboard' },
-        { title: 'About', icon: 'question_answer' }
+        { title: "Home", icon: "dashboard" },
+        { title: "About", icon: "question_answer" }
       ],
-      links: ['Home', 'Contacts', 'Settings'],
+      links: ["Home", "Contacts", "Settings"],
       mini: true
     };
   }

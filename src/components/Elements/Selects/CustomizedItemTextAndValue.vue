@@ -6,7 +6,17 @@
       </v-col>
 
       <v-col cols="6">
-        <v-select v-model="select" :hint="`${select.state}, ${select.abbr}`" :items="items" item-text="state" item-value="abbr" label="Select" persistent-hint return-object single-line></v-select>
+        <v-select
+          v-model="select"
+          :hint="`${select.state}, ${select.abbr}`"
+          :items="items"
+          item-text="state"
+          item-value="abbr"
+          label="Select"
+          persistent-hint
+          return-object
+          single-line
+        ></v-select>
       </v-col>
     </v-row>
   </v-container>
@@ -16,13 +26,13 @@
 export default {
   data() {
     return {
-      select: { state: 'Florida', abbr: 'FL' },
+      select: { state: "Florida", abbr: "FL" },
       items: [
-        { state: 'Florida', abbr: 'FL' },
-        { state: 'Georgia', abbr: 'GA' },
-        { state: 'Nebraska', abbr: 'NE' },
-        { state: 'California', abbr: 'CA' },
-        { state: 'New York', abbr: 'NY' }
+        { state: "Florida", abbr: "FL" },
+        { state: "Georgia", abbr: "GA" },
+        { state: "Nebraska", abbr: "NE" },
+        { state: "California", abbr: "CA" },
+        { state: "New York", abbr: "NY" }
       ]
     };
   }

@@ -542,13 +542,13 @@
 </template>
 
 <script>
-import AdvancedSlots from './AdvancedSlots';
-import AsynchronousItems from './AsynchronousItems';
-import CustomFilters from './CustomFilterOnAutocomplete';
-import Dense from './Dense';
-import SearchingAnAPI from './SearchingAnAPI';
-import Slots from './Slots';
-import StateSelector from './StateSelector';
+import AdvancedSlots from "./AdvancedSlots";
+import AsynchronousItems from "./AsynchronousItems";
+import CustomFilters from "./CustomFilterOnAutocomplete";
+import Dense from "./Dense";
+import SearchingAnAPI from "./SearchingAnAPI";
+import Slots from "./Slots";
+import StateSelector from "./StateSelector";
 
 export default {
   components: {
@@ -1215,7 +1215,7 @@ export default {
         showCode: false,
         window: 0
       },
-      tooltipText: 'Copy Code'
+      tooltipText: "Copy Code"
     };
   },
   methods: {
@@ -1223,10 +1223,10 @@ export default {
       this.$copyText(text).then(
         // eslint-disable-next-line
         (e) => {
-          this.tooltipText = 'Copied!';
+          this.tooltipText = "Copied!";
           console.log(`copied successfully`);
         },
-        (e) => {
+        e => {
           console.log(`could not copy`, e);
         }
       );

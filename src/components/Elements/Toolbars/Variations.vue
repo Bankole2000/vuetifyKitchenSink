@@ -1,6 +1,13 @@
 <template>
   <v-row>
-    <v-col v-for="(bar, i) in bars" :key="i" cols="12" sm="12" md="6" class="my-4">
+    <v-col
+      v-for="(bar, i) in bars"
+      :key="i"
+      cols="12"
+      sm="12"
+      md="6"
+      class="my-4"
+    >
       <v-card color="grey lighten-4" flat height="200px">
         <v-toolbar :color="bar.class" :dark="bar.dark">
           <v-app-bar-nav-icon></v-app-bar-nav-icon>
@@ -24,7 +31,12 @@
 <script>
 export default {
   data: () => ({
-    bars: [{ class: '' }, { class: '', dark: true }, { class: 'primary', dark: true }, { class: 'elevation-0' }]
+    bars: [
+      { class: "" },
+      { class: "", dark: true },
+      { class: "primary", dark: true },
+      { class: "elevation-0" }
+    ]
   })
 };
 </script>

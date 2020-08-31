@@ -73,20 +73,20 @@
 </template>
 
 <script>
-import * as easings from 'vuetify/es5/services/goto/easing-patterns';
+import * as easings from "vuetify/es5/services/goto/easing-patterns";
 
 export default {
   data() {
     return {
-      type: 'number',
+      type: "number",
       number: 9999,
-      selector: '#first',
-      selections: ['#first', '#second', '#third'],
-      selected: 'Button',
-      elements: ['Button', 'Radio group'],
+      selector: "#first",
+      selections: ["#first", "#second", "#third"],
+      selected: "Button",
+      elements: ["Button", "Radio group"],
       duration: 300,
       offset: 0,
-      easing: 'easeInOutCubic',
+      easing: "easeInOutCubic",
       easings: Object.keys(easings)
     };
   },
@@ -104,8 +104,8 @@ export default {
       };
     },
     element() {
-      if (this.selected === 'Button') return this.$refs.button;
-      else if (this.selected === 'Radio group') return this.$refs.radio;
+      if (this.selected === "Button") return this.$refs.button;
+      else if (this.selected === "Radio group") return this.$refs.radio;
     }
   }
 };

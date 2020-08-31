@@ -4,7 +4,13 @@
 
     <v-row class="px-6 py-3" align="center">
       <span class="mr-4">To</span>
-      <v-menu v-model="menu" bottom right transition="scale-transition" origin="top left">
+      <v-menu
+        v-model="menu"
+        bottom
+        right
+        transition="scale-transition"
+        origin="top left"
+      >
         <template v-slot:activator="{ on }">
           <v-chip pill v-on="on">
             <v-avatar left>
@@ -44,7 +50,12 @@
 
     <v-divider></v-divider>
 
-    <v-text-field full-width value="Re: Vacation Request" label="Subject" single-line></v-text-field>
+    <v-text-field
+      full-width
+      value="Re: Vacation Request"
+      label="Subject"
+      single-line
+    ></v-text-field>
 
     <v-textarea full-width single-line label="Message"></v-textarea>
   </v-card>

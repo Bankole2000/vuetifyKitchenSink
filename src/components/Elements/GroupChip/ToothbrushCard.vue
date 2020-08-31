@@ -7,7 +7,8 @@
     </v-card-title>
 
     <v-card-text>
-      Our company takes pride in making handmade brushes. Our toothbrushes are available in 4 different bristel types, from extra soft to hard.
+      Our company takes pride in making handmade brushes. Our toothbrushes are
+      available in 4 different bristel types, from extra soft to hard.
     </v-card-text>
 
     <v-divider class="mx-4"></v-divider>
@@ -15,7 +16,11 @@
     <v-card-text>
       <span class="subheading">Select type</span>
 
-      <v-chip-group v-model="selection" active-class="deep-purple--text text--accent-4" mandatory>
+      <v-chip-group
+        v-model="selection"
+        active-class="deep-purple--text text--accent-4"
+        mandatory
+      >
         <v-chip>Extra Soft</v-chip>
         <v-chip>Soft</v-chip>
         <v-chip>Medium</v-chip>

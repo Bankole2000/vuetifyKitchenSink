@@ -46,29 +46,29 @@
 <script>
 export default {
   data: () => ({
-    model: 'caption',
+    model: "caption",
     sizes: [
-      ['mdi-devices', 'all', 'caption'],
-      ['mdi-cellphone-iphone', 'sm', 'body-2'],
-      ['mdi-laptop', 'md', 'body-1'],
-      ['mdi-monitor', 'lg', 'h6'],
-      ['mdi-television', 'xl', 'h4']
+      ["mdi-devices", "all", "caption"],
+      ["mdi-cellphone-iphone", "sm", "body-2"],
+      ["mdi-laptop", "md", "body-1"],
+      ["mdi-monitor", "lg", "h6"],
+      ["mdi-television", "xl", "h4"]
     ]
   }),
 
   computed: {
     typeClass() {
-      const type = ['text', this.model];
+      const type = ["text", this.model];
       const [, breakpoint] = this.current;
 
-      if (breakpoint !== 'all') {
+      if (breakpoint !== "all") {
         type.splice(1, 0, breakpoint);
       }
 
-      return `.${type.join('-')}`;
+      return `.${type.join("-")}`;
     },
     current() {
-      return this.sizes.find((size) => size[2] === this.model);
+      return this.sizes.find(size => size[2] === this.model);
     }
   }
 };

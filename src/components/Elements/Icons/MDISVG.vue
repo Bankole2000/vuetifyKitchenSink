@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { mdiAccount, mdiPencil, mdiShareVariant, mdiDelete } from '@mdi/js';
+import { mdiAccount, mdiPencil, mdiShareVariant, mdiDelete } from "@mdi/js";
 
 export default {
   data: () => ({

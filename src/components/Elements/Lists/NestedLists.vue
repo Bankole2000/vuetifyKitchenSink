@@ -51,14 +51,14 @@
 export default {
   data: () => ({
     admins: [
-      ['Management', 'people_outline'],
-      ['Settings', 'settings']
+      ["Management", "people_outline"],
+      ["Settings", "settings"]
     ],
     cruds: [
-      ['Create', 'add'],
-      ['Read', 'insert_drive_file'],
-      ['Update', 'update'],
-      ['Delete', 'delete']
+      ["Create", "add"],
+      ["Read", "insert_drive_file"],
+      ["Update", "update"],
+      ["Delete", "delete"]
     ]
   })
 };

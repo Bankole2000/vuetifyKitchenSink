@@ -7,12 +7,22 @@
         </v-card>
         <v-row no-gutters>
           <v-col cols="8" sm="6">
-            <v-card class="pa-2" outlined style="background-color: lightgrey;" tile>
+            <v-card
+              class="pa-2"
+              outlined
+              style="background-color: lightgrey;"
+              tile
+            >
               Level 2: .col-8 .col-sm-6
             </v-card>
           </v-col>
           <v-col cols="4" sm="6">
-            <v-card class="pa-2" outlined style="background-color: lightgrey;" tile>
+            <v-card
+              class="pa-2"
+              outlined
+              style="background-color: lightgrey;"
+              tile
+            >
               Level 3: .col-4 .col-sm-6
             </v-card>
           </v-col>

@@ -1,6 +1,9 @@
 <template>
   <div>
-    <v-progress-linear indeterminate color="yellow darken-2"></v-progress-linear>
+    <v-progress-linear
+      indeterminate
+      color="yellow darken-2"
+    ></v-progress-linear>
     <br />
     <v-progress-linear indeterminate color="green"></v-progress-linear>
     <br />

@@ -1,13 +1,22 @@
 <template>
   <v-card class="mx-auto" max-width="450">
-    <v-img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" :aspect-ratio="16 / 9"> </v-img>
+    <v-img
+      src="https://cdn.vuetifyjs.com/images/cards/house.jpg"
+      :aspect-ratio="16 / 9"
+    >
+    </v-img>
     <v-card-title>
       <div class="display-1 mb-2">Welcome Home...</div>
-      <div class="title font-weight-regular grey--text">Monday, 12:30 PM, Mostly Sunny</div>
+      <div class="title font-weight-regular grey--text">
+        Monday, 12:30 PM, Mostly Sunny
+      </div>
     </v-card-title>
     <v-row class="px-4 grey--text" align="center">
       <v-avatar size="24" class="mr-4">
-        <v-img src="https://cdn.vuetifyjs.com/images/weather/part-cloud-48px.png" contain></v-img>
+        <v-img
+          src="https://cdn.vuetifyjs.com/images/weather/part-cloud-48px.png"
+          contain
+        ></v-img>
       </v-avatar>
 
       <span>81° / 62°</span>
@@ -36,13 +45,13 @@
 export default {
   methods: {
     alarm() {
-      alert('Turning on alarm...');
+      alert("Turning on alarm...");
     },
     blinds() {
-      alert('Toggling Blinds...');
+      alert("Toggling Blinds...");
     },
     lights() {
-      alert('Toggling lights...');
+      alert("Toggling lights...");
     }
   }
 };

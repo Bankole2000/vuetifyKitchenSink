@@ -1,6 +1,11 @@
 <template>
   <v-card class="overflow-hidden mx-auto" height="200" max-width="500">
-    <v-bottom-navigation scroll-target="#scroll-area-1" hide-on-scroll absolute horizontal>
+    <v-bottom-navigation
+      scroll-target="#scroll-area-1"
+      hide-on-scroll
+      absolute
+      horizontal
+    >
       <v-btn text color="deep-purple accent-4">
         <span>Recents</span>
         <v-icon>mdi-history</v-icon>

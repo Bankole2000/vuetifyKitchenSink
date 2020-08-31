@@ -4,7 +4,13 @@
       <template v-slot:activator="{ on: menu, attrs }">
         <v-tooltip bottom>
           <template v-slot:activator="{ on: tooltip }">
-            <v-btn color="primary" dark v-bind="attrs" v-on="{ ...tooltip, ...menu }">Dropdown w/ Tooltip</v-btn>
+            <v-btn
+              color="primary"
+              dark
+              v-bind="attrs"
+              v-on="{ ...tooltip, ...menu }"
+              >Dropdown w/ Tooltip</v-btn
+            >
           </template>
           <span>Im A ToolTip</span>
         </v-tooltip>
@@ -21,7 +27,12 @@
 <script>
 export default {
   data: () => ({
-    items: [{ title: 'Click Me1' }, { title: 'Click Me2' }, { title: 'Click Me3' }, { title: 'Click Me4' }]
+    items: [
+      { title: "Click Me1" },
+      { title: "Click Me2" },
+      { title: "Click Me3" },
+      { title: "Click Me4" }
+    ]
   })
 };
 </script>

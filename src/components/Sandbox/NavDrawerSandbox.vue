@@ -9,9 +9,17 @@
 
       <v-switch v-model="permanent" class="ma-2" label="Permanent"></v-switch>
 
-      <v-switch v-model="miniVariant" class="ma-2" label="Mini variant"></v-switch>
+      <v-switch
+        v-model="miniVariant"
+        class="ma-2"
+        label="Mini variant"
+      ></v-switch>
 
-      <v-switch v-model="expandOnHover" class="ma-2" label="Expand on hover"></v-switch>
+      <v-switch
+        v-model="expandOnHover"
+        class="ma-2"
+        label="Expand on hover"
+      ></v-switch>
 
       <v-switch v-model="background" class="ma-2" label="Background"></v-switch>
 
@@ -19,7 +27,17 @@
     </v-row>
 
     <v-card height="400" class="overflow-hidden">
-      <v-navigation-drawer v-model="drawer" :color="color" :expand-on-hover="expandOnHover" :mini-variant="miniVariant" :right="right" :permanent="permanent" :src="bg" absolute dark>
+      <v-navigation-drawer
+        v-model="drawer"
+        :color="color"
+        :expand-on-hover="expandOnHover"
+        :mini-variant="miniVariant"
+        :right="right"
+        :permanent="permanent"
+        :src="bg"
+        absolute
+        dark
+      >
         <v-list dense nav class="py-0">
           <v-list-item two-line :class="miniVariant && 'px-0'">
             <v-list-item-avatar>
@@ -54,12 +72,12 @@ export default {
     return {
       drawer: true,
       items: [
-        { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-        { title: 'Photos', icon: 'mdi-image' },
-        { title: 'About', icon: 'mdi-help-box' }
+        { title: "Dashboard", icon: "mdi-view-dashboard" },
+        { title: "Photos", icon: "mdi-image" },
+        { title: "About", icon: "mdi-help-box" }
       ],
-      color: 'primary',
-      colors: ['primary', 'blue', 'success', 'red', 'teal'],
+      color: "primary",
+      colors: ["primary", "blue", "success", "red", "teal"],
       right: false,
       permanent: true,
       miniVariant: false,
@@ -69,7 +87,9 @@ export default {
   },
   computed: {
     bg() {
-      return this.background ? 'https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg' : undefined;
+      return this.background
+        ? "https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
+        : undefined;
     }
   }
 };

@@ -179,18 +179,18 @@ export default {
       { icon: "mdi-history", text: "Frequently contacted" },
       { icon: "mdi-content-copy", text: "Duplicates" },
       {
-        "icon": "mdi-chevron-up",
+        icon: "mdi-chevron-up",
         "icon-alt": "mdi-chevron-down",
-        "text": "Labels",
-        "model": true,
-        "children": [{ icon: "mdi-plus", text: "Create label" }]
+        text: "Labels",
+        model: true,
+        children: [{ icon: "mdi-plus", text: "Create label" }]
       },
       {
-        "icon": "mdi-chevron-up",
+        icon: "mdi-chevron-up",
         "icon-alt": "mdi-chevron-down",
-        "text": "More",
-        "model": false,
-        "children": [
+        text: "More",
+        model: false,
+        children: [
           { text: "Import" },
           { text: "Export" },
           { text: "Print" },

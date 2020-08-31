@@ -128,7 +128,7 @@ export default {
           (match, contents, offset) => {
             return ` ${contents
               .split(" ")
-              .map((v) => v.charAt(0))
+              .map(v => v.charAt(0))
               .join("")}`;
           }
         )

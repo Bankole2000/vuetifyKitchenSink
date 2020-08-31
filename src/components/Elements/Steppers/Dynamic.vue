@@ -2,13 +2,24 @@
   <div>
     <v-card class="mb-4">
       <v-card-text>
-        <v-select v-model="steps" :items="[2, 3, 4, 5, 6]" label="# of steps"></v-select>
+        <v-select
+          v-model="steps"
+          :items="[2, 3, 4, 5, 6]"
+          label="# of steps"
+        ></v-select>
       </v-card-text>
     </v-card>
     <v-stepper v-model="e1">
       <v-stepper-header>
         <template v-for="n in steps">
-          <v-stepper-step :key="`${n}-step`" :complete="e1 > n" :step="n" editable> Step {{ n }} </v-stepper-step>
+          <v-stepper-step
+            :key="`${n}-step`"
+            :complete="e1 > n"
+            :step="n"
+            editable
+          >
+            Step {{ n }}
+          </v-stepper-step>
 
           <v-divider v-if="n !== steps" :key="n"></v-divider>
         </template>

@@ -1,6 +1,10 @@
 <template>
   <div>
-    <v-container v-for="align in alignments" :key="align" class="grey lighten-5 mb-6">
+    <v-container
+      v-for="align in alignments"
+      :key="align"
+      class="grey lighten-5 mb-6"
+    >
       <v-row :align="align" no-gutters style="height: 150px;">
         <v-col v-for="n in 3" :key="n">
           <v-card class="pa-2" outlined tile>
@@ -25,7 +29,7 @@
 <script>
 export default {
   data: () => ({
-    alignments: ['start', 'center', 'end']
+    alignments: ["start", "center", "end"]
   })
 };
 </script>

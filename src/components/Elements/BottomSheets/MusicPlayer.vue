@@ -7,7 +7,11 @@
         </v-btn>
       </template>
       <v-card tile>
-        <v-progress-linear :value="50" class="my-0" height="3"></v-progress-linear>
+        <v-progress-linear
+          :value="50"
+          class="my-0"
+          height="3"
+        ></v-progress-linear>
 
         <v-list>
           <v-list-item>
@@ -30,7 +34,10 @@
               </v-btn>
             </v-list-item-icon>
 
-            <v-list-item-icon class="ml-0" :class="{ 'mr-3': $vuetify.breakpoint.mdAndUp }">
+            <v-list-item-icon
+              class="ml-0"
+              :class="{ 'mr-3': $vuetify.breakpoint.mdAndUp }"
+            >
               <v-btn icon>
                 <v-icon>mdi-fast-forward</v-icon>
               </v-btn>

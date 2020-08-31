@@ -6,13 +6,23 @@
       <v-switch v-model="flat" class="mx-2" label="Flat"></v-switch>
       <v-switch v-model="dense" class="mx-2" label="Dense"></v-switch>
       <v-col cols="12">
-        <v-slider v-model="count" min="0" max="25" label="Items count"></v-slider>
+        <v-slider
+          v-model="count"
+          min="0"
+          max="25"
+          label="Items count"
+        ></v-slider>
       </v-col>
     </v-row>
 
     <v-card class="mx-auto" max-width="400">
       <v-list :flat="flat" :dense="dense">
-        <v-list-item-group v-model="model" :multiple="multiple" :mandatory="mandatory" color="indigo">
+        <v-list-item-group
+          v-model="model"
+          :multiple="multiple"
+          :mandatory="mandatory"
+          color="indigo"
+        >
           <v-list-item v-for="i in count" :key="i">
             <v-list-item-icon>
               <v-icon v-text="item.icon"></v-icon>
@@ -31,8 +41,8 @@
 export default {
   data: () => ({
     item: {
-      icon: 'mdi-wifi',
-      text: 'Wifi'
+      icon: "mdi-wifi",
+      text: "Wifi"
     },
     model: 1,
     multiple: false,

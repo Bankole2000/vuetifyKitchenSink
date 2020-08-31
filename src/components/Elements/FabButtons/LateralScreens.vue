@@ -21,13 +21,26 @@
     </v-toolbar>
     <v-card-text>
       <v-tabs-items v-model="tabs">
-        <v-tab-item v-for="content in ['one', 'two', 'three']" :key="content" :value="content">
+        <v-tab-item
+          v-for="content in ['one', 'two', 'three']"
+          :key="content"
+          :value="content"
+        >
           <v-card height="200px" flat> </v-card>
         </v-tab-item>
       </v-tabs-items>
     </v-card-text>
     <v-fab-transition>
-      <v-btn :key="activeFab.icon" :color="activeFab.color" fab large dark bottom left class="v-btn--example">
+      <v-btn
+        :key="activeFab.icon"
+        :color="activeFab.color"
+        fab
+        large
+        dark
+        bottom
+        left
+        class="v-btn--example"
+      >
         <v-icon>{{ activeFab.icon }}</v-icon>
       </v-btn>
     </v-fab-transition>
@@ -45,12 +58,12 @@ export default {
   computed: {
     activeFab() {
       switch (this.tabs) {
-        case 'one':
-          return { color: 'success', icon: 'share' };
-        case 'two':
-          return { color: 'red', icon: 'edit' };
-        case 'three':
-          return { color: 'green', icon: 'keyboard_arrow_up' };
+        case "one":
+          return { color: "success", icon: "share" };
+        case "two":
+          return { color: "red", icon: "edit" };
+        case "three":
+          return { color: "green", icon: "keyboard_arrow_up" };
         default:
           return {};
       }

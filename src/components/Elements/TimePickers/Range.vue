@@ -14,14 +14,13 @@
   </div>
 </template>
 
-
 <script>
-  export default {
-    data () {
-      return {
-        start: null,
-        end: null,
-      }
-    },
+export default {
+  data() {
+    return {
+      start: null,
+      end: null
+    };
   }
+};
 </script>

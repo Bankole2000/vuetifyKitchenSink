@@ -1,6 +1,9 @@
 <template>
   <v-list>
-    <v-list-item v-click-outside="onClickOutsideStandard" @click="models.base = true">
+    <v-list-item
+      v-click-outside="onClickOutsideStandard"
+      @click="models.base = true"
+    >
       <v-list-item-title>Default Click Outside</v-list-item-title>
 
       <v-list-item-action>
@@ -18,7 +21,9 @@
       <v-list-item-title>Default w/ Close Conditional</v-list-item-title>
 
       <v-list-item-action>
-        <v-icon :color="models.conditional ? 'green' : 'red'">mdi-record</v-icon>
+        <v-icon :color="models.conditional ? 'green' : 'red'"
+          >mdi-record</v-icon
+        >
       </v-list-item-action>
     </v-list-item>
   </v-list>

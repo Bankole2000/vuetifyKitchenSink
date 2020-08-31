@@ -15,7 +15,11 @@
             </v-list-item-content>
           </v-list-item>
 
-          <v-divider v-else-if="item.divider" :key="index" :inset="inset"></v-divider>
+          <v-divider
+            v-else-if="item.divider"
+            :key="index"
+            :inset="inset"
+          ></v-divider>
         </template>
       </v-list>
     </v-card>
@@ -28,22 +32,22 @@ export default {
     inset: true,
     items: [
       {
-        action: 'label',
-        title: 'List item 1'
+        action: "label",
+        title: "List item 1"
       },
       {
         divider: true
       },
       {
-        action: 'label',
-        title: 'List item 2'
+        action: "label",
+        title: "List item 2"
       },
       {
         divider: true
       },
       {
-        action: 'label',
-        title: 'List item 3'
+        action: "label",
+        title: "List item 3"
       }
     ]
   })

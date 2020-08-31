@@ -12,7 +12,7 @@
 export default {
   data: () => ({
     mutations: 0,
-    content: 'Hello, world!'
+    content: "Hello, world!"
   }),
 
   methods: {

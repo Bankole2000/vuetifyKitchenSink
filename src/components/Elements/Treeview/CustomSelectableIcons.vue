@@ -29,12 +29,23 @@
 
       <v-col cols="12" md="6">
         <v-card-text>
-          <div v-if="tree.length === 0" key="title" class="title font-weight-light grey--text pa-4 text-center">
+          <div
+            v-if="tree.length === 0"
+            key="title"
+            class="title font-weight-light grey--text pa-4 text-center"
+          >
             Select your favorite breweries
           </div>
 
           <v-scroll-x-transition group hide-on-leave>
-            <v-chip v-for="(selection, i) in tree" :key="i" color="grey" dark small class="ma-1">
+            <v-chip
+              v-for="(selection, i) in tree"
+              :key="i"
+              color="grey"
+              dark
+              small
+              class="ma-1"
+            >
               <v-icon left small>mdi-beer</v-icon>
               {{ selection.name }}
             </v-chip>
@@ -71,7 +82,7 @@ export default {
 
   computed: {
     items() {
-      const children = this.types.map((type) => ({
+      const children = this.types.map(type => ({
         id: type,
         name: this.getName(type),
         children: this.getChildren(type)
@@ -80,7 +91,7 @@ export default {
       return [
         {
           id: 1,
-          name: 'All Breweries',
+          name: "All Breweries",
           children
         }
       ];
@@ -108,10 +119,10 @@ export default {
     fetch() {
       if (this.breweries.length) return;
 
-      return fetch('https://api.openbrewerydb.org/breweries')
-        .then((res) => res.json())
-        .then((data) => (this.breweries = data))
-        .catch((err) => console.log(err));
+      return fetch("https://api.openbrewerydb.org/breweries")
+        .then(res => res.json())
+        .then(data => (this.breweries = data))
+        .catch(err => console.log(err));
     },
     getChildren(type) {
       const breweries = [];

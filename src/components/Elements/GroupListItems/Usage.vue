@@ -20,20 +20,20 @@ export default {
   data: () => ({
     items: [
       {
-        icon: 'mdi-inbox',
-        text: 'Inbox'
+        icon: "mdi-inbox",
+        text: "Inbox"
       },
       {
-        icon: 'mdi-star',
-        text: 'Star'
+        icon: "mdi-star",
+        text: "Star"
       },
       {
-        icon: 'mdi-send',
-        text: 'Send'
+        icon: "mdi-send",
+        text: "Send"
       },
       {
-        icon: 'mdi-email-open',
-        text: 'Drafts'
+        icon: "mdi-email-open",
+        text: "Drafts"
       }
     ],
     model: 1

@@ -2,12 +2,22 @@
   <div>
     <v-row justify="space-around">
       <v-switch v-model="icons" class="mx-2" label="Text + icons"></v-switch>
-      <v-switch v-model="centered" class="mx-2" label="Centered" :disabled="vertical"></v-switch>
+      <v-switch
+        v-model="centered"
+        class="mx-2"
+        label="Centered"
+        :disabled="vertical"
+      ></v-switch>
       <v-switch v-model="grow" class="mx-2" label="Grow"></v-switch>
       <v-switch v-model="vertical" class="mx-2" label="Vertical"></v-switch>
       <v-switch v-model="right" class="mx-2" label="Right"></v-switch>
       <v-col cols="12">
-        <v-slider v-model="tabs" min="0" max="10" label="Tabs number"></v-slider>
+        <v-slider
+          v-model="tabs"
+          min="0"
+          max="10"
+          label="Tabs number"
+        ></v-slider>
       </v-col>
     </v-row>
 
@@ -46,7 +56,7 @@ export default {
     return {
       tab: null,
       text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       icons: false,
       centered: false,
       grow: false,

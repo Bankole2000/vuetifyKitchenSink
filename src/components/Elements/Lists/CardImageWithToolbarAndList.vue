@@ -1,6 +1,10 @@
 <template>
   <v-card max-width="375" class="mx-auto">
-    <v-img src="https://cdn.vuetifyjs.com/images/lists/ali.png" height="300px" dark>
+    <v-img
+      src="https://cdn.vuetifyjs.com/images/lists/ali.png"
+      height="300px"
+      dark
+    >
       <v-row class="fill-height">
         <v-card-title>
           <v-btn dark icon>

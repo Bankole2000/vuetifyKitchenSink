@@ -11,11 +11,19 @@
             <v-card>
               <v-card-title>Card 1</v-card-title>
 
-              <div class="title text-center pb-3">Times Mutated: {{ card1 }}</div>
+              <div class="title text-center pb-3">
+                Times Mutated: {{ card1 }}
+              </div>
 
               <v-card-text v-mutate="() => onMutate('card1')">
-                <p v-for="n in +content + 2" :key="n" :class="n === +content + 2 && 'mb-0'">
-                  Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. Fusce fermentum odio nec arcu. Aenean ut eros et nisl sagittis vestibulum. Nunc interdum lacus sit amet orci.
+                <p
+                  v-for="n in +content + 2"
+                  :key="n"
+                  :class="n === +content + 2 && 'mb-0'"
+                >
+                  Suspendisse enim turpis, dictum sed, iaculis a, condimentum
+                  nec, nisi. Fusce fermentum odio nec arcu. Aenean ut eros et
+                  nisl sagittis vestibulum. Nunc interdum lacus sit amet orci.
                   Phasellus nec sem in justo pellentesque facilisis.
                 </p>
               </v-card-text>
@@ -26,11 +34,19 @@
             <v-card>
               <v-card-title>Card 2 (w/ once modifier)</v-card-title>
 
-              <div class="title text-center pb-3">Times Mutated: {{ card2 }}</div>
+              <div class="title text-center pb-3">
+                Times Mutated: {{ card2 }}
+              </div>
 
               <v-card-text v-mutate.once="() => onMutate('card2')">
-                <p v-for="n in +content + 2" :key="n" :class="n === +content + 2 && 'mb-0'">
-                  Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. Fusce fermentum odio nec arcu. Aenean ut eros et nisl sagittis vestibulum. Nunc interdum lacus sit amet orci.
+                <p
+                  v-for="n in +content + 2"
+                  :key="n"
+                  :class="n === +content + 2 && 'mb-0'"
+                >
+                  Suspendisse enim turpis, dictum sed, iaculis a, condimentum
+                  nec, nisi. Fusce fermentum odio nec arcu. Aenean ut eros et
+                  nisl sagittis vestibulum. Nunc interdum lacus sit amet orci.
                   Phasellus nec sem in justo pellentesque facilisis.
                 </p>
               </v-card-text>

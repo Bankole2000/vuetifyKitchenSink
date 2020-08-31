@@ -10,13 +10,12 @@
   </v-row>
 </template>
 
-
 <script>
-  export default {
-    data () {
-      return {
-        picker: new Date().toISOString().substr(0, 7),
-      }
-    },
+export default {
+  data() {
+    return {
+      picker: new Date().toISOString().substr(0, 7)
+    };
   }
+};
 </script>

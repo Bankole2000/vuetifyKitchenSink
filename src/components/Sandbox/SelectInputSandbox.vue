@@ -6,11 +6,31 @@
     <v-switch v-model="multiple" class="ma-2" label="Multiple"></v-switch>
     <v-switch v-model="appendIcon" class="ma-2" label="Append icon"></v-switch>
     <v-switch v-model="appendSlot" class="ma-2" label="Append slot"></v-switch>
-    <v-switch v-model="appendItemSlot" class="ma-2" label="Append item slot"></v-switch>
-    <v-switch v-model="prependIcon" class="ma-2" label="Prepend icon"></v-switch>
-    <v-switch v-model="prependSlot" class="ma-2" label="Prepend slot"></v-switch>
-    <v-switch v-model="prependItemSlot" class="ma-2" label="Prepend item slot"></v-switch>
-    <v-switch v-model="selectSlot" class="ma-2" label="Selection slot"></v-switch>
+    <v-switch
+      v-model="appendItemSlot"
+      class="ma-2"
+      label="Append item slot"
+    ></v-switch>
+    <v-switch
+      v-model="prependIcon"
+      class="ma-2"
+      label="Prepend icon"
+    ></v-switch>
+    <v-switch
+      v-model="prependSlot"
+      class="ma-2"
+      label="Prepend slot"
+    ></v-switch>
+    <v-switch
+      v-model="prependItemSlot"
+      class="ma-2"
+      label="Prepend item slot"
+    ></v-switch>
+    <v-switch
+      v-model="selectSlot"
+      class="ma-2"
+      label="Selection slot"
+    ></v-switch>
     <v-col cols="12">
       <v-select
         v-model="model"
@@ -25,13 +45,19 @@
       >
         <v-icon v-if="appendSlot" slot="append" color="green">mdi-plus</v-icon>
         <v-icon v-if="prependSlot" slot="prepend" color="red">mdi-minus</v-icon>
-        <v-icon v-if="appendItemSlot" slot="append-item">mdi-contain-end</v-icon>
-        <v-icon v-if="prependItemSlot" slot="prepend-item">mdi-contain-start</v-icon>
+        <v-icon v-if="appendItemSlot" slot="append-item"
+          >mdi-contain-end</v-icon
+        >
+        <v-icon v-if="prependItemSlot" slot="prepend-item"
+          >mdi-contain-start</v-icon
+        >
         <template v-if="selectSlot" v-slot:selection="{ item, index }">
           <v-chip v-if="index === 0">
             <span>{{ item }}</span>
           </v-chip>
-          <span v-if="index === 1" class="grey--text caption">(+{{ model.length - 1 }} others)</span>
+          <span v-if="index === 1" class="grey--text caption"
+            >(+{{ model.length - 1 }} others)</span
+          >
         </template>
       </v-select>
     </v-col>
@@ -40,7 +66,7 @@
 <script>
 export default {
   data: () => ({
-    items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+    items: ["Foo", "Bar", "Fizz", "Buzz"],
     disabled: false,
     readonly: false,
     chips: false,
@@ -52,13 +78,13 @@ export default {
     prependSlot: false,
     prependItemSlot: false,
     selectSlot: false,
-    model: 'Foo'
+    model: "Foo"
   }),
 
   watch: {
     multiple(val) {
       if (val) this.model = [this.model];
-      else this.model = this.model[0] || 'Foo';
+      else this.model = this.model[0] || "Foo";
     }
   }
 };

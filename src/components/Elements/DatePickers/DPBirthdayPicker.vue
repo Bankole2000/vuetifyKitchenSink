@@ -27,22 +27,21 @@
   </v-menu>
 </template>
 
-
 <script>
-  export default {
-    data: () => ({
-      date: null,
-      menu: false,
-    }),
-    watch: {
-      menu (val) {
-        val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
-      },
-    },
-    methods: {
-      save (date) {
-        this.$refs.menu.save(date)
-      },
-    },
+export default {
+  data: () => ({
+    date: null,
+    menu: false
+  }),
+  watch: {
+    menu(val) {
+      val && setTimeout(() => (this.$refs.picker.activePicker = "YEAR"));
+    }
+  },
+  methods: {
+    save(date) {
+      this.$refs.menu.save(date);
+    }
   }
+};
 </script>

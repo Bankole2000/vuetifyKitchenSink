@@ -17,11 +17,10 @@
   </v-row>
 </template>
 
-
 <script>
-  export default {
-    data: () => ({
-      time: '11:15',
-    }),
-  }
+export default {
+  data: () => ({
+    time: "11:15"
+  })
+};
 </script>

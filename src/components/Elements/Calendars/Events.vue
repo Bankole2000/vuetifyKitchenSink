@@ -53,7 +53,12 @@
           @click:date="viewDay"
           @change="updateRange"
         ></v-calendar>
-        <v-menu v-model="selectedOpen" :close-on-content-click="false" :activator="selectedElement" offset-x>
+        <v-menu
+          v-model="selectedOpen"
+          :close-on-content-click="false"
+          :activator="selectedElement"
+          offset-x
+        >
           <v-card color="grey lighten-4" min-width="350px" flat>
             <v-toolbar :color="selectedEvent.color" dark>
               <v-btn icon>
@@ -86,20 +91,37 @@
 <script>
 export default {
   data: () => ({
-    focus: '',
-    type: 'month',
+    focus: "",
+    type: "month",
     typeToLabel: {
-      'month': 'Month',
-      'week': 'Week',
-      'day': 'Day',
-      '4day': '4 Days'
+      month: "Month",
+      week: "Week",
+      day: "Day",
+      "4day": "4 Days"
     },
     selectedEvent: {},
     selectedElement: null,
     selectedOpen: false,
     events: [],
-    colors: ['blue', 'indigo', 'deep-purple', 'cyan', 'green', 'orange', 'grey darken-1'],
-    names: ['Meeting', 'Holiday', 'PTO', 'Travel', 'Event', 'Birthday', 'Conference', 'Party']
+    colors: [
+      "blue",
+      "indigo",
+      "deep-purple",
+      "cyan",
+      "green",
+      "orange",
+      "grey darken-1"
+    ],
+    names: [
+      "Meeting",
+      "Holiday",
+      "PTO",
+      "Travel",
+      "Event",
+      "Birthday",
+      "Conference",
+      "Party"
+    ]
   }),
   mounted() {
     this.$refs.calendar.checkChange();
@@ -107,13 +129,13 @@ export default {
   methods: {
     viewDay({ date }) {
       this.focus = date;
-      this.type = 'day';
+      this.type = "day";
     },
     getEventColor(event) {
       return event.color;
     },
     setToday() {
-      this.focus = '';
+      this.focus = "";
     },
     prev() {
       this.$refs.calendar.prev();

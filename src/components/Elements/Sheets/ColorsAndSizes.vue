@@ -60,11 +60,11 @@ export default {
 
       render(h, { children }) {
         return h(
-          'v-sheet',
+          "v-sheet",
           {
-            staticClass: 'mt-auto align-center justify-center d-flex',
+            staticClass: "mt-auto align-center justify-center d-flex",
             props: {
-              color: 'rgba(0, 0, 0, .36)',
+              color: "rgba(0, 0, 0, .36)",
               dark: true,
               height: 50
             }

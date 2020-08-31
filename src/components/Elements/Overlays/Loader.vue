@@ -1,6 +1,10 @@
 <template>
   <div class="text-center">
-    <v-btn color="deep-purple accent-4" class="white--text" @click="overlay = !overlay">
+    <v-btn
+      color="deep-purple accent-4"
+      class="white--text"
+      @click="overlay = !overlay"
+    >
       Launch Application
       <v-icon right>mdi-open-in-new</v-icon>
     </v-btn>

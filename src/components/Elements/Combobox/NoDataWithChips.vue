@@ -1,6 +1,16 @@
 <template>
   <v-container fluid>
-    <v-combobox v-model="model" :items="items" :search-input.sync="search" hide-selected hint="Maximum of 5 tags" label="Add some tags" multiple persistent-hint small-chips>
+    <v-combobox
+      v-model="model"
+      :items="items"
+      :search-input.sync="search"
+      hide-selected
+      hint="Maximum of 5 tags"
+      label="Add some tags"
+      multiple
+      persistent-hint
+      small-chips
+    >
       <template v-slot:no-data>
         <v-list-item>
           <v-list-item-content>
@@ -18,8 +28,8 @@
 <script>
 export default {
   data: () => ({
-    items: ['Gaming', 'Programming', 'Vue', 'Vuetify'],
-    model: ['Vuetify'],
+    items: ["Gaming", "Programming", "Vue", "Vuetify"],
+    model: ["Vuetify"],
     search: null
   }),
 

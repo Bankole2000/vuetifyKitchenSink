@@ -13,7 +13,11 @@
 
       <v-col cols="12">
         <v-subheader class="pl-0">Custom thumb size</v-subheader>
-        <v-slider v-model="slider" :thumb-size="24" thumb-label="always"></v-slider>
+        <v-slider
+          v-model="slider"
+          :thumb-size="24"
+          thumb-label="always"
+        ></v-slider>
       </v-col>
 
       <v-col cols="12">
@@ -32,7 +36,18 @@
 export default {
   data() {
     return {
-      satisfactionEmojis: ['😭', '😢', '☹️', '🙁', '😐', '🙂', '😊', '😁', '😄', '😍'],
+      satisfactionEmojis: [
+        "😭",
+        "😢",
+        "☹️",
+        "🙁",
+        "😐",
+        "🙂",
+        "😊",
+        "😁",
+        "😄",
+        "😍"
+      ],
       slider: 45
     };
   }

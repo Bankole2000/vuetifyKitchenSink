@@ -16,7 +16,13 @@
 
     <v-menu transition="slide-x-transition" bottom right>
       <template v-slot:activator="{ on, attrs }">
-        <v-btn class="deep-orange" color="primary" dark v-bind="attrs" v-on="on">
+        <v-btn
+          class="deep-orange"
+          color="primary"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
           Slide X Transition
         </v-btn>
       </template>
@@ -46,7 +52,12 @@
 <script>
 export default {
   data: () => ({
-    items: [{ title: 'Click Me' }, { title: 'Click Me' }, { title: 'Click Me' }, { title: 'Click Me 2' }]
+    items: [
+      { title: "Click Me" },
+      { title: "Click Me" },
+      { title: "Click Me" },
+      { title: "Click Me 2" }
+    ]
   })
 };
 </script>

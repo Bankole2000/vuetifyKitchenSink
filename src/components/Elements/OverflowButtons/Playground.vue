@@ -17,7 +17,11 @@
 
       <v-switch v-model="dense" class="ma-2" label="Dense"></v-switch>
 
-      <v-switch v-model="persistentHint" class="ma-2" label="Persistent hint"></v-switch>
+      <v-switch
+        v-model="persistentHint"
+        class="ma-2"
+        label="Persistent hint"
+      ></v-switch>
 
       <v-switch v-model="topMenu" class="ma-2" label="Menu to top"></v-switch>
     </v-row>
@@ -48,10 +52,10 @@
 export default {
   data: () => ({
     dropdownFont: [
-      { text: 'Arial', callback: () => {} },
-      { text: 'Calibri', callback: () => {} },
-      { text: 'Courier', callback: () => {} },
-      { text: 'Verdana', callback: () => {} }
+      { text: "Arial", callback: () => {} },
+      { text: "Calibri", callback: () => {} },
+      { text: "Courier", callback: () => {} },
+      { text: "Verdana", callback: () => {} }
     ],
     editable: false,
     segmented: false,

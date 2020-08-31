@@ -21,7 +21,7 @@
 export default {
   data() {
     return {
-      bottomNav: 'recent'
+      bottomNav: "recent"
     };
   }
 };

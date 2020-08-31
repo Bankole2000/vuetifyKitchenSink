@@ -33,7 +33,9 @@
         </v-card-text>
         <v-divider></v-divider>
         <v-card-actions>
-          <v-btn color="blue darken-1" text @click="dialog = false">Close</v-btn>
+          <v-btn color="blue darken-1" text @click="dialog = false"
+            >Close</v-btn
+          >
           <v-btn color="blue darken-1" text @click="dialog = false">Save</v-btn>
         </v-card-actions>
       </v-card>
@@ -45,7 +47,7 @@
 export default {
   data() {
     return {
-      dialogm1: '',
+      dialogm1: "",
       dialog: false
     };
   }

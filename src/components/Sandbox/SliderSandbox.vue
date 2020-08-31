@@ -23,7 +23,17 @@
         :vertical="vertical"
         label="Volume"
       ></v-slider>
-      <v-range-slider v-else append-icon="volume_up" prepend-icon="volume_down" :min="min" :max="max" :disabled="disabled" :readonly="readonly" :vertical="vertical" label="Volume"></v-range-slider>
+      <v-range-slider
+        v-else
+        append-icon="volume_up"
+        prepend-icon="volume_down"
+        :min="min"
+        :max="max"
+        :disabled="disabled"
+        :readonly="readonly"
+        :vertical="vertical"
+        label="Volume"
+      ></v-range-slider>
     </v-col>
   </v-row>
 </template>

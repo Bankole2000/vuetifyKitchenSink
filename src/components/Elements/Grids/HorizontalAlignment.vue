@@ -13,7 +13,7 @@
 <script>
 export default {
   data: () => ({
-    justify: ['start', 'center', 'end', 'space-around', 'space-between']
+    justify: ["start", "center", "end", "space-around", "space-between"]
   })
 };
 </script>

@@ -24,14 +24,27 @@
       Years
     </v-chip>
 
-    <v-chip class="ma-2" close color="teal" text-color="white" @click:close="close">
+    <v-chip
+      class="ma-2"
+      close
+      color="teal"
+      text-color="white"
+      @click:close="close"
+    >
       <v-avatar left>
         <v-icon>mdi-checkbox-marked-circle</v-icon>
       </v-avatar>
       Confirmed
     </v-chip>
 
-    <v-chip class="ma-2" close color="teal" text-color="white" close-icon="mdi-delete" @click:close="close">
+    <v-chip
+      class="ma-2"
+      close
+      color="teal"
+      text-color="white"
+      close-icon="mdi-delete"
+      @click:close="close"
+    >
       <v-avatar left>
         <v-icon>mdi-checkbox-marked-circle</v-icon>
       </v-avatar>
@@ -44,7 +57,7 @@
 export default {
   methods: {
     close() {
-      alert('Chip close clicked');
+      alert("Chip close clicked");
     }
   }
 };

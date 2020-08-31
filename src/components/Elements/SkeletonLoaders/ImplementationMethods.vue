@@ -5,7 +5,13 @@
         Toggle
       </v-btn>
 
-      <v-select v-model="transition" label="Transition" hide-details :items="transitions" style="max-width: 200px;"></v-select>
+      <v-select
+        v-model="transition"
+        label="Transition"
+        hide-details
+        :items="transitions"
+        style="max-width: 200px;"
+      ></v-select>
     </div>
 
     <v-row justify="center">
@@ -14,7 +20,12 @@
       </v-col>
 
       <v-col class="mb-12" cols="12" md="4">
-        <v-skeleton-loader :loading="loading" :transition="transition" height="94" type="list-item-two-line">
+        <v-skeleton-loader
+          :loading="loading"
+          :transition="transition"
+          height="94"
+          type="list-item-two-line"
+        >
           <v-card>
             <v-card-title>Title</v-card-title>
             <v-card-text>Card Text</v-card-text>
@@ -27,8 +38,16 @@
       </v-col>
 
       <v-col cols="12" md="4">
-        <component :is="transition !== 'None' ? `v-${transition}` : 'div'" hide-on-leave>
-          <v-skeleton-loader v-if="loading" height="94" type="list-item-two-line"> </v-skeleton-loader>
+        <component
+          :is="transition !== 'None' ? `v-${transition}` : 'div'"
+          hide-on-leave
+        >
+          <v-skeleton-loader
+            v-if="loading"
+            height="94"
+            type="list-item-two-line"
+          >
+          </v-skeleton-loader>
 
           <v-card v-else>
             <v-card-title>Title</v-card-title>
@@ -44,19 +63,19 @@
 export default {
   data: () => ({
     loading: true,
-    transition: 'scale-transition',
+    transition: "scale-transition",
     transitions: [
       {
-        text: 'None',
+        text: "None",
         value: undefined
       },
       {
-        text: 'Fade Transition',
-        value: 'fade-transition'
+        text: "Fade Transition",
+        value: "fade-transition"
       },
       {
-        text: 'Scale Transition',
-        value: 'scale-transition'
+        text: "Scale Transition",
+        value: "scale-transition"
       }
     ]
   })

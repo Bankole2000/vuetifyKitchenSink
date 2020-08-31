@@ -2,11 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12" lg="6">
-        <v-menu
-          v-model="menu1"
-          :close-on-content-click="false"
-          max-width="290"
-        >
+        <v-menu v-model="menu1" :close-on-content-click="false" max-width="290">
           <template v-slot:activator="{ on, attrs }">
             <v-text-field
               :value="computedDateFormattedMomentjs"
@@ -18,19 +14,12 @@
               @click:clear="date = null"
             ></v-text-field>
           </template>
-          <v-date-picker
-            v-model="date"
-            @change="menu1 = false"
-          ></v-date-picker>
+          <v-date-picker v-model="date" @change="menu1 = false"></v-date-picker>
         </v-menu>
       </v-col>
 
       <v-col cols="12" lg="6">
-        <v-menu
-          v-model="menu2"
-          :close-on-content-click="false"
-          max-width="290"
-        >
+        <v-menu v-model="menu2" :close-on-content-click="false" max-width="290">
           <template v-slot:activator="{ on, attrs }">
             <v-text-field
               :value="computedDateFormattedDatefns"
@@ -42,36 +31,32 @@
               @click:clear="date = null"
             ></v-text-field>
           </template>
-          <v-date-picker
-            v-model="date"
-            @change="menu2 = false"
-          ></v-date-picker>
+          <v-date-picker v-model="date" @change="menu2 = false"></v-date-picker>
         </v-menu>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
-
 <script>
-  import moment from 'moment'
-  import { format, parseISO } from 'date-fns'
+import moment from "moment";
+import { format, parseISO } from "date-fns";
 
-  export default {
-    data: () => ({
-      // https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments
-      date: parseISO(new Date().toISOString().substr(0, 10)),
-      menu1: false,
-      menu2: false,
-    }),
+export default {
+  data: () => ({
+    // https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments
+    date: parseISO(new Date().toISOString().substr(0, 10)),
+    menu1: false,
+    menu2: false
+  }),
 
-    computed: {
-      computedDateFormattedMomentjs () {
-        return this.date ? moment(this.date).format('dddd, MMMM Do YYYY') : ''
-      },
-      computedDateFormattedDatefns () {
-        return this.date ? format(this.date, 'EEEE, MMMM do yyyy') : ''
-      },
+  computed: {
+    computedDateFormattedMomentjs() {
+      return this.date ? moment(this.date).format("dddd, MMMM Do YYYY") : "";
     },
+    computedDateFormattedDatefns() {
+      return this.date ? format(this.date, "EEEE, MMMM do yyyy") : "";
+    }
   }
+};
 </script>

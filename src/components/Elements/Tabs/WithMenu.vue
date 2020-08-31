@@ -23,14 +23,23 @@
 
           <v-menu v-if="more.length" bottom left>
             <template v-slot:activator="{ on, attrs }">
-              <v-btn text class="align-self-center mr-4" v-bind="attrs" v-on="on">
+              <v-btn
+                text
+                class="align-self-center mr-4"
+                v-bind="attrs"
+                v-on="on"
+              >
                 more
                 <v-icon right>mdi-menu-down</v-icon>
               </v-btn>
             </template>
 
             <v-list class="grey lighten-3">
-              <v-list-item v-for="item in more" :key="item" @click="addItem(item)">
+              <v-list-item
+                v-for="item in more"
+                :key="item"
+                @click="addItem(item)"
+              >
                 {{ item }}
               </v-list-item>
             </v-list>
@@ -40,7 +49,11 @@
     </v-toolbar>
 
     <v-tabs-items v-model="currentItem">
-      <v-tab-item v-for="item in items.concat(more)" :key="item" :value="'tab-' + item">
+      <v-tab-item
+        v-for="item in items.concat(more)"
+        :key="item"
+        :value="'tab-' + item"
+      >
         <v-card flat>
           <v-card-text>
             <h2>{{ item }}</h2>
@@ -55,11 +68,11 @@
 <script>
 export default {
   data: () => ({
-    currentItem: 'tab-Web',
-    items: ['Web', 'Shopping', 'Videos', 'Images'],
-    more: ['News', 'Maps', 'Books', 'Flights', 'Apps'],
+    currentItem: "tab-Web",
+    items: ["Web", "Shopping", "Videos", "Images"],
+    more: ["News", "Maps", "Books", "Flights", "Apps"],
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   }),
 
   methods: {
@@ -68,7 +81,7 @@ export default {
       this.items.push(...this.more.splice(this.more.indexOf(item), 1));
       this.more.push(...removed);
       this.$nextTick(() => {
-        this.currentItem = 'tab-' + item;
+        this.currentItem = "tab-" + item;
       });
     }
   }

@@ -20,7 +20,13 @@
           <v-row align="center" class="flex-column" justify="center">
             <v-icon class="cols 12">mdi-format-color-text</v-icon>
 
-            <v-sheet tile style="margin-top: -4px;" height="4" width="26" color="purple"></v-sheet>
+            <v-sheet
+              tile
+              style="margin-top: -4px;"
+              height="4"
+              width="26"
+              color="purple"
+            ></v-sheet>
           </v-row>
         </v-btn>
       </v-btn-toggle>
@@ -42,11 +48,21 @@
 
     <v-sheet class="pa-4 text-center" color="grey lighten-3" tile>
       <v-row class="mb-2" dense>
-        <v-col v-for="n in numbers" :key="n" class="caption grey--text text--darken-1" v-text="n"></v-col>
+        <v-col
+          v-for="n in numbers"
+          :key="n"
+          class="caption grey--text text--darken-1"
+          v-text="n"
+        ></v-col>
       </v-row>
 
       <v-row dense>
-        <v-col v-for="l in letters" :key="l" class="title grey--text font-weight-regular text--darken-2" v-text="l"></v-col>
+        <v-col
+          v-for="l in letters"
+          :key="l"
+          class="title grey--text font-weight-regular text--darken-2"
+          v-text="l"
+        ></v-col>
       </v-row>
     </v-sheet>
   </v-card>
@@ -58,8 +74,9 @@ export default {
     alignment: 1,
     formatting: [],
     numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
-    letters: 'qwertyuiop'.split(''),
-    value: 'Toggle button requirements.\r\rHave at least three toggle buttons in a group\rLabel buttons with text, an icon, or'
+    letters: "qwertyuiop".split(""),
+    value:
+      "Toggle button requirements.\r\rHave at least three toggle buttons in a group\rLabel buttons with text, an icon, or"
   })
 };
 </script>

@@ -15,7 +15,10 @@
           ></v-img>
         </v-avatar>
       </v-card-title>
-      <v-img src="https://cdn.vuetifyjs.com/images/cards/forest.jpg" gradient="to top, rgba(0,0,0,.44), rgba(0,0,0,.44)">
+      <v-img
+        src="https://cdn.vuetifyjs.com/images/cards/forest.jpg"
+        gradient="to top, rgba(0,0,0,.44), rgba(0,0,0,.44)"
+      >
         <v-container class="fill-height">
           <v-row align="center">
             <strong class="display-4 font-weight-regular mr-6">8</strong>

@@ -5,8 +5,16 @@
         <v-switch v-model="landscape" class="ma-4" label="Landscape"></v-switch>
         <v-switch v-model="reactive" class="ma-4" label="Reactive"></v-switch>
         <v-switch v-model="flat" class="ma-4" label="Flat"></v-switch>
-        <v-switch v-model="fullWidth" class="ma-4" label="Full width"></v-switch>
-        <v-switch v-model="showCurrent" class="ma-4" label="Show current date"></v-switch>
+        <v-switch
+          v-model="fullWidth"
+          class="ma-4"
+          label="Full width"
+        ></v-switch>
+        <v-switch
+          v-model="showCurrent"
+          class="ma-4"
+          label="Show current date"
+        ></v-switch>
         <v-switch v-model="month" class="ma-4" label="Month picker"></v-switch>
         <v-switch v-model="multiple" class="ma-4" label="Multiple"></v-switch>
         <v-switch v-model="readonly" class="ma-4" label="Readonly"></v-switch>
@@ -56,15 +64,16 @@ export default {
 
   methods: {
     dateFunctionEvents(date) {
-      const [, , day] = date.split('-');
+      const [, , day] = date.split("-");
       if ([12, 17, 28].includes(parseInt(day, 10))) return true;
-      if ([1, 19, 22].includes(parseInt(day, 10))) return ['red', '#00f'];
+      if ([1, 19, 22].includes(parseInt(day, 10))) return ["red", "#00f"];
       return false;
     },
     monthFunctionEvents(date) {
-      const month = parseInt(date.split('-')[1], 10);
+      const month = parseInt(date.split("-")[1], 10);
       if ([1, 3, 7].includes(month)) return true;
-      if ([2, 5, 12].includes(month)) return ['error', 'purple', 'rgba(0, 128, 0, 0.5)'];
+      if ([2, 5, 12].includes(month))
+        return ["error", "purple", "rgba(0, 128, 0, 0.5)"];
       return false;
     }
   }

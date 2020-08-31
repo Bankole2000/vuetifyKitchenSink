@@ -1,11 +1,22 @@
 <template>
   <div>
     <v-responsive max-width="400" class="mx-auto mb-4">
-      <v-text-field v-model="benched" type="number" label="Total Benched" min="0" max="10"></v-text-field>
+      <v-text-field
+        v-model="benched"
+        type="number"
+        label="Total Benched"
+        min="0"
+        max="10"
+      ></v-text-field>
     </v-responsive>
 
     <v-card elevation="16" max-width="400" class="mx-auto">
-      <v-virtual-scroll :bench="benched" :items="items" height="300" item-height="64">
+      <v-virtual-scroll
+        :bench="benched"
+        :items="items"
+        height="300"
+        item-height="64"
+      >
         <template v-slot="{ item }">
           <v-list-item :key="item">
             <v-list-item-action>

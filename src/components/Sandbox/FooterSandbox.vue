@@ -10,13 +10,20 @@
 
         <v-divider></v-divider>
 
-        <v-card-text class="white--text"> {{ new Date().getFullYear() }} — <strong>Vuetify</strong> </v-card-text>
+        <v-card-text class="white--text">
+          {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        </v-card-text>
       </v-card>
     </v-footer>
 
     <v-row align="center" justify="center" class="ma-12">
       <v-col cols="12" md="8">
-        <v-select v-model="variant" :items="items" clearable label="Variant"></v-select>
+        <v-select
+          v-model="variant"
+          :items="items"
+          clearable
+          label="Variant"
+        ></v-select>
 
         <v-checkbox v-model="padless" hide-details label="Padless"></v-checkbox>
       </v-col>
@@ -26,16 +33,16 @@
 <script>
 export default {
   data: () => ({
-    icons: ['mdi-home', 'mdi-email', 'mdi-calendar', 'mdi-delete'],
-    items: ['default', 'absolute', 'fixed'],
+    icons: ["mdi-home", "mdi-email", "mdi-calendar", "mdi-delete"],
+    items: ["default", "absolute", "fixed"],
     padless: false,
-    variant: 'default'
+    variant: "default"
   }),
   computed: {
     localAttrs() {
       const attrs = {};
 
-      if (this.variant === 'default') {
+      if (this.variant === "default") {
         attrs.absolute = false;
         attrs.fixed = false;
       } else {

@@ -16,13 +16,32 @@ import Avatars from '../components/Elements/Avatars/All.vue';
 import Badges from '../components/Elements/Badges/All.vue';
 import Banners from '../components/Elements/Banners/All.vue';
 import BottomNav from '../components/Elements/BottomNav/All.vue';
+import VirtualScrollers from '../components/Elements/VirtualScrollers/All.vue';
+import Treeview from '../components/Elements/Treeview/All.vue';
+import ToolTips from '../components/Elements/Tooltips/All.vue';
+import Toolbars from '../components/Elements/Toolbars/All.vue';
+import Timepickers from '../components/Elements/TimePickers/All.vue';
+import Timelines from '../components/Elements/Timelines/All.vue';
+import TextFields from '../components/Elements/TextFields/All.vue';
+import TextAreas from '../components/Elements/TextAreas/All.vue';
+import Tabs from '../components/Elements/Tabs/All.vue';
+
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Alerts,
+    meta: {
+      title: 'VJS Docs',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Vuetify JS Component Library'
+        }
+      ]
+    }
   },
   {
     path: '/directives',
@@ -402,12 +421,47 @@ const routes = [
   {
     path: '/elements/tabs',
     name: 'Tabs',
-    component: Home
+    component: Tabs
   },
   {
-    path: '/elements/textAreas',
+    path: '/elements/textareas',
     name: 'TextAreas',
-    component: Home
+    component: TextAreas
+  },
+  {
+    path: '/elements/textfields',
+    name: 'Textfields',
+    component: TextFields
+  },
+  {
+    path: '/elements/timelines',
+    name: 'Timelines',
+    component: Timelines
+  },
+  {
+    path: '/elements/timepickers',
+    name: 'Timepickers',
+    component: Timepickers
+  },
+  {
+    path: '/elements/toolbars',
+    name: 'Toolbars',
+    component: Toolbars
+  },
+  {
+    path: '/elements/tooltips',
+    name: 'Tooltips',
+    component: ToolTips
+  },
+  {
+    path: '/elements/treeview',
+    name: 'Treeview',
+    component: Treeview
+  },
+  {
+    path: '/elements/virtualscrollers',
+    name: 'Virtual Scrollers',
+    component: VirtualScrollers
   },
   {
     path: '/about',

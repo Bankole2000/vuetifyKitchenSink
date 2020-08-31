@@ -5,14 +5,22 @@
         <template v-for="(item, i) in items">
           <v-divider v-if="!item" :key="`divider-${i}`"></v-divider>
 
-          <v-list-item v-else :key="`item-${i}`" :value="item" active-class="deep-purple--text text--accent-4">
+          <v-list-item
+            v-else
+            :key="`item-${i}`"
+            :value="item"
+            active-class="deep-purple--text text--accent-4"
+          >
             <template v-slot:default="{ active }">
               <v-list-item-content>
                 <v-list-item-title v-text="item"></v-list-item-title>
               </v-list-item-content>
 
               <v-list-item-action>
-                <v-checkbox :input-value="active" color="deep-purple accent-4"></v-checkbox>
+                <v-checkbox
+                  :input-value="active"
+                  color="deep-purple accent-4"
+                ></v-checkbox>
               </v-list-item-action>
             </template>
           </v-list-item>
@@ -25,8 +33,8 @@
 <script>
 export default {
   data: () => ({
-    items: ['Dog Photos', 'Cat Photos', '', 'Potatoes', 'Carrots'],
-    model: ['Carrots']
+    items: ["Dog Photos", "Cat Photos", "", "Potatoes", "Carrots"],
+    model: ["Carrots"]
   })
 };
 </script>

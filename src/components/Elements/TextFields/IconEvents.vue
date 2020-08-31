@@ -27,12 +27,21 @@
 <script>
 export default {
   data: () => ({
-    password: 'Password',
+    password: "Password",
     show: false,
-    message: 'Hey!',
+    message: "Hey!",
     marker: true,
     iconIndex: 0,
-    icons: ['mdi-emoticon', 'mdi-emoticon-cool', 'mdi-emoticon-dead', 'mdi-emoticon-excited', 'mdi-emoticon-happy', 'mdi-emoticon-neutral', 'mdi-emoticon-sad', 'mdi-emoticon-tongue']
+    icons: [
+      "mdi-emoticon",
+      "mdi-emoticon-cool",
+      "mdi-emoticon-dead",
+      "mdi-emoticon-excited",
+      "mdi-emoticon-happy",
+      "mdi-emoticon-neutral",
+      "mdi-emoticon-sad",
+      "mdi-emoticon-tongue"
+    ]
   }),
 
   computed: {
@@ -50,13 +59,15 @@ export default {
       this.clearMessage();
     },
     clearMessage() {
-      this.message = '';
+      this.message = "";
     },
     resetIcon() {
       this.iconIndex = 0;
     },
     changeIcon() {
-      this.iconIndex === this.icons.length - 1 ? (this.iconIndex = 0) : this.iconIndex++;
+      this.iconIndex === this.icons.length - 1
+        ? (this.iconIndex = 0)
+        : this.iconIndex++;
     }
   }
 };

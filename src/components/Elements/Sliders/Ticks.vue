@@ -15,13 +15,25 @@
     <v-subheader>Tick size</v-subheader>
 
     <v-card-text>
-      <v-slider v-model="value" step="10" ticks="always" tick-size="4"></v-slider>
+      <v-slider
+        v-model="value"
+        step="10"
+        ticks="always"
+        tick-size="4"
+      ></v-slider>
     </v-card-text>
 
     <v-subheader>Tick labels</v-subheader>
 
     <v-card-text>
-      <v-slider v-model="fruits" :tick-labels="ticksLabels" :max="3" step="1" ticks="always" tick-size="4"></v-slider>
+      <v-slider
+        v-model="fruits"
+        :tick-labels="ticksLabels"
+        :max="3"
+        step="1"
+        ticks="always"
+        tick-size="4"
+      ></v-slider>
     </v-card-text>
   </v-card>
 </template>
@@ -32,7 +44,7 @@ export default {
     return {
       value: 0,
       fruits: 0,
-      ticksLabels: ['Figs', 'Lemon', 'Pear', 'Apple']
+      ticksLabels: ["Figs", "Lemon", "Pear", "Apple"]
     };
   }
 };

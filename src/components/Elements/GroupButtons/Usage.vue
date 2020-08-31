@@ -26,7 +26,13 @@
       <v-col cols="12" sm="6" class="py-2">
         <p>Multiple</p>
 
-        <v-btn-toggle v-model="toggle_multiple" dense background-color="primary" dark multiple>
+        <v-btn-toggle
+          v-model="toggle_multiple"
+          dense
+          background-color="primary"
+          dark
+          multiple
+        >
           <v-btn>
             <v-icon>mdi-format-bold</v-icon>
           </v-btn>
@@ -147,8 +153,8 @@
 export default {
   data() {
     return {
-      text: 'center',
-      icon: 'justify',
+      text: "center",
+      icon: "justify",
       toggle_none: null,
       toggle_one: 0,
       toggle_exclusive: 2,

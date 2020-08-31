@@ -44,34 +44,34 @@ export default {
     return {
       items: [
         {
-          action: 'move_to_inbox',
-          title: 'Inbox'
+          action: "move_to_inbox",
+          title: "Inbox"
         },
         {
-          action: 'send',
-          title: 'Sent'
+          action: "send",
+          title: "Sent"
         },
         {
-          action: 'delete',
-          title: 'Trash'
+          action: "delete",
+          title: "Trash"
         },
         {
-          action: 'report',
-          title: 'Spam'
+          action: "report",
+          title: "Spam"
         },
         { divider: true },
-        { header: 'Labels' },
+        { header: "Labels" },
         {
-          action: 'label',
-          title: 'Family'
+          action: "label",
+          title: "Family"
         },
         {
-          action: 'label',
-          title: 'Friends'
+          action: "label",
+          title: "Friends"
         },
         {
-          action: 'label',
-          title: 'Work'
+          action: "label",
+          title: "Work"
         }
       ]
     };

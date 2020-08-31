@@ -30,13 +30,20 @@
         <v-col class="text-right">
           <v-btn :color="color" dark depressed fab @click="toggle">
             <v-icon large>
-              {{ isPlaying ? 'mdi-pause' : 'mdi-play' }}
+              {{ isPlaying ? "mdi-pause" : "mdi-play" }}
             </v-icon>
           </v-btn>
         </v-col>
       </v-row>
 
-      <v-slider v-model="bpm" :color="color" track-color="grey" always-dirty min="40" max="218">
+      <v-slider
+        v-model="bpm"
+        :color="color"
+        track-color="grey"
+        always-dirty
+        min="40"
+        max="218"
+      >
         <template v-slot:prepend>
           <v-icon :color="color" @click="decrement">
             mdi-minus
@@ -63,11 +70,11 @@ export default {
 
   computed: {
     color() {
-      if (this.bpm < 100) return 'indigo';
-      if (this.bpm < 125) return 'teal';
-      if (this.bpm < 140) return 'green';
-      if (this.bpm < 175) return 'orange';
-      return 'red';
+      if (this.bpm < 100) return "indigo";
+      if (this.bpm < 125) return "teal";
+      if (this.bpm < 140) return "green";
+      if (this.bpm < 175) return "orange";
+      return "red";
     },
     animationDuration() {
       return `${60 / this.bpm}s`;

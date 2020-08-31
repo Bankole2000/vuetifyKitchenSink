@@ -20,7 +20,7 @@
 export default {
   data: () => ({
     snackbar: false,
-    text: 'Lorem ipsum dolor sit amet',
+    text: "Lorem ipsum dolor sit amet",
     vertical: true
   })
 };

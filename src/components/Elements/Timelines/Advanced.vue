@@ -5,7 +5,14 @@
         <template v-slot:icon>
           <span>JL</span>
         </template>
-        <v-text-field v-model="input" hide-details flat label="Leave a comment..." solo @keydown.enter="comment">
+        <v-text-field
+          v-model="input"
+          hide-details
+          flat
+          label="Leave a comment..."
+          solo
+          @keydown.enter="comment"
+        >
           <template v-slot:append>
             <v-btn class="mx-0" depressed @click="comment">
               Post
@@ -15,7 +22,13 @@
       </v-timeline-item>
 
       <v-slide-x-transition group>
-        <v-timeline-item v-for="event in timeline" :key="event.id" class="mb-4" color="pink" small>
+        <v-timeline-item
+          v-for="event in timeline"
+          :key="event.id"
+          class="mb-4"
+          color="pink"
+          small
+        >
           <v-row justify="space-between">
             <v-col cols="7" v-text="event.text"></v-col>
             <v-col class="text-right" cols="5" v-text="event.time"></v-col>
@@ -27,7 +40,12 @@
         <span>TODAY</span>
       </v-timeline-item>
 
-      <v-timeline-item class="mb-4" color="grey" icon-color="grey lighten-2" small>
+      <v-timeline-item
+        class="mb-4"
+        color="grey"
+        icon-color="grey lighten-2"
+        small
+      >
         <v-row justify="space-between">
           <v-col cols="7">This order was archived.</v-col>
           <v-col class="text-right" cols="5">15:26 EDT</v-col>
@@ -49,7 +67,8 @@
       <v-timeline-item class="mb-4" color="grey" small>
         <v-row justify="space-between">
           <v-col cols="7">
-            Order confirmation email was sent to John Leider (john@vuetifyjs.com).
+            Order confirmation email was sent to John Leider
+            (john@vuetifyjs.com).
           </v-col>
           <v-col class="text-right" cols="5">15:25 EDT</v-col>
         </v-row>
@@ -73,7 +92,8 @@
       <v-timeline-item color="grey" small>
         <v-row justify="space-between">
           <v-col cols="7">
-            John Leider placed this order on Online Store (checkout #1937432132572).
+            John Leider placed this order on Online Store (checkout
+            #1937432132572).
           </v-col>
           <v-col class="text-right" cols="5">15:25 EDT</v-col>
         </v-row>
@@ -102,12 +122,17 @@ export default {
       this.events.push({
         id: this.nonce++,
         text: this.input,
-        time: time.replace(/:\d{2}\sGMT-\d{4}\s\((.*)\)/, (match, contents, offset) => {
-          return ` ${contents
-            .split(' ')
-            .map((v) => v.charAt(0))
-            .join('')}`;
-        })
+        // eslint-disable-next-line
+        time: time.replace(
+          /:\d{2}\sGMT-\d{4}\s\((.*)\)/,
+          // eslint-disable-next-line
+          (match, contents, offset) => {
+            return ` ${contents
+              .split(" ")
+              .map(v => v.charAt(0))
+              .join("")}`;
+          }
+        )
       });
 
       this.input = null;

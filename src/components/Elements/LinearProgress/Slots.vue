@@ -1,6 +1,10 @@
 <template>
   <div>
-    <v-progress-linear v-model="power" color="amber" height="25"></v-progress-linear>
+    <v-progress-linear
+      v-model="power"
+      color="amber"
+      height="25"
+    ></v-progress-linear>
 
     <br />
 

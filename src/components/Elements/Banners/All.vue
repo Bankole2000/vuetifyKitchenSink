@@ -368,11 +368,11 @@
 </template>
 
 <script>
-import ActionSlot from './ActionsSlot';
-import IconClick from './IconClickEvent';
-import IconSlot from './IconSlot';
-import SingleLineDesktop from './SingleLineForDesktop';
-import TwoLine from './TwoLine';
+import ActionSlot from "./ActionsSlot";
+import IconClick from "./IconClickEvent";
+import IconSlot from "./IconSlot";
+import SingleLineDesktop from "./SingleLineForDesktop";
+import TwoLine from "./TwoLine";
 
 export default {
   components: {
@@ -504,7 +504,7 @@ export default {
 </template>`,
         showCode: false
       },
-      tooltipText: 'Copy Code'
+      tooltipText: "Copy Code"
     };
   },
   methods: {}

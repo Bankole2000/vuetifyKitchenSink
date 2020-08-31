@@ -92,12 +92,12 @@ export default {
       this.isLoading = true;
 
       // Lazily load input items
-      fetch('https://api.coingecko.com/api/v3/coins/list')
-        .then((res) => res.clone().json())
-        .then((res) => {
+      fetch("https://api.coingecko.com/api/v3/coins/list")
+        .then(res => res.clone().json())
+        .then(res => {
           this.items = res;
         })
-        .catch((err) => {
+        .catch(err => {
           console.log(err);
         })
         .finally(() => (this.isLoading = false));

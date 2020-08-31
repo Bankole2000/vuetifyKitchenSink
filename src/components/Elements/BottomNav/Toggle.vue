@@ -6,7 +6,11 @@
       </v-btn>
     </div>
 
-    <v-bottom-navigation v-model="activeBtn" :input-value="showNav" color="indigo">
+    <v-bottom-navigation
+      v-model="activeBtn"
+      :input-value="showNav"
+      color="indigo"
+    >
       <v-btn>
         <span>Recents</span>
         <v-icon>mdi-history</v-icon>

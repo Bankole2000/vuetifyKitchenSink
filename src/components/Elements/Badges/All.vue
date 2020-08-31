@@ -294,10 +294,10 @@
 </template>
 
 <script>
-import Customization from './CustomizationOptions';
-import DynamicNotifications from './DynamicNotifications';
-import ShowOnHover from './ShowOnHover';
-import TabBadges from './Tabs';
+import Customization from "./CustomizationOptions";
+import DynamicNotifications from "./DynamicNotifications";
+import ShowOnHover from "./ShowOnHover";
+import TabBadges from "./Tabs";
 
 export default {
   components: {
@@ -431,7 +431,7 @@ export default {
 `,
         showCode: false
       },
-      tooltipText: 'Copy Code'
+      tooltipText: "Copy Code"
     };
   },
   methods: {
@@ -439,10 +439,10 @@ export default {
       this.$copyText(text).then(
         // eslint-disable-next-line
         (e) => {
-          this.tooltipText = 'Copied!';
+          this.tooltipText = "Copied!";
           console.log(`copied successfully`);
         },
-        (e) => {
+        e => {
           console.log(`could not copy`, e);
         }
       );

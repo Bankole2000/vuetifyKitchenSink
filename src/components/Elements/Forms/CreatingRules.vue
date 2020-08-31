@@ -3,7 +3,12 @@
     <v-row justify="space-between">
       <v-col cols="12" md="4">
         <v-form ref="form">
-          <v-text-field v-model="model" :counter="max" :rules="rules" label="First name"></v-text-field>
+          <v-text-field
+            v-model="model"
+            :counter="max"
+            :rules="rules"
+            label="First name"
+          ></v-text-field>
         </v-form>
       </v-col>
 
@@ -22,9 +27,9 @@
 export default {
   data: () => ({
     allowSpaces: false,
-    match: 'Foobar',
+    match: "Foobar",
     max: 0,
-    model: 'Foobar'
+    model: "Foobar"
   }),
 
   computed: {
@@ -32,19 +37,21 @@ export default {
       const rules = [];
 
       if (this.max) {
-        const rule = (v) => (v || '').length <= this.max || `A maximum of ${this.max} characters is allowed`;
+        const rule = v =>
+          (v || "").length <= this.max ||
+          `A maximum of ${this.max} characters is allowed`;
 
         rules.push(rule);
       }
 
       if (!this.allowSpaces) {
-        const rule = (v) => (v || '').indexOf(' ') < 0 || 'No spaces are allowed';
+        const rule = v => (v || "").indexOf(" ") < 0 || "No spaces are allowed";
 
         rules.push(rule);
       }
 
       if (this.match) {
-        const rule = (v) => (!!v && v) === this.match || 'Values do not match';
+        const rule = v => (!!v && v) === this.match || "Values do not match";
 
         rules.push(rule);
       }
@@ -54,9 +61,9 @@ export default {
   },
 
   watch: {
-    match: 'validateField',
-    max: 'validateField',
-    model: 'validateField'
+    match: "validateField",
+    max: "validateField",
+    model: "validateField"
   },
 
   methods: {

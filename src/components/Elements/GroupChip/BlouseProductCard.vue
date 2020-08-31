@@ -7,7 +7,8 @@
     </v-card-title>
 
     <v-card-text>
-      Our blouses are available in 8 colors. You can custom order a built-in arch support for any of the models.
+      Our blouses are available in 8 colors. You can custom order a built-in
+      arch support for any of the models.
     </v-card-text>
 
     <v-divider class="mx-4"></v-divider>
@@ -15,7 +16,11 @@
     <v-card-text>
       <span class="subheading">Select size</span>
 
-      <v-chip-group v-model="selection" active-class="deep-purple--text text--accent-4" mandatory>
+      <v-chip-group
+        v-model="selection"
+        active-class="deep-purple--text text--accent-4"
+        mandatory
+      >
         <v-chip v-for="size in sizes" :key="size" :value="size">
           {{ size }}
         </v-chip>
@@ -33,8 +38,8 @@
 <script>
 export default {
   data: () => ({
-    selection: '08',
-    sizes: ['04', '06', '08', '10', '12', '14']
+    selection: "08",
+    sizes: ["04", "06", "08", "10", "12", "14"]
   })
 };
 </script>

@@ -335,11 +335,11 @@
 </template>
 
 <script>
-import AdvancedUsage from './AdvancedUsage';
-import DefaultSlot from './DefaultSlot';
-import ProfileCard from './ProfileCard';
-import Size from './Size';
-import Tile from './Tile';
+import AdvancedUsage from "./AdvancedUsage";
+import DefaultSlot from "./DefaultSlot";
+import ProfileCard from "./ProfileCard";
+import Size from "./Size";
+import Tile from "./Tile";
 
 export default {
   components: {
@@ -503,7 +503,7 @@ export default {
 </template>`,
         showCode: false
       },
-      tooltipText: 'Copy Code'
+      tooltipText: "Copy Code"
     };
   },
   methods: {
@@ -511,10 +511,10 @@ export default {
       this.$copyText(text).then(
         // eslint-disable-next-line
         (e) => {
-          this.tooltipText = 'Copied!';
+          this.tooltipText = "Copied!";
           console.log(`copied successfully`);
         },
-        (e) => {
+        e => {
           console.log(`could not copy`, e);
         }
       );

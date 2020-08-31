@@ -4,7 +4,11 @@
       <v-sheet height="500">
         <v-calendar ref="calendar" v-model="value" type="week">
           <template #day-body="{ date, week }">
-            <div class="v-current-time" :class="{ first: date === week[0].date }" :style="{ top: nowY }"></div>
+            <div
+              class="v-current-time"
+              :class="{ first: date === week[0].date }"
+              :style="{ top: nowY }"
+            ></div>
           </template>
         </v-calendar>
       </v-sheet>
@@ -15,7 +19,7 @@
 <script>
 export default {
   data: () => ({
-    value: '',
+    value: "",
     ready: false
   }),
   computed: {
@@ -23,7 +27,7 @@ export default {
       return this.ready ? this.$refs.calendar : null;
     },
     nowY() {
-      return this.cal ? this.cal.timeToY(this.cal.times.now) + 'px' : '-10px';
+      return this.cal ? this.cal.timeToY(this.cal.times.now) + "px" : "-10px";
     }
   },
   mounted() {
@@ -33,7 +37,9 @@ export default {
   },
   methods: {
     getCurrentTime() {
-      return this.cal ? this.cal.times.now.hour * 60 + this.cal.times.now.minute : 0;
+      return this.cal
+        ? this.cal.times.now.hour * 60 + this.cal.times.now.minute
+        : 0;
     },
     scrollToTime() {
       const time = this.getCurrentTime();
@@ -58,7 +64,7 @@ export default {
   pointer-events: none;
 
   &.first::before {
-    content: '';
+    content: "";
     position: absolute;
     background-color: #ea4335;
     width: 12px;

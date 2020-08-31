@@ -14,7 +14,13 @@
 
       <v-toolbar-title>My Recipes</v-toolbar-title>
 
-      <v-progress-linear :active="loading" :indeterminate="loading" absolute bottom color="deep-purple accent-4"></v-progress-linear>
+      <v-progress-linear
+        :active="loading"
+        :indeterminate="loading"
+        absolute
+        bottom
+        color="deep-purple accent-4"
+      ></v-progress-linear>
 
       <v-spacer></v-spacer>
 

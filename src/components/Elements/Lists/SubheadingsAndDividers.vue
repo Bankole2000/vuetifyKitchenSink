@@ -12,14 +12,18 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title>Profile photo</v-list-item-title>
-          <v-list-item-subtitle>Change your Google+ profile photo</v-list-item-subtitle>
+          <v-list-item-subtitle
+            >Change your Google+ profile photo</v-list-item-subtitle
+          >
         </v-list-item-content>
       </v-list-item>
 
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title>Show your status</v-list-item-title>
-          <v-list-item-subtitle>Your status is visible to everyone</v-list-item-subtitle>
+          <v-list-item-subtitle
+            >Your status is visible to everyone</v-list-item-subtitle
+          >
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -77,7 +81,9 @@
 
             <v-list-item-content>
               <v-list-item-title>Invites</v-list-item-title>
-              <v-list-item-subtitle>Notify when receiving invites</v-list-item-subtitle>
+              <v-list-item-subtitle
+                >Notify when receiving invites</v-list-item-subtitle
+              >
             </v-list-item-content>
           </template>
         </v-list-item>

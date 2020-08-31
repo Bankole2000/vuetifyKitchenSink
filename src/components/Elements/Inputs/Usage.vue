@@ -2,7 +2,11 @@
   <v-container id="input-usage" fluid>
     <v-row>
       <v-col cols="12">
-        <v-input :messages="['Messages']" append-icon="close" prepend-icon="phone">
+        <v-input
+          :messages="['Messages']"
+          append-icon="close"
+          prepend-icon="phone"
+        >
           Default Slot
         </v-input>
       </v-col>
@@ -14,7 +18,7 @@
 export default {
   data() {
     return {
-      text: ''
+      text: ""
     };
   },
   methods: {

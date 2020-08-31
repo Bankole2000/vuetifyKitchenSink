@@ -1,17 +1,35 @@
 <template>
   <v-toolbar dense>
-    <v-overflow-btn :items="dropdown_font" label="Select font" hide-details class="pa-0"></v-overflow-btn>
+    <v-overflow-btn
+      :items="dropdown_font"
+      label="Select font"
+      hide-details
+      class="pa-0"
+    ></v-overflow-btn>
 
     <template v-if="$vuetify.breakpoint.mdAndUp">
       <v-divider vertical></v-divider>
 
-      <v-overflow-btn :items="dropdown_edit" editable label="Select size" hide-details class="pa-0" overflow></v-overflow-btn>
+      <v-overflow-btn
+        :items="dropdown_edit"
+        editable
+        label="Select size"
+        hide-details
+        class="pa-0"
+        overflow
+      ></v-overflow-btn>
 
       <v-divider vertical></v-divider>
 
       <v-spacer></v-spacer>
 
-      <v-btn-toggle v-model="toggle_multiple" color="primary" dense group multiple>
+      <v-btn-toggle
+        v-model="toggle_multiple"
+        color="primary"
+        dense
+        group
+        multiple
+      >
         <v-btn :value="1" text>
           <v-icon>mdi-format-bold</v-icon>
         </v-btn>
@@ -56,8 +74,19 @@
 export default {
   data() {
     return {
-      dropdown_font: [{ text: 'Arial' }, { text: 'Calibri' }, { text: 'Courier' }, { text: 'Verdana' }],
-      dropdown_edit: [{ text: '100%' }, { text: '75%' }, { text: '50%' }, { text: '25%' }, { text: '0%' }],
+      dropdown_font: [
+        { text: "Arial" },
+        { text: "Calibri" },
+        { text: "Courier" },
+        { text: "Verdana" }
+      ],
+      dropdown_edit: [
+        { text: "100%" },
+        { text: "75%" },
+        { text: "50%" },
+        { text: "25%" },
+        { text: "0%" }
+      ],
       toggle_exclusive: 2,
       toggle_multiple: [1, 2, 3]
     };

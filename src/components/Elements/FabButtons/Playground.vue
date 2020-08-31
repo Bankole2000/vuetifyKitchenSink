@@ -4,7 +4,11 @@
       <v-row class="child-flex">
         <v-col cols="12" sm="6" md="4">
           <v-subheader>Options</v-subheader>
-          <v-checkbox v-model="hover" label="Open on hover" hide-details></v-checkbox>
+          <v-checkbox
+            v-model="hover"
+            label="Open on hover"
+            hide-details
+          ></v-checkbox>
         </v-col>
         <v-col cols="12" sm="6" md="4">
           <v-subheader>FAB location</v-subheader>
@@ -26,15 +30,30 @@
           <v-subheader>Transition</v-subheader>
           <v-radio-group v-model="transition" hide-details>
             <v-radio value="slide-y-transition" label="Slide y"></v-radio>
-            <v-radio value="slide-y-reverse-transition" label="Slide y reverse"></v-radio>
+            <v-radio
+              value="slide-y-reverse-transition"
+              label="Slide y reverse"
+            ></v-radio>
             <v-radio value="slide-x-transition" label="Slide x"></v-radio>
-            <v-radio value="slide-x-reverse-transition" label="Slide x reverse"></v-radio>
+            <v-radio
+              value="slide-x-reverse-transition"
+              label="Slide x reverse"
+            ></v-radio>
             <v-radio value="scale-transition" label="Scale"></v-radio>
           </v-radio-group>
         </v-col>
       </v-row>
     </v-container>
-    <v-speed-dial v-model="fab" :top="top" :bottom="bottom" :right="right" :left="left" :direction="direction" :open-on-hover="hover" :transition="transition">
+    <v-speed-dial
+      v-model="fab"
+      :top="top"
+      :bottom="bottom"
+      :right="right"
+      :left="left"
+      :direction="direction"
+      :open-on-hover="hover"
+      :transition="transition"
+    >
       <template v-slot:activator>
         <v-btn v-model="fab" color="blue darken-2" dark fab>
           <v-icon v-if="fab">mdi-close</v-icon>
@@ -57,7 +76,7 @@
 <script>
 export default {
   data: () => ({
-    direction: 'top',
+    direction: "top",
     fab: false,
     fling: false,
     hover: false,
@@ -66,18 +85,18 @@ export default {
     right: true,
     bottom: true,
     left: false,
-    transition: 'slide-y-reverse-transition'
+    transition: "slide-y-reverse-transition"
   }),
 
   computed: {
     activeFab() {
       switch (this.tabs) {
-        case 'one':
-          return { class: 'purple', icon: 'account_circle' };
-        case 'two':
-          return { class: 'red', icon: 'edit' };
-        case 'three':
-          return { class: 'green', icon: 'keyboard_arrow_up' };
+        case "one":
+          return { class: "purple", icon: "account_circle" };
+        case "two":
+          return { class: "red", icon: "edit" };
+        case "three":
+          return { class: "green", icon: "keyboard_arrow_up" };
         default:
           return {};
       }

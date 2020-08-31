@@ -7,7 +7,9 @@
             <v-icon color="grey darken-2">mdi-arrow-left</v-icon>
           </v-btn>
 
-          <v-toolbar-title class="grey--text text--darken-4">Albums</v-toolbar-title>
+          <v-toolbar-title class="grey--text text--darken-4"
+            >Albums</v-toolbar-title
+          >
 
           <v-spacer></v-spacer>
 
@@ -20,7 +22,13 @@
         <v-container fluid>
           <v-row>
             <v-col v-for="i in 6" :key="i" cols="4">
-              <img :src="`https://randomuser.me/api/portraits/men/${i + 20}.jpg`" alt="lorem" class="image" height="100%" width="100%" />
+              <img
+                :src="`https://randomuser.me/api/portraits/men/${i + 20}.jpg`"
+                alt="lorem"
+                class="image"
+                height="100%"
+                width="100%"
+              />
             </v-col>
           </v-row>
         </v-container>
@@ -29,7 +37,13 @@
         <v-container fluid>
           <v-row>
             <v-col v-for="i in 6" :key="i" cols="4">
-              <img :src="`https://randomuser.me/api/portraits/women/${i + 5}.jpg`" alt="lorem" class="image" height="100%" width="100%" />
+              <img
+                :src="`https://randomuser.me/api/portraits/women/${i + 5}.jpg`"
+                alt="lorem"
+                class="image"
+                height="100%"
+                width="100%"
+              />
             </v-col>
           </v-row>
         </v-container>

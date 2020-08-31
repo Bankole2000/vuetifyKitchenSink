@@ -10,7 +10,12 @@
       </v-col>
 
       <v-col class="d-flex" cols="12" sm="6">
-        <v-select :items="items" label="Outlined style" dense outlined></v-select>
+        <v-select
+          :items="items"
+          label="Outlined style"
+          dense
+          outlined
+        ></v-select>
       </v-col>
 
       <v-col class="d-flex" cols="12" sm="6">
@@ -23,7 +28,7 @@
 <script>
 export default {
   data: () => ({
-    items: ['Foo', 'Bar', 'Fizz', 'Buzz']
+    items: ["Foo", "Bar", "Fizz", "Buzz"]
   })
 };
 </script>

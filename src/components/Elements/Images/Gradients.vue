@@ -2,7 +2,10 @@
   <v-container fluid>
     <v-row>
       <v-col cols="6" sm="4">
-        <v-img src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg" gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"></v-img>
+        <v-img
+          src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
+          gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
+        ></v-img>
       </v-col>
 
       <v-col cols="6" sm="4">
@@ -22,10 +25,20 @@
 
 <style scoped>
 .bottom-gradient {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 72px);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4) 0%,
+    transparent 72px
+  );
 }
 
 .repeating-gradient {
-  background-image: repeating-linear-gradient(-45deg, rgba(255, 0, 0, 0.25), rgba(255, 0, 0, 0.25) 5px, rgba(0, 0, 255, 0.25) 5px, rgba(0, 0, 255, 0.25) 10px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 0, 0, 0.25),
+    rgba(255, 0, 0, 0.25) 5px,
+    rgba(0, 0, 255, 0.25) 5px,
+    rgba(0, 0, 255, 0.25) 10px
+  );
 }
 </style>

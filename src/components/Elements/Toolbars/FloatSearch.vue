@@ -1,10 +1,19 @@
 <template>
-  <v-card class="pa-4" flat height="300px" img="https://cdn.vuetifyjs.com/images/toolbar/map.jpg">
+  <v-card
+    class="pa-4"
+    flat
+    height="300px"
+    img="https://cdn.vuetifyjs.com/images/toolbar/map.jpg"
+  >
     <v-toolbar dense floating>
-      <v-text-field hide-details prepend-icon="search" single-line></v-text-field>
+      <v-text-field
+        hide-details
+        prepend-icon="mdi-magnify"
+        single-line
+      ></v-text-field>
 
       <v-btn icon>
-        <v-icon>my_location</v-icon>
+        <v-icon>mdi-map-marker</v-icon>
       </v-btn>
 
       <v-btn icon>

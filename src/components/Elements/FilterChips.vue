@@ -111,7 +111,7 @@ export default {
 
       const search = this.search.toLowerCase();
 
-      return this.items.filter((item) => {
+      return this.items.filter(item => {
         const text = item.title.toLowerCase();
 
         return text.indexOf(search) > -1;

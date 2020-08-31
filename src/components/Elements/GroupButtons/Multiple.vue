@@ -20,7 +20,9 @@
           </v-btn>
         </v-btn-toggle>
 
-        <v-col cols="12" class="text-center"> Model: {{ toggle_exclusive }} </v-col>
+        <v-col cols="12" class="text-center">
+          Model: {{ toggle_exclusive }}
+        </v-col>
       </v-row>
     </v-card-text>
   </v-card>

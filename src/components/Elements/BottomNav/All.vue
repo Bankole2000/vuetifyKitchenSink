@@ -561,14 +561,14 @@
 </template>
 
 <script>
-import Color from './Color';
-import Grow from './Grow';
-import HideOnScroll from './HideOnScroll';
-import Horizontal from './Horizontal';
-import ScrollThreshold from './ScrollThreshold';
-import Shift from './Shift';
-import Toggle from './Toggle';
-import Usage from './Usage';
+import Color from "./Color";
+import Grow from "./Grow";
+import HideOnScroll from "./HideOnScroll";
+import Horizontal from "./Horizontal";
+import ScrollThreshold from "./ScrollThreshold";
+import Shift from "./Shift";
+import Toggle from "./Toggle";
+import Usage from "./Usage";
 
 export default {
   components: {
@@ -875,17 +875,18 @@ export default {
         window: 0,
         showCode: false
       },
-      tooltipText: 'Copy Code'
+      tooltipText: "Copy Code"
     };
   },
   methods: {
     copy(text) {
       this.$copyText(text).then(
+        // eslint-disable-next-line
         (e) => {
-          this.tooltipText = 'Copied!';
-          console.log(`copied`, e);
+          this.tooltipText = "Copied!";
+          console.log(`copied Successfully`);
         },
-        (e) => {
+        e => {
           console.log(`could not copy`, e);
         }
       );

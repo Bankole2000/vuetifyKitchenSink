@@ -6,13 +6,12 @@
   </v-row>
 </template>
 
-
 <script>
-  export default {
-    data () {
-      return {
-        e7: null,
-      }
-    },
+export default {
+  data() {
+    return {
+      e7: null
+    };
   }
+};
 </script>

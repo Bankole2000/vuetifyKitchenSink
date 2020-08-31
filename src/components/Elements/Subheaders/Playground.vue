@@ -26,7 +26,12 @@
     <v-row class="mt-12" align="center" justify="center">
       <v-col cols="12" md="8">
         <template>
-          <v-checkbox v-model="inset" hide-details label="Inset" light></v-checkbox>
+          <v-checkbox
+            v-model="inset"
+            hide-details
+            label="Inset"
+            light
+          ></v-checkbox>
         </template>
       </v-col>
     </v-row>
@@ -39,22 +44,22 @@ export default {
     inset: false,
     items: [
       {
-        action: 'inbox',
-        title: 'inbox'
+        action: "inbox",
+        title: "inbox"
       },
       {
         divider: true
       },
       {
-        action: 'send',
-        title: 'send'
+        action: "send",
+        title: "send"
       },
       {
         divider: true
       },
       {
-        action: 'delete',
-        title: 'trash'
+        action: "delete",
+        title: "trash"
       }
     ]
   })

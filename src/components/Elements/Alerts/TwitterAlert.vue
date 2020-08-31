@@ -1,6 +1,15 @@
 <template>
   <div>
-    <v-alert v-model="alert" dismissible close-icon="mdi-delete" color="cyan" border="left" elevation="2" colored-border icon="mdi-twitter">
+    <v-alert
+      v-model="alert"
+      dismissible
+      close-icon="mdi-delete"
+      color="cyan"
+      border="left"
+      elevation="2"
+      colored-border
+      icon="mdi-twitter"
+    >
       You've got <strong>5</strong> new updates on your timeline!.
     </v-alert>
 

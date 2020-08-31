@@ -1,10 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-date-picker
-        v-model="dates"
-        multiple
-      ></v-date-picker>
+      <v-date-picker v-model="dates" multiple></v-date-picker>
     </v-col>
     <v-col cols="12" sm="6">
       <v-menu
@@ -39,12 +36,11 @@
   </v-row>
 </template>
 
-
 <script>
-  export default {
-    data: () => ({
-      dates: ['2018-09-15', '2018-09-20'],
-      menu: false,
-    }),
-  }
+export default {
+  data: () => ({
+    dates: ["2018-09-15", "2018-09-20"],
+    menu: false
+  })
+};
 </script>

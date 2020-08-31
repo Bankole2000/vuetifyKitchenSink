@@ -14,7 +14,13 @@
     <v-subheader>Icon click callback</v-subheader>
 
     <v-card-text>
-      <v-slider v-model="zoom" append-icon="zoom_in" prepend-icon="zoom_out" @click:append="zoomIn" @click:prepend="zoomOut"></v-slider>
+      <v-slider
+        v-model="zoom"
+        append-icon="zoom_in"
+        prepend-icon="zoom_out"
+        @click:append="zoomIn"
+        @click:prepend="zoomOut"
+      ></v-slider>
     </v-card-text>
   </v-card>
 </template>

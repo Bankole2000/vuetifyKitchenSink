@@ -5,7 +5,11 @@
       <v-toolbar-title>My Document</v-toolbar-title>
       <v-spacer></v-spacer>
       <div>
-        <v-switch v-model="sticky" label="Sticky Banner" hide-details></v-switch>
+        <v-switch
+          v-model="sticky"
+          label="Sticky Banner"
+          hide-details
+        ></v-switch>
       </div>
     </v-toolbar>
     <v-banner single-line :sticky="sticky">

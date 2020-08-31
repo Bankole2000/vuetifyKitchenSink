@@ -3,7 +3,12 @@
     <v-window v-model="onboarding" reverse>
       <v-window-item v-for="n in length" :key="`card-${n}`">
         <v-card color="grey" height="200">
-          <v-row class="fill-height" align="center" justify="center" tag="v-card-text">
+          <v-row
+            class="fill-height"
+            align="center"
+            justify="center"
+            tag="v-card-text"
+          >
             <h1 style="font-size: 5rem;" class="white--text">Slide {{ n }}</h1>
           </v-row>
         </v-card>
@@ -15,7 +20,11 @@
         <v-icon>mdi-chevron-left</v-icon>
       </v-btn>
       <v-item-group v-model="onboarding" class="text-center" mandatory>
-        <v-item v-for="n in length" :key="`btn-${n}`" v-slot:default="{ active, toggle }">
+        <v-item
+          v-for="n in length"
+          :key="`btn-${n}`"
+          v-slot:default="{ active, toggle }"
+        >
           <v-btn :input-value="active" icon @click="toggle">
             <v-icon>mdi-record</v-icon>
           </v-btn>
@@ -37,10 +46,12 @@ export default {
 
   methods: {
     next() {
-      this.onboarding = this.onboarding + 1 === this.length ? 0 : this.onboarding + 1;
+      this.onboarding =
+        this.onboarding + 1 === this.length ? 0 : this.onboarding + 1;
     },
     prev() {
-      this.onboarding = this.onboarding - 1 < 0 ? this.length - 1 : this.onboarding - 1;
+      this.onboarding =
+        this.onboarding - 1 < 0 ? this.length - 1 : this.onboarding - 1;
     }
   }
 };

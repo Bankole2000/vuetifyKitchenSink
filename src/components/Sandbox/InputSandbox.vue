@@ -2,13 +2,26 @@
   <v-row>
     <v-row justify="space-around">
       <v-col cols="12">
-        <v-slider v-model="errorCount" label="Max error count" min="0" max="4"></v-slider>
+        <v-slider
+          v-model="errorCount"
+          label="Max error count"
+          min="0"
+          max="4"
+        ></v-slider>
       </v-col>
       <v-switch v-model="messages" class="ma-2" label="Messages"></v-switch>
       <v-switch v-model="success" class="ma-2" label="Success"></v-switch>
       <v-switch v-model="error" class="ma-2" label="Error"></v-switch>
-      <v-switch v-model="hideDetails" class="ma-2" label="Hide details"></v-switch>
-      <v-switch v-model="persistentHint" class="ma-2" label="Persistent hint"></v-switch>
+      <v-switch
+        v-model="hideDetails"
+        class="ma-2"
+        label="Hide details"
+      ></v-switch>
+      <v-switch
+        v-model="persistentHint"
+        class="ma-2"
+        label="Persistent hint"
+      ></v-switch>
       <v-col cols="12">
         <v-row justify="space-around">
           <v-btn
@@ -60,23 +73,25 @@ export default {
       messages: false,
       persistentHint: true,
       success: false,
-      text: ''
+      text: ""
     };
   },
   computed: {
     successMsg() {
-      return this.success ? ['Done'] : [];
+      return this.success ? ["Done"] : [];
     },
     errorMsg() {
-      return this.error ? ['Error', 'Another one', 'One more', 'All the errors'] : [];
+      return this.error
+        ? ["Error", "Another one", "One more", "All the errors"]
+        : [];
     }
   },
   methods: {
     appendIconCallback() {
-      alert('click:append');
+      alert("click:append");
     },
     prependIconCallback() {
-      alert('click:prepend');
+      alert("click:prepend");
     }
   }
 };

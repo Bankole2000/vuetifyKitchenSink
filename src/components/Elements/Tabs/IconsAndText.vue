@@ -1,6 +1,12 @@
 <template>
   <v-card>
-    <v-tabs v-model="tab" background-color="deep-purple accent-4" centered dark icons-and-text>
+    <v-tabs
+      v-model="tab"
+      background-color="deep-purple accent-4"
+      centered
+      dark
+      icons-and-text
+    >
       <v-tabs-slider></v-tabs-slider>
 
       <v-tab href="#tab-1">
@@ -35,7 +41,7 @@ export default {
     return {
       tab: null,
       text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     };
   }
 };

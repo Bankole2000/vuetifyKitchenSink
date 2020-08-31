@@ -8,22 +8,39 @@
       </v-col>
     </v-row>
 
-    <v-item-group v-model="selected" :mandatory="mandatory" :multiple="multiple">
+    <v-item-group
+      v-model="selected"
+      :mandatory="mandatory"
+      :multiple="multiple"
+    >
       <v-container class="pa-0">
         <v-row>
           <v-col v-for="n in 3" :key="n" cols="12" md="4">
             <v-item v-slot:default="{ active, toggle }">
-              <v-card v-if="type === 'cards'" :color="active ? 'primary' : ''" class="d-flex align-center" dark height="200" @click="toggle">
+              <v-card
+                v-if="type === 'cards'"
+                :color="active ? 'primary' : ''"
+                class="d-flex align-center"
+                dark
+                height="200"
+                @click="toggle"
+              >
                 <v-scroll-y-transition>
                   <div v-if="active" class="display-3 flex-grow-1 text-center">
                     Active
                   </div>
                 </v-scroll-y-transition>
               </v-card>
-              <v-img v-else src="https://picsum.photos/id/237/200/300" height="150" class="text-right pa-2" @click="toggle">
+              <v-img
+                v-else
+                src="https://picsum.photos/id/237/200/300"
+                height="150"
+                class="text-right pa-2"
+                @click="toggle"
+              >
                 <v-btn icon dark>
                   <v-icon>
-                    {{ active ? 'mdi-heart' : 'mdi-heart-outline' }}
+                    {{ active ? "mdi-heart" : "mdi-heart-outline" }}
                   </v-icon>
                 </v-btn>
               </v-img>
@@ -40,12 +57,16 @@ export default {
     mandatory: false,
     multiple: true,
     selected: null,
-    types: ['cards', 'images'],
-    type: 'cards'
+    types: ["cards", "images"],
+    type: "cards"
   }),
   watch: {
     multiple(val) {
-      this.selected = val ? (this.selected >= 0 ? [this.selected] : []) : this.selected.pop();
+      this.selected = val
+        ? this.selected >= 0
+          ? [this.selected]
+          : []
+        : this.selected.pop();
     }
   }
 };

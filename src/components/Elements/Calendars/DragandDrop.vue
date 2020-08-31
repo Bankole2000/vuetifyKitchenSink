@@ -19,7 +19,11 @@
         >
           <template #event="{ event, timed, eventSummary }">
             <div class="v-event-draggable" v-html="eventSummary()"></div>
-            <div v-if="timed" class="v-event-drag-bottom" @mousedown.stop="extendBottom(event)"></div>
+            <div
+              v-if="timed"
+              class="v-event-drag-bottom"
+              @mousedown.stop="extendBottom(event)"
+            ></div>
           </template>
         </v-calendar>
       </v-sheet>
@@ -30,10 +34,27 @@
 <script>
 export default {
   data: () => ({
-    value: '',
+    value: "",
     events: [],
-    colors: ['#2196F3', '#3F51B5', '#673AB7', '#00BCD4', '#4CAF50', '#FF9800', '#757575'],
-    names: ['Meeting', 'Holiday', 'PTO', 'Travel', 'Event', 'Birthday', 'Conference', 'Party'],
+    colors: [
+      "#2196F3",
+      "#3F51B5",
+      "#673AB7",
+      "#00BCD4",
+      "#4CAF50",
+      "#FF9800",
+      "#757575"
+    ],
+    names: [
+      "Meeting",
+      "Holiday",
+      "PTO",
+      "Travel",
+      "Event",
+      "Birthday",
+      "Conference",
+      "Party"
+    ],
     dragEvent: null,
     dragStart: null,
     createEvent: null,
@@ -123,10 +144,18 @@ export default {
       const roundTo = 15; // minutes
       const roundDownTime = roundTo * 60 * 1000;
 
-      return down ? time - (time % roundDownTime) : time + (roundDownTime - (time % roundDownTime));
+      return down
+        ? time - (time % roundDownTime)
+        : time + (roundDownTime - (time % roundDownTime));
     },
     toTime(tms) {
-      return new Date(tms.year, tms.month - 1, tms.day, tms.hour, tms.minute).getTime();
+      return new Date(
+        tms.year,
+        tms.month - 1,
+        tms.day,
+        tms.hour,
+        tms.minute
+      ).getTime();
     },
     getEventColor(event) {
       const rgb = parseInt(event.color.substring(1), 16);
@@ -134,7 +163,11 @@ export default {
       const g = (rgb >> 8) & 0xff;
       const b = (rgb >> 0) & 0xff;
 
-      return event === this.dragEvent ? `rgba(${r}, ${g}, ${b}, 0.7)` : event === this.createEvent ? `rgba(${r}, ${g}, ${b}, 0.7)` : event.color;
+      return event === this.dragEvent
+        ? `rgba(${r}, ${g}, ${b}, 0.7)`
+        : event === this.createEvent
+        ? `rgba(${r}, ${g}, ${b}, 0.7)`
+        : event.color;
     },
     getEvents({ start, end }) {
       const events = [];
@@ -200,7 +233,7 @@ export default {
     width: 16px;
     margin-left: -8px;
     opacity: 0.8;
-    content: '';
+    content: "";
   }
 
   &:hover::after {
