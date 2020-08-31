@@ -39,6 +39,10 @@ const routes = [
         {
           name: 'description',
           content: 'Vuetify JS Component Library'
+        },
+        {
+          property: 'og:description',
+          content: 'The home page of our example app.'
         }
       ]
     }

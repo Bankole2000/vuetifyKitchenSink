@@ -92,15 +92,16 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        href="https://github.com/Bankole2000/vuetifyKitchenSink"
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <v-icon left>mdi-github</v-icon>
+        <span class="mr-2">View Git Repository</span>
+        <v-icon right>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-main style="background-color: #778899 ;">
+    <v-main style="background-color: #fefefe ;">
       <transition name="router-anim">
         <router-view />
         <!-- <HelloWorld /> -->
@@ -265,10 +266,10 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: pink;
+  background: #59adf1;
 }
 *::-webkit-scrollbar-thumb {
-  background: pink;
+  background: #59adf1;
 }
 
 *::-webkit-scrollbar {
