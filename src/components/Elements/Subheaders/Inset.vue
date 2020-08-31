@@ -5,7 +5,7 @@
 
       <v-list>
         <template v-for="(item, index) in items">
-          <v-list-item v-if="item.action" :key="item.title" @click="">
+          <v-list-item v-if="item.action" :key="item.title">
             <v-list-item-action>
               <v-icon>{{ item.action }}</v-icon>
             </v-list-item-action>
@@ -32,22 +32,22 @@ export default {
     inset: true,
     items: [
       {
-        action: "label",
-        title: "List item 1"
+        action: 'mdi-label',
+        title: 'List item 1'
       },
       {
         divider: true
       },
       {
-        action: "label",
-        title: "List item 2"
+        action: 'mdi-label',
+        title: 'List item 2'
       },
       {
         divider: true
       },
       {
-        action: "label",
-        title: "List item 3"
+        action: 'mdi-label',
+        title: 'List item 3'
       }
     ]
   })

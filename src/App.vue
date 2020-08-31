@@ -10,6 +10,15 @@
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
           <v-list-item-title>{{ item.name }}</v-list-item-title>
+          <div class="text-center">
+            <v-chip
+              v-if="item.isUpdate"
+              class="orange white--text ma-2"
+              x-small
+            >
+              New
+            </v-chip>
+          </div>
         </v-list-item>
       </v-list-group>
       <!-- <v-list>
@@ -129,85 +138,120 @@ export default {
           route: '/elements/alerts',
           name: 'Alerts',
           icon: 'mdi-alert-circle',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
         },
         {
           route: '/elements/appbars',
           name: 'AppBars',
           icon: 'mdi-application',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
         },
         {
           route: '/elements/autocomplete',
           name: 'Autocomplete',
           icon: 'mdi-more',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
         },
         {
           route: '/elements/badges',
           name: 'Badges',
           icon: 'mdi-bell-outline',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
         },
         {
           route: '/elements/banners',
           name: 'Banners',
           icon: 'mdi-book-variant',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
+        },
+        {
+          route: '/elements/steppers',
+          name: 'Steppers',
+          icon: 'mdi-fast-forward',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/subheaders',
+          name: 'SubHeaders',
+          icon: 'mdi-format-size',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/systembars',
+          name: 'System Bars',
+          icon: 'mdi-desktop-classic',
+          group: 'Elements',
+          isUpdate: true
         },
         {
           route: '/elements/tabs',
           name: 'Tabs',
           icon: 'mdi-table-border',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
         },
         {
           route: '/elements/textareas',
           name: 'Text Areas',
           icon: 'mdi-checkbook',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
         },
         {
           route: '/elements/textfields',
           name: 'Text Fields',
           icon: 'mdi-cursor-text',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
         },
         {
           route: '/elements/timelines',
           name: 'Time lines',
           icon: 'mdi-timeline-text',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
         },
         {
           route: '/elements/timepickers',
           name: 'Time Pickers',
           icon: 'mdi-clock',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
         },
         {
           route: '/elements/toolbars',
           name: 'Toolbars',
           icon: 'mdi-cellphone-text',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
         },
         {
           route: '/elements/tooltips',
           name: 'Tooltips',
           icon: 'mdi-tooltip',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
         },
         {
           route: '/elements/treeview',
           name: 'Tree View',
           icon: 'mdi-file-tree',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
         },
         {
           route: '/elements/virtualscrollers',
           name: 'Virtual Scrollers',
           icon: 'mdi-arrow-expand-vertical',
-          group: 'Elements'
+          group: 'Elements',
+          isUpdate: false
         }
       ],
       admins: [

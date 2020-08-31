@@ -25,6 +25,9 @@ import Timelines from '../components/Elements/Timelines/All.vue';
 import TextFields from '../components/Elements/TextFields/All.vue';
 import TextAreas from '../components/Elements/TextAreas/All.vue';
 import Tabs from '../components/Elements/Tabs/All.vue';
+import SystemBars from '../components/Elements/SystemBars/All.vue';
+import Subheaders from '../components/Elements/Subheaders/All.vue';
+import Steppers from '../components/Elements/Steppers/All.vue';
 
 Vue.use(VueRouter);
 
@@ -405,17 +408,17 @@ const routes = [
   {
     path: '/elements/steppers',
     name: 'Steppers',
-    component: Home
+    component: Steppers
   },
   {
     path: '/elements/subheaders',
     name: 'Subheaders',
-    component: Home
+    component: Subheaders
   },
   {
     path: '/elements/systembars',
     name: 'SystemBars',
-    component: Home
+    component: SystemBars
   },
   {
     path: '/elements/tables',

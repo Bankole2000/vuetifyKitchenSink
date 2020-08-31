@@ -16,7 +16,7 @@
 
         <v-list>
           <template v-for="(item, index) in items">
-            <v-list-item v-if="item.action" :key="item.title" @click="">
+            <v-list-item v-if="item.action" :key="item.title">
               <v-list-item-action>
                 <v-icon>{{ item.action }}</v-icon>
               </v-list-item-action>
@@ -44,34 +44,34 @@ export default {
     return {
       items: [
         {
-          action: "move_to_inbox",
-          title: "Inbox"
+          action: 'mdi-inbox-arrow-down',
+          title: 'Inbox'
         },
         {
-          action: "send",
-          title: "Sent"
+          action: 'mdi-send',
+          title: 'Sent'
         },
         {
-          action: "delete",
-          title: "Trash"
+          action: 'mdi-delete',
+          title: 'Trash'
         },
         {
-          action: "report",
-          title: "Spam"
+          action: 'mdi-alert',
+          title: 'Spam'
         },
         { divider: true },
-        { header: "Labels" },
+        { header: 'Labels' },
         {
-          action: "label",
-          title: "Family"
+          action: 'mdi-label',
+          title: 'Family'
         },
         {
-          action: "label",
-          title: "Friends"
+          action: 'mdi-label',
+          title: 'Friends'
         },
         {
-          action: "label",
-          title: "Work"
+          action: 'mdi-label',
+          title: 'Work'
         }
       ]
     };
