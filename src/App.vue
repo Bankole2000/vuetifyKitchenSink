@@ -266,10 +266,10 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #59adf1;
+  background: rgba(255, 218, 151, 0.89);
 }
 *::-webkit-scrollbar-thumb {
-  background: #59adf1;
+  background: rgba(255, 218, 151, 0.89);
 }
 
 *::-webkit-scrollbar {
