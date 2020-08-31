@@ -1,4 +1,4 @@
-# truckhire
+# My Vuetify Component Library
 
 ## Project setup
 ```
