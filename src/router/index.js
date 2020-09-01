@@ -36,9 +36,11 @@ import Sheets from '../components/Elements/Sheets/All.vue';
 import Selects from '../components/Elements/Selects/All.vue';
 import SelectionControls from '../components/Elements/SelectionControls/All.vue';
 import Ratings from '../components/Elements/Ratings/All.vue';
+import Pagination from '../components/Elements/Paginations/All.vue';
 import Parallax from '../components/Elements/Parallax/All.vue';
 import Overlays from '../components/Elements/Overlays/All.vue';
 import Carousels from '../components/Elements/Carousels/All.vue';
+import Cards from '../components/Elements/Cards/All.vue';
 
 Vue.use(VueRouter);
 
@@ -209,7 +211,7 @@ const routes = [
   {
     path: '/elements/cards',
     name: 'Cards',
-    component: Home
+    component: Cards
   },
   {
     path: '/elements/carousels',
@@ -367,9 +369,9 @@ const routes = [
     component: Overlays
   },
   {
-    path: '/elements/paginations',
+    path: '/elements/pagination',
     name: 'Paginations',
-    component: Home
+    component: Pagination
   },
   {
     path: '/elements/parallax',

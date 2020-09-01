@@ -172,6 +172,13 @@ export default {
           isUpdate: false
         },
         {
+          route: '/elements/cards',
+          name: 'Cards',
+          icon: 'mdi-cards-playing-outline',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
           route: '/elements/carousels',
           name: 'Carousels',
           icon: 'mdi-view-carousel',
@@ -182,6 +189,13 @@ export default {
           route: '/elements/overlays',
           name: 'Overlays',
           icon: 'mdi-transition-masked',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/pagination',
+          name: 'Pagination',
+          icon: 'mdi-book-open-page-variant',
           group: 'Elements',
           isUpdate: true
         },

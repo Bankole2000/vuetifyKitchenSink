@@ -83,10 +83,10 @@ export default {
       circle: false,
       disabled: false,
       length: 10,
-      nextIcon: "navigate_next",
-      nextIcons: ["mdi-chevron-right", "mdi-arrow-right", "mdi-menu-right"],
-      prevIcon: "navigate_before",
-      prevIcons: ["mdi-chevron-left", "mdi-arrow-left", "mdi-menu-left"],
+      nextIcon: 'mdi-chevron-right-circle',
+      nextIcons: ['mdi-chevron-right', 'mdi-arrow-right', 'mdi-menu-right'],
+      prevIcon: 'mdi-chevron-left-circle',
+      prevIcons: ['mdi-chevron-left', 'mdi-arrow-left', 'mdi-menu-left'],
       page: 1,
       totalVisible: 10
     };
