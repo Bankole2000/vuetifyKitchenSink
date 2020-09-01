@@ -2,13 +2,13 @@
   <v-card flat color="transparent">
     <v-subheader>Media volume</v-subheader>
     <v-card-text>
-      <v-slider v-model="media" prepend-icon="volume_up"></v-slider>
+      <v-slider v-model="media" prepend-icon="mdi-volume-high"></v-slider>
     </v-card-text>
 
     <v-subheader>Alarm volume</v-subheader>
 
     <v-card-text>
-      <v-slider v-model="alarm" append-icon="alarm"></v-slider>
+      <v-slider v-model="alarm" append-icon="mdi-alarm"></v-slider>
     </v-card-text>
 
     <v-subheader>Icon click callback</v-subheader>
@@ -16,8 +16,8 @@
     <v-card-text>
       <v-slider
         v-model="zoom"
-        append-icon="zoom_in"
-        prepend-icon="zoom_out"
+        append-icon="mdi-magnify-plus"
+        prepend-icon="mdi-magnify-minus"
         @click:append="zoomIn"
         @click:prepend="zoomOut"
       ></v-slider>

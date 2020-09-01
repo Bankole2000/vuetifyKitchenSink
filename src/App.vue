@@ -5,6 +5,7 @@
         <template v-slot:activator>
           <v-list-item-title>All Elements</v-list-item-title>
         </template>
+
         <v-list-item v-for="(item, i) in menu" :key="i" :to="item.route">
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -21,6 +22,7 @@
           </div>
         </v-list-item>
       </v-list-group>
+      <v-divider></v-divider>
       <!-- <v-list>
         <v-list-group prepend-icon="account_circle" value="true">
           <template v-slot:activator>
@@ -168,6 +170,83 @@ export default {
           icon: 'mdi-book-variant',
           group: 'Elements',
           isUpdate: false
+        },
+        {
+          route: '/elements/carousels',
+          name: 'Carousels',
+          icon: 'mdi-view-carousel',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/overlays',
+          name: 'Overlays',
+          icon: 'mdi-transition-masked',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/parallax',
+          name: 'Parallax',
+          icon: 'mdi-panorama-horizontal',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/ratings',
+          name: 'Ratings',
+          icon: 'mdi-star',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/selectioncontrols',
+          name: 'Selection Controls',
+          icon: 'mdi-checkbox-marked',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/selects',
+          name: 'Selects',
+          icon: 'mdi-chevron-down-circle-outline',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/sheets',
+          name: 'Sheets',
+          icon: 'mdi-note',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/skeletonloaders',
+          name: 'Skeleton Loaders',
+          icon: 'mdi-desktop-mac-dashboard',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/sliders',
+          name: 'Sliders',
+          icon: 'mdi-signal-distance-variant',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/snackbars',
+          name: 'Snackbars',
+          icon: 'mdi-chart-timeline',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/sparklines',
+          name: 'Sparklines',
+          icon: 'mdi-chart-bell-curve',
+          group: 'Elements',
+          isUpdate: true
         },
         {
           route: '/elements/steppers',

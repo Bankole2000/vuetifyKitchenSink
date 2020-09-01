@@ -54,19 +54,19 @@
             </v-btn>
           </v-card-title>
           <v-list>
-            <v-list-item @click="">
+            <v-list-item>
               <v-list-item-action>
                 <v-icon color="indigo">mdi-facebook</v-icon>
               </v-list-item-action>
               <v-card-title>Facebook</v-card-title>
             </v-list-item>
-            <v-list-item @click="">
+            <v-list-item>
               <v-list-item-action>
                 <v-icon color="cyan">mdi-twitter</v-icon>
               </v-list-item-action>
               <v-card-title>Twitter</v-card-title>
             </v-list-item>
-            <v-list-item @click="">
+            <v-list-item>
               <v-list-item-action>
                 <v-icon>mdi-email</v-icon>
               </v-list-item-action>
@@ -121,8 +121,8 @@ export default {
     copy() {
       const markup = this.$refs.link;
       markup.focus();
-      document.execCommand("selectAll", false, null);
-      this.copied = document.execCommand("copy");
+      document.execCommand('selectAll', false, null);
+      this.copied = document.execCommand('copy');
     }
   }
 };

@@ -14,8 +14,8 @@
       <v-slider
         v-if="!range"
         v-model="volume"
-        append-icon="volume_up"
-        prepend-icon="volume_down"
+        append-icon="mdi-volume-high"
+        prepend-icon="mdi-volume-medium"
         :min="min"
         :max="max"
         :disabled="disabled"
@@ -25,8 +25,8 @@
       ></v-slider>
       <v-range-slider
         v-else
-        append-icon="volume_up"
-        prepend-icon="volume_down"
+        append-icon="mdi-volume-high"
+        prepend-icon="mdi-volume-medium"
         :min="min"
         :max="max"
         :disabled="disabled"

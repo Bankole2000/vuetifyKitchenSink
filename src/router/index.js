@@ -28,6 +28,17 @@ import Tabs from '../components/Elements/Tabs/All.vue';
 import SystemBars from '../components/Elements/SystemBars/All.vue';
 import Subheaders from '../components/Elements/Subheaders/All.vue';
 import Steppers from '../components/Elements/Steppers/All.vue';
+import Sparklines from '../components/Elements/Sparklines/All.vue';
+import Snackbars from '../components/Elements/Snackbars/All.vue';
+import Sliders from '../components/Elements/Sliders/All.vue';
+import SkeletonLoaders from '../components/Elements/SkeletonLoaders/All.vue';
+import Sheets from '../components/Elements/Sheets/All.vue';
+import Selects from '../components/Elements/Selects/All.vue';
+import SelectionControls from '../components/Elements/SelectionControls/All.vue';
+import Ratings from '../components/Elements/Ratings/All.vue';
+import Parallax from '../components/Elements/Parallax/All.vue';
+import Overlays from '../components/Elements/Overlays/All.vue';
+import Carousels from '../components/Elements/Carousels/All.vue';
 
 Vue.use(VueRouter);
 
@@ -203,7 +214,7 @@ const routes = [
   {
     path: '/elements/carousels',
     name: 'Carousels',
-    component: Home
+    component: Carousels
   },
   {
     path: '/elements/chips',
@@ -353,7 +364,7 @@ const routes = [
   {
     path: '/elements/overlays',
     name: 'Overlays',
-    component: Home
+    component: Overlays
   },
   {
     path: '/elements/paginations',
@@ -363,47 +374,47 @@ const routes = [
   {
     path: '/elements/parallax',
     name: 'Parallax',
-    component: Home
+    component: Parallax
   },
   {
     path: '/elements/ratings',
     name: 'Ratings',
-    component: Home
+    component: Ratings
   },
   {
-    path: '/elements/selectionControls',
+    path: '/elements/selectioncontrols',
     name: 'SelectionControls',
-    component: Home
+    component: SelectionControls
   },
   {
     path: '/elements/selects',
     name: 'Selects',
-    component: Home
+    component: Selects
   },
   {
     path: '/elements/sheets',
     name: 'Sheets',
-    component: Home
+    component: Sheets
   },
   {
-    path: '/elements/skeletonLoaders',
+    path: '/elements/skeletonloaders',
     name: 'SkeletonLoaders',
-    component: Home
+    component: SkeletonLoaders
   },
   {
     path: '/elements/sliders',
     name: 'Sliders',
-    component: Home
+    component: Sliders
   },
   {
     path: '/elements/snackbars',
     name: 'Snackbars',
-    component: Home
+    component: Snackbars
   },
   {
     path: '/elements/sparklines',
     name: 'Sparklines',
-    component: Home
+    component: Sparklines
   },
   {
     path: '/elements/steppers',
