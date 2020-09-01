@@ -17,7 +17,7 @@
       <v-divider></v-divider>
 
       <v-list dense>
-        <v-list-item v-for="item in items" :key="item.title" @click="">
+        <v-list-item v-for="item in items" :key="item.title">
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -36,9 +36,9 @@ export default {
   data() {
     return {
       items: [
-        { title: "Home", icon: "mdi-home-city" },
-        { title: "My Account", icon: "mdi-account" },
-        { title: "Users", icon: "mdi-account-group-outline" }
+        { title: 'Home', icon: 'mdi-home-city' },
+        { title: 'My Account', icon: 'mdi-account' },
+        { title: 'Users', icon: 'mdi-account-group-outline' }
       ]
     };
   }

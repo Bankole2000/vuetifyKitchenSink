@@ -186,6 +186,20 @@ export default {
           isUpdate: true
         },
         {
+          route: '/elements/navdrawers',
+          name: 'Nav Drawers',
+          icon: 'mdi-menu',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/overflowbuttons',
+          name: 'Overflow Buttons',
+          icon: 'mdi-chevron-left-box-outline',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
           route: '/elements/overlays',
           name: 'Overlays',
           icon: 'mdi-transition-masked',

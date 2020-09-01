@@ -41,6 +41,8 @@ import Parallax from '../components/Elements/Parallax/All.vue';
 import Overlays from '../components/Elements/Overlays/All.vue';
 import Carousels from '../components/Elements/Carousels/All.vue';
 import Cards from '../components/Elements/Cards/All.vue';
+import OverflowButtons from '../components/Elements/OverflowButtons/All.vue';
+import NavDrawers from '../components/Elements/NavDrawers/All.vue';
 
 Vue.use(VueRouter);
 
@@ -354,14 +356,14 @@ const routes = [
     component: Home
   },
   {
-    path: '/elements/navDrawers',
+    path: '/elements/navdrawers',
     name: 'NavDrawers',
-    component: Home
+    component: NavDrawers
   },
   {
-    path: '/elements/overflowButtons',
+    path: '/elements/overflowbuttons',
     name: 'OverflowButtons',
-    component: Home
+    component: OverflowButtons
   },
   {
     path: '/elements/overlays',

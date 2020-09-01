@@ -27,9 +27,9 @@ export default {
   data() {
     return {
       items: [
-        { title: "Dashboard", icon: "dashboard" },
-        { title: "Account", icon: "account_box" },
-        { title: "Admin", icon: "gavel" }
+        { title: 'Dashboard', icon: 'mdi-view-dashboard' },
+        { title: 'Account', icon: 'mdi-account' },
+        { title: 'Admin', icon: 'mdi-gavel' }
       ]
     };
   }
