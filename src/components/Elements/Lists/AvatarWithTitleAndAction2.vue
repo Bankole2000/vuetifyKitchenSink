@@ -16,7 +16,7 @@
       </v-btn>
     </v-toolbar>
     <v-list>
-      <v-list-item v-for="item in items" :key="item.title" @click="">
+      <v-list-item v-for="item in items" :key="item.title">
         <v-list-item-icon>
           <v-icon v-if="item.icon" color="pink">mdi-star</v-icon>
         </v-list-item-icon>
@@ -40,20 +40,20 @@ export default {
       items: [
         {
           icon: true,
-          title: "Jason Oner",
-          avatar: "https://cdn.vuetifyjs.com/images/lists/1.jpg"
+          title: 'Jason Oner',
+          avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg'
         },
         {
-          title: "Travis Howard",
-          avatar: "https://cdn.vuetifyjs.com/images/lists/2.jpg"
+          title: 'Travis Howard',
+          avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg'
         },
         {
-          title: "Ali Connors",
-          avatar: "https://cdn.vuetifyjs.com/images/lists/3.jpg"
+          title: 'Ali Connors',
+          avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg'
         },
         {
-          title: "Cindy Baker",
-          avatar: "https://cdn.vuetifyjs.com/images/lists/4.jpg"
+          title: 'Cindy Baker',
+          avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg'
         }
       ]
     };

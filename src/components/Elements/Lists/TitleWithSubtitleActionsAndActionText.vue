@@ -20,6 +20,7 @@
       <v-list-item-group v-model="selected" multiple active-class="pink--text">
         <template v-for="(item, index) in items">
           <v-list-item :key="item.title">
+            <!-- eslint-disable-next-line -->
             <template v-slot:default="{ active, toggle }">
               <v-list-item-content>
                 <v-list-item-title v-text="item.title"></v-list-item-title>
@@ -37,11 +38,11 @@
                   v-text="item.action"
                 ></v-list-item-action-text>
                 <v-icon v-if="!active" color="grey lighten-1">
-                  star_border
+                  mdi-star-outline
                 </v-icon>
 
                 <v-icon v-else color="yellow">
-                  star
+                  mdi-star
                 </v-icon>
               </v-list-item-action>
             </template>
@@ -60,37 +61,37 @@ export default {
     selected: [2],
     items: [
       {
-        action: "15 min",
-        headline: "Brunch this weekend?",
-        title: "Ali Connors",
+        action: '15 min',
+        headline: 'Brunch this weekend?',
+        title: 'Ali Connors',
         subtitle:
           "I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
       },
       {
-        action: "2 hr",
-        headline: "Summer BBQ",
-        title: "me, Scrott, Jennifer",
+        action: '2 hr',
+        headline: 'Summer BBQ',
+        title: 'me, Scrott, Jennifer',
         subtitle: "Wish I could come, but I'm out of town this weekend."
       },
       {
-        action: "6 hr",
-        headline: "Oui oui",
-        title: "Sandra Adams",
-        subtitle: "Do you have Paris recommendations? Have you ever been?"
+        action: '6 hr',
+        headline: 'Oui oui',
+        title: 'Sandra Adams',
+        subtitle: 'Do you have Paris recommendations? Have you ever been?'
       },
       {
-        action: "12 hr",
-        headline: "Birthday gift",
-        title: "Trevor Hansen",
+        action: '12 hr',
+        headline: 'Birthday gift',
+        title: 'Trevor Hansen',
         subtitle:
-          "Have any ideas about what we should get Heidi for her birthday?"
+          'Have any ideas about what we should get Heidi for her birthday?'
       },
       {
-        action: "18hr",
-        headline: "Recipe to try",
-        title: "Britta Holt",
+        action: '18hr',
+        headline: 'Recipe to try',
+        title: 'Britta Holt',
         subtitle:
-          "We should eat this: Grate, Squash, Corn, and tomatillo Tacos."
+          'We should eat this: Grate, Squash, Corn, and tomatillo Tacos.'
       }
     ]
   })

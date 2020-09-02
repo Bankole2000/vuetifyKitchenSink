@@ -26,11 +26,7 @@
           </v-list-item-content>
         </template>
 
-        <v-list-item
-          v-for="subItem in item.items"
-          :key="subItem.title"
-          @click=""
-        >
+        <v-list-item v-for="subItem in item.items" :key="subItem.title">
           <v-list-item-content>
             <v-list-item-title v-text="subItem.title"></v-list-item-title>
           </v-list-item-content>
@@ -46,44 +42,44 @@ export default {
     return {
       items: [
         {
-          action: "local_activity",
-          title: "Attractions",
-          items: [{ title: "List Item" }]
+          action: 'mdi-ticket',
+          title: 'Attractions',
+          items: [{ title: 'List Item' }]
         },
         {
-          action: "restaurant",
-          title: "Dining",
+          action: 'mdi-silverware',
+          title: 'Dining',
           active: true,
           items: [
-            { title: "Breakfast & brunch" },
-            { title: "New American" },
-            { title: "Sushi" }
+            { title: 'Breakfast & brunch' },
+            { title: 'New American' },
+            { title: 'Sushi' }
           ]
         },
         {
-          action: "school",
-          title: "Education",
-          items: [{ title: "List Item" }]
+          action: 'mdi-school',
+          title: 'Education',
+          items: [{ title: 'List Item' }]
         },
         {
-          action: "directions_run",
-          title: "Family",
-          items: [{ title: "List Item" }]
+          action: 'mdi-directions',
+          title: 'Family',
+          items: [{ title: 'List Item' }]
         },
         {
-          action: "healing",
-          title: "Health",
-          items: [{ title: "List Item" }]
+          action: 'mdi-medical-bag',
+          title: 'Health',
+          items: [{ title: 'List Item' }]
         },
         {
-          action: "content_cut",
-          title: "Office",
-          items: [{ title: "List Item" }]
+          action: 'mdi-content-cut',
+          title: 'Office',
+          items: [{ title: 'List Item' }]
         },
         {
-          action: "local_offer",
-          title: "Promotions",
-          items: [{ title: "List Item" }]
+          action: 'mdi-tag',
+          title: 'Promotions',
+          items: [{ title: 'List Item' }]
         }
       ]
     };

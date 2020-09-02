@@ -8,7 +8,7 @@
       </template>
 
       <v-list>
-        <v-list-item v-for="(item, i) in items" :key="i" @click="">
+        <v-list-item v-for="(item, i) in items" :key="i">
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -28,7 +28,7 @@
       </template>
 
       <v-list>
-        <v-list-item v-for="(item, i) in items" :key="i" @click="">
+        <v-list-item v-for="(item, i) in items" :key="i">
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -41,7 +41,7 @@
         </v-btn>
       </template>
       <v-list>
-        <v-list-item v-for="(item, i) in items" :key="i" @click="">
+        <v-list-item v-for="(item, i) in items" :key="i">
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -53,10 +53,10 @@
 export default {
   data: () => ({
     items: [
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me 2" }
+      { title: 'Click Me' },
+      { title: 'Click Me' },
+      { title: 'Click Me' },
+      { title: 'Click Me 2' }
     ]
   })
 };

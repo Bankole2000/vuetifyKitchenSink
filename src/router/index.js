@@ -16,6 +16,9 @@ import Avatars from '../components/Elements/Avatars/All.vue';
 import Badges from '../components/Elements/Badges/All.vue';
 import Banners from '../components/Elements/Banners/All.vue';
 import BottomNav from '../components/Elements/BottomNav/All.vue';
+import BottomSheets from '../components/Elements/BottomSheets/All.vue';
+import BreadCrumbs from '../components/Elements/BreadCrumbs/All.vue';
+import Buttons from '../components/Elements/Buttons/All.vue';
 import VirtualScrollers from '../components/Elements/VirtualScrollers/All.vue';
 import Treeview from '../components/Elements/Treeview/All.vue';
 import ToolTips from '../components/Elements/Tooltips/All.vue';
@@ -43,6 +46,8 @@ import Carousels from '../components/Elements/Carousels/All.vue';
 import Cards from '../components/Elements/Cards/All.vue';
 import OverflowButtons from '../components/Elements/OverflowButtons/All.vue';
 import NavDrawers from '../components/Elements/NavDrawers/All.vue';
+import Menus from '../components/Elements/Menus/All.vue';
+import Lists from '../components/Elements/Lists/All.vue';
 
 Vue.use(VueRouter);
 
@@ -191,19 +196,19 @@ const routes = [
     component: BottomNav
   },
   {
-    path: '/elements/bottomSheets',
+    path: '/elements/bottomsheets',
     name: 'BottomSheets',
-    component: Home
+    component: BottomSheets
   },
   {
     path: '/elements/breadcrumbs',
     name: 'BreadCrumbs',
-    component: Home
+    component: BreadCrumbs
   },
   {
     path: '/elements/buttons',
     name: 'Buttons',
-    component: Home
+    component: Buttons
   },
   {
     path: '/elements/calendars',
@@ -348,12 +353,12 @@ const routes = [
   {
     path: '/elements/lists',
     name: 'Lists',
-    component: Home
+    component: Lists
   },
   {
     path: '/elements/menus',
     name: 'Menus',
-    component: Home
+    component: Menus
   },
   {
     path: '/elements/navdrawers',

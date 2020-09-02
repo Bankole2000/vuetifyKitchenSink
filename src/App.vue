@@ -172,6 +172,27 @@ export default {
           isUpdate: false
         },
         {
+          route: '/elements/bottomsheets',
+          name: 'Bottom Sheets',
+          icon: 'mdi-cards-variant',
+          group: 'Elements',
+          isUpdate: false
+        },
+        {
+          route: '/elements/breadcrumbs',
+          name: 'Bread Crumbs',
+          icon: 'mdi-dots-horizontal',
+          group: 'Elements',
+          isUpdate: false
+        },
+        {
+          route: '/elements/buttons',
+          name: 'Buttons',
+          icon: 'mdi-caps-lock',
+          group: 'Elements',
+          isUpdate: false
+        },
+        {
           route: '/elements/cards',
           name: 'Cards',
           icon: 'mdi-cards-playing-outline',
@@ -186,9 +207,23 @@ export default {
           isUpdate: true
         },
         {
+          route: '/elements/lists',
+          name: 'Lists',
+          icon: 'mdi-format-list-bulleted-square',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/menus',
+          name: 'Menus',
+          icon: 'mdi-menu',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
           route: '/elements/navdrawers',
           name: 'Nav Drawers',
-          icon: 'mdi-menu',
+          icon: 'mdi-menu-open',
           group: 'Elements',
           isUpdate: true
         },

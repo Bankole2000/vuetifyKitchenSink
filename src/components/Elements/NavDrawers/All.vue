@@ -1179,9 +1179,9 @@ export default {
   data() {
     return {
       items: [
-        { title: "Dashboard", icon: "dashboard" },
-        { title: "Account", icon: "account_box" },
-        { title: "Admin", icon: "gavel" }
+        { title: 'Dashboard', icon: 'mdi-view-dashboard' },
+        { title: 'Account', icon: 'mdi-account' },
+        { title: 'Admin', icon: 'mdi-gavel' }
       ]
     };
   }
@@ -1353,13 +1353,11 @@ export default {
 export default {
   data() {
     return {
-      drawer: true,
+      drawer: null,
       items: [
-        { title: "Home", icon: "mdi-home-city" },
-        { title: "My Account", icon: "mdi-account" },
-        { title: "Users", icon: "mdi-account-group-outline" }
-      ],
-      mini: true
+        { title: 'Home', icon: 'mdi-view-dashboard' },
+        { title: 'About', icon: 'mdi-forum' }
+      ]
     };
   }
 };
@@ -1394,14 +1392,13 @@ export default {
   data() {
     return {
       items: [
-        { title: "Home", icon: "dashboard" },
-        { title: "About", icon: "question_answer" }
+        { title: 'Home', icon: 'mdi-view-dashboard' },
+        { title: 'About', icon: 'mdi-forum' }
       ]
     };
   }
 };
-</scrpt>
-`,
+</scrpt>`,
         window: 0,
         showCode: false
       },

@@ -9,7 +9,7 @@
       </template>
 
       <v-list>
-        <v-list-item v-for="(item, index) in items" :key="index" @click="">
+        <v-list-item v-for="(item, index) in items" :key="index">
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -21,10 +21,10 @@
 export default {
   data: () => ({
     items: [
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me 2" }
+      { title: 'Click Me' },
+      { title: 'Click Me' },
+      { title: 'Click Me' },
+      { title: 'Click Me 2' }
     ],
     offset: true
   })

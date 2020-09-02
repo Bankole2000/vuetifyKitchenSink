@@ -9,7 +9,7 @@
         <v-list-item-title>Home</v-list-item-title>
       </v-list-item>
 
-      <v-list-group prepend-icon="account_circle" value="true">
+      <v-list-group prepend-icon="mdi-account-circle" value="true">
         <template v-slot:activator>
           <v-list-item-title>Users</v-list-item-title>
         </template>
@@ -35,7 +35,7 @@
               <v-list-item-title>Actions</v-list-item-title>
             </v-list-item-content>
           </template>
-          <v-list-item v-for="(crud, i) in cruds" :key="i" @click="">
+          <v-list-item v-for="(crud, i) in cruds" :key="i">
             <v-list-item-title v-text="crud[0]"></v-list-item-title>
             <v-list-item-action>
               <v-icon v-text="crud[1]"></v-icon>
@@ -51,14 +51,14 @@
 export default {
   data: () => ({
     admins: [
-      ["Management", "people_outline"],
-      ["Settings", "settings"]
+      ['Management', 'mdi-account-multiple-outline'],
+      ['Settings', 'mdi-cog']
     ],
     cruds: [
-      ["Create", "add"],
-      ["Read", "insert_drive_file"],
-      ["Update", "update"],
-      ["Delete", "delete"]
+      ['Create', 'mdi-plus'],
+      ['Read', 'mdi-file'],
+      ['Update', 'mdi-update'],
+      ['Delete', 'mdi-delete']
     ]
   })
 };
