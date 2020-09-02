@@ -221,6 +221,27 @@ export default {
           isUpdate: true
         },
         {
+          route: '/elements/circularprogress',
+          name: 'Circular',
+          icon: 'mdi-cached',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/colorpickers',
+          name: 'Color Picker',
+          icon: 'mdi-palette',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/combobox',
+          name: 'Combo Box',
+          icon: 'mdi-package',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
           route: '/elements/dialogs',
           name: 'Dialogs / Modals',
           icon: 'mdi-picture-in-picture-top-right',

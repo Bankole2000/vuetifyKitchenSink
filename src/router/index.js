@@ -23,6 +23,10 @@ import Calendars from '../components/Elements/Calendars/All.vue';
 import Carousels from '../components/Elements/Carousels/All.vue';
 import Cards from '../components/Elements/Cards/All.vue';
 import Chips from '../components/Elements/Chips/All.vue';
+import Circular from '../components/Elements/CircularProgress/All.vue';
+import ColorPickers from '../components/Elements/ColorPickers/All.vue';
+import Combobox from '../components/Elements/Combobox/All.vue';
+import DatePickers from '../components/Elements/DatePickers/All.vue';
 import Dialogs from '../components/Elements/Dialogs/All.vue';
 import VirtualScrollers from '../components/Elements/VirtualScrollers/All.vue';
 import Treeview from '../components/Elements/Treeview/All.vue';
@@ -236,22 +240,22 @@ const routes = [
   {
     path: '/elements/circularprogress',
     name: 'CircularProgress',
-    component: Home
+    component: Circular
   },
   {
     path: '/elements/colorpickers',
     name: 'ColorPickers',
-    component: Home
+    component: ColorPickers
   },
   {
     path: '/elements/combobox',
     name: 'Combobox',
-    component: Home
+    component: Combobox
   },
   {
     path: '/elements/datepickers',
     name: 'DatePickers',
-    component: Home
+    component: DatePickers
   },
   {
     path: '/elements/dialogs',

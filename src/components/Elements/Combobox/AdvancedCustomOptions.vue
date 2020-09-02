@@ -32,7 +32,7 @@
           <span class="pr-2">
             {{ item.text }}
           </span>
-          <v-icon small @click="parent.selectItem(item)">close</v-icon>
+          <v-icon small @click="parent.selectItem(item)">mdi-close</v-icon>
         </v-chip>
       </template>
       <template v-slot:item="{ index, item }">
@@ -52,7 +52,7 @@
         <v-spacer></v-spacer>
         <v-list-item-action @click.stop>
           <v-btn icon @click.stop.prevent="edit(index, item)">
-            <v-icon>{{ editing !== item ? "mdi-pencil" : "mdi-check" }}</v-icon>
+            <v-icon>{{ editing !== item ? 'mdi-pencil' : 'mdi-check' }}</v-icon>
           </v-btn>
         </v-list-item-action>
       </template>
@@ -65,26 +65,26 @@ export default {
   data: () => ({
     activator: null,
     attach: null,
-    colors: ["green", "purple", "indigo", "cyan", "teal", "orange"],
+    colors: ['green', 'purple', 'indigo', 'cyan', 'teal', 'orange'],
     editing: null,
     index: -1,
     items: [
-      { header: "Select an option or create one" },
+      { header: 'Select an option or create one' },
       {
-        text: "Foo",
-        color: "blue"
+        text: 'Foo',
+        color: 'blue'
       },
       {
-        text: "Bar",
-        color: "red"
+        text: 'Bar',
+        color: 'red'
       }
     ],
     nonce: 1,
     menu: false,
     model: [
       {
-        text: "Foo",
-        color: "blue"
+        text: 'Foo',
+        color: 'blue'
       }
     ],
     x: 0,
@@ -96,8 +96,8 @@ export default {
     model(val, prev) {
       if (val.length === prev.length) return;
 
-      this.model = val.map(v => {
-        if (typeof v === "string") {
+      this.model = val.map((v) => {
+        if (typeof v === 'string') {
           v = {
             text: v,
             color: this.colors[this.nonce - 1]
@@ -126,7 +126,7 @@ export default {
     filter(item, queryText, itemText) {
       if (item.header) return false;
 
-      const hasValue = val => (val != null ? val : "");
+      const hasValue = (val) => (val != null ? val : '');
 
       const text = hasValue(itemText);
       const query = hasValue(queryText);
