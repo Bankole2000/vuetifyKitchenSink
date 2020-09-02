@@ -262,6 +262,7 @@ const intervalsDefault = {
 };
 
 const stylings = {
+  // eslint-disable-next-line
   default(interval) {
     return undefined;
   },
@@ -273,23 +274,23 @@ const stylings = {
       interval.hour >= 17;
     const startOfHour = interval.minute === 0;
     const dark = this.dark;
-    const mid = dark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)";
+    const mid = dark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
 
     return {
       backgroundColor: inactive
         ? dark
-          ? "rgba(0,0,0,0.4)"
-          : "rgba(0,0,0,0.05)"
+          ? 'rgba(0,0,0,0.4)'
+          : 'rgba(0,0,0,0.05)'
         : undefined,
-      borderTop: startOfHour ? undefined : "1px dashed " + mid
+      borderTop: startOfHour ? undefined : '1px dashed ' + mid
     };
   },
   past(interval) {
     return {
       backgroundColor: interval.past
         ? this.dark
-          ? "rgba(0,0,0,0.4)"
-          : "rgba(0,0,0,0.05)"
+          ? 'rgba(0,0,0,0.4)'
+          : 'rgba(0,0,0,0.05)'
         : undefined
     };
   }
@@ -299,99 +300,99 @@ export default {
   data: () => ({
     dark: false,
     startMenu: false,
-    start: "2019-01-12",
+    start: '2019-01-12',
     endMenu: false,
-    end: "2019-01-27",
+    end: '2019-01-27',
     nowMenu: false,
     minWeeks: 1,
     now: null,
     events: [],
     colors: [
-      "blue",
-      "indigo",
-      "deep-purple",
-      "cyan",
-      "green",
-      "orange",
-      "grey darken-1"
+      'blue',
+      'indigo',
+      'deep-purple',
+      'cyan',
+      'green',
+      'orange',
+      'grey darken-1'
     ],
     names: [
-      "Meeting",
-      "Holiday",
-      "PTO",
-      "Travel",
-      "Event",
-      "Birthday",
-      "Conference",
-      "Party"
+      'Meeting',
+      'Holiday',
+      'PTO',
+      'Travel',
+      'Event',
+      'Birthday',
+      'Conference',
+      'Party'
     ],
-    type: "month",
+    type: 'month',
     typeOptions: [
-      { text: "Day", value: "day" },
-      { text: "4 Day", value: "4day" },
-      { text: "Week", value: "week" },
-      { text: "Month", value: "month" },
-      { text: "Custom Daily", value: "custom-daily" },
-      { text: "Custom Weekly", value: "custom-weekly" }
+      { text: 'Day', value: 'day' },
+      { text: '4 Day', value: '4day' },
+      { text: 'Week', value: 'week' },
+      { text: 'Month', value: 'month' },
+      { text: 'Custom Daily', value: 'custom-daily' },
+      { text: 'Custom Weekly', value: 'custom-weekly' }
     ],
-    mode: "stack",
+    mode: 'stack',
     modeOptions: [
-      { text: "Stack", value: "stack" },
-      { text: "Column", value: "column" }
+      { text: 'Stack', value: 'stack' },
+      { text: 'Column', value: 'column' }
     ],
     weekdays: weekdaysDefault,
     weekdaysOptions: [
-      { text: "Sunday - Saturday", value: weekdaysDefault },
-      { text: "Mon, Wed, Fri", value: [1, 3, 5] },
-      { text: "Mon - Fri", value: [1, 2, 3, 4, 5] },
-      { text: "Mon - Sun", value: [1, 2, 3, 4, 5, 6, 0] }
+      { text: 'Sunday - Saturday', value: weekdaysDefault },
+      { text: 'Mon, Wed, Fri', value: [1, 3, 5] },
+      { text: 'Mon - Fri', value: [1, 2, 3, 4, 5] },
+      { text: 'Mon - Sun', value: [1, 2, 3, 4, 5, 6, 0] }
     ],
     intervals: intervalsDefault,
     intervalsOptions: [
-      { text: "Default", value: intervalsDefault },
+      { text: 'Default', value: intervalsDefault },
       {
-        text: "Workday",
+        text: 'Workday',
         value: { first: 16, minutes: 30, count: 20, height: 48 }
       }
     ],
     maxDays: 7,
     maxDaysOptions: [
-      { text: "7 days", value: 7 },
-      { text: "5 days", value: 5 },
-      { text: "4 days", value: 4 },
-      { text: "3 days", value: 3 }
+      { text: '7 days', value: 7 },
+      { text: '5 days', value: 5 },
+      { text: '4 days', value: 4 },
+      { text: '3 days', value: 3 }
     ],
-    styleInterval: "default",
+    styleInterval: 'default',
     styleIntervalOptions: [
-      { text: "Default", value: "default" },
-      { text: "Workday", value: "workday" },
-      { text: "Past", value: "past" }
+      { text: 'Default', value: 'default' },
+      { text: 'Workday', value: 'workday' },
+      { text: 'Past', value: 'past' }
     ],
-    color: "primary",
+    color: 'primary',
     colorOptions: [
-      { text: "Primary", value: "primary" },
-      { text: "Secondary", value: "secondary" },
-      { text: "Accent", value: "accent" },
-      { text: "Red", value: "red" },
-      { text: "Pink", value: "pink" },
-      { text: "Purple", value: "purple" },
-      { text: "Deep Purple", value: "deep-purple" },
-      { text: "Indigo", value: "indigo" },
-      { text: "Blue", value: "blue" },
-      { text: "Light Blue", value: "light-blue" },
-      { text: "Cyan", value: "cyan" },
-      { text: "Teal", value: "teal" },
-      { text: "Green", value: "green" },
-      { text: "Light Green", value: "light-green" },
-      { text: "Lime", value: "lime" },
-      { text: "Yellow", value: "yellow" },
-      { text: "Amber", value: "amber" },
-      { text: "Orange", value: "orange" },
-      { text: "Deep Orange", value: "deep-orange" },
-      { text: "Brown", value: "brown" },
-      { text: "Blue Gray", value: "blue-gray" },
-      { text: "Gray", value: "gray" },
-      { text: "Black", value: "black" }
+      { text: 'Primary', value: 'primary' },
+      { text: 'Secondary', value: 'secondary' },
+      { text: 'Accent', value: 'accent' },
+      { text: 'Red', value: 'red' },
+      { text: 'Pink', value: 'pink' },
+      { text: 'Purple', value: 'purple' },
+      { text: 'Deep Purple', value: 'deep-purple' },
+      { text: 'Indigo', value: 'indigo' },
+      { text: 'Blue', value: 'blue' },
+      { text: 'Light Blue', value: 'light-blue' },
+      { text: 'Cyan', value: 'cyan' },
+      { text: 'Teal', value: 'teal' },
+      { text: 'Green', value: 'green' },
+      { text: 'Light Green', value: 'light-green' },
+      { text: 'Lime', value: 'lime' },
+      { text: 'Yellow', value: 'yellow' },
+      { text: 'Amber', value: 'amber' },
+      { text: 'Orange', value: 'orange' },
+      { text: 'Deep Orange', value: 'deep-orange' },
+      { text: 'Brown', value: 'brown' },
+      { text: 'Blue Gray', value: 'blue-gray' },
+      { text: 'Gray', value: 'gray' },
+      { text: 'Black', value: 'black' }
     ],
     shortIntervals: true,
     shortMonths: false,
@@ -405,10 +406,10 @@ export default {
       return (
         this.type in
         {
-          week: 1,
-          day: 1,
-          "4day": 1,
-          "custom-daily": 1
+          'week': 1,
+          'day': 1,
+          '4day': 1,
+          'custom-daily': 1
         }
       );
     },
@@ -416,8 +417,8 @@ export default {
       return (
         this.type in
         {
-          "custom-weekly": 1,
-          "custom-daily": 1
+          'custom-weekly': 1,
+          'custom-daily': 1
         }
       );
     }
@@ -425,7 +426,7 @@ export default {
   methods: {
     viewDay({ date }) {
       this.start = date;
-      this.type = "day";
+      this.type = 'day';
     },
     getEventColor(event) {
       return event.color;

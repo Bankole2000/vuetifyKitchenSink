@@ -19,6 +19,10 @@ import BottomNav from '../components/Elements/BottomNav/All.vue';
 import BottomSheets from '../components/Elements/BottomSheets/All.vue';
 import BreadCrumbs from '../components/Elements/BreadCrumbs/All.vue';
 import Buttons from '../components/Elements/Buttons/All.vue';
+import Calendars from '../components/Elements/Calendars/All.vue';
+import Carousels from '../components/Elements/Carousels/All.vue';
+import Cards from '../components/Elements/Cards/All.vue';
+import Chips from '../components/Elements/Chips/All.vue';
 import VirtualScrollers from '../components/Elements/VirtualScrollers/All.vue';
 import Treeview from '../components/Elements/Treeview/All.vue';
 import ToolTips from '../components/Elements/Tooltips/All.vue';
@@ -42,8 +46,6 @@ import Ratings from '../components/Elements/Ratings/All.vue';
 import Pagination from '../components/Elements/Paginations/All.vue';
 import Parallax from '../components/Elements/Parallax/All.vue';
 import Overlays from '../components/Elements/Overlays/All.vue';
-import Carousels from '../components/Elements/Carousels/All.vue';
-import Cards from '../components/Elements/Cards/All.vue';
 import OverflowButtons from '../components/Elements/OverflowButtons/All.vue';
 import NavDrawers from '../components/Elements/NavDrawers/All.vue';
 import Menus from '../components/Elements/Menus/All.vue';
@@ -213,7 +215,7 @@ const routes = [
   {
     path: '/elements/calendars',
     name: 'Calendars',
-    component: Home
+    component: Calendars
   },
   {
     path: '/elements/cards',
@@ -228,7 +230,7 @@ const routes = [
   {
     path: '/elements/chips',
     name: 'Chips',
-    component: Home
+    component: Chips
   },
   {
     path: '/elements/circularprogress',

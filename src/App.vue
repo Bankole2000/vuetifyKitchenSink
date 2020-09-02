@@ -190,7 +190,14 @@ export default {
           name: 'Buttons',
           icon: 'mdi-caps-lock',
           group: 'Elements',
-          isUpdate: false
+          isUpdate: true
+        },
+        {
+          route: '/elements/calendars',
+          name: 'Calendars',
+          icon: 'mdi-calendar',
+          group: 'Elements',
+          isUpdate: true
         },
         {
           route: '/elements/cards',
@@ -203,6 +210,13 @@ export default {
           route: '/elements/carousels',
           name: 'Carousels',
           icon: 'mdi-view-carousel',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/chips',
+          name: 'Chips',
+          icon: 'mdi-chip',
           group: 'Elements',
           isUpdate: true
         },
