@@ -23,6 +23,7 @@ import Calendars from '../components/Elements/Calendars/All.vue';
 import Carousels from '../components/Elements/Carousels/All.vue';
 import Cards from '../components/Elements/Cards/All.vue';
 import Chips from '../components/Elements/Chips/All.vue';
+import Dialogs from '../components/Elements/Dialogs/All.vue';
 import VirtualScrollers from '../components/Elements/VirtualScrollers/All.vue';
 import Treeview from '../components/Elements/Treeview/All.vue';
 import ToolTips from '../components/Elements/Tooltips/All.vue';
@@ -255,7 +256,7 @@ const routes = [
   {
     path: '/elements/dialogs',
     name: 'Dialogs',
-    component: Home
+    component: Dialogs
   },
   {
     path: '/elements/dividers',

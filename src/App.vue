@@ -221,6 +221,13 @@ export default {
           isUpdate: true
         },
         {
+          route: '/elements/dialogs',
+          name: 'Dialogs / Modals',
+          icon: 'mdi-picture-in-picture-top-right',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
           route: '/elements/lists',
           name: 'Lists',
           icon: 'mdi-format-list-bulleted-square',
