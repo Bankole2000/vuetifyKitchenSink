@@ -45,6 +45,8 @@ import Timelines from '../components/Elements/Timelines/All.vue';
 import TextFields from '../components/Elements/TextFields/All.vue';
 import TextAreas from '../components/Elements/TextAreas/All.vue';
 import Tabs from '../components/Elements/Tabs/All.vue';
+import Tables from '../components/Elements/TablesDataIterators/All.vue';
+import DataTables from '../components/Elements/TablesDataTables/All.vue';
 import SystemBars from '../components/Elements/SystemBars/All.vue';
 import Subheaders from '../components/Elements/Subheaders/All.vue';
 import Steppers from '../components/Elements/Steppers/All.vue';
@@ -458,7 +460,12 @@ const routes = [
   {
     path: '/elements/tables',
     name: 'Tables',
-    component: Home
+    component: Tables
+  },
+  {
+    path: '/elements/datatables',
+    name: 'Datatables',
+    component: DataTables
   },
   {
     path: '/elements/tabs',

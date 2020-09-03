@@ -438,12 +438,27 @@ export default {
           isUpdate: true
         },
         {
+          route: '/elements/datatables',
+          name: 'Data Tables',
+          icon: 'mdi-database',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/tables',
+          name: 'Tables',
+          icon: 'mdi-table',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
           route: '/elements/tabs',
           name: 'Tabs',
           icon: 'mdi-table-border',
           group: 'Elements',
           isUpdate: false
         },
+
         {
           route: '/elements/textareas',
           name: 'Text Areas',
