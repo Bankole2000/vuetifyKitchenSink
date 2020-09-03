@@ -1,12 +1,36 @@
 <template>
   <v-app>
     <v-navigation-drawer v-model="drawer" app light>
-      <v-list-group dense prepend-icon="mdi-all-inclusive" value="true">
+      <v-list-group prepend-icon="mdi-palette">
+        <template v-slot:activator>
+          <v-list-item-title>Styles</v-list-item-title>
+        </template>
+      </v-list-group>
+      <v-divider></v-divider>
+      <v-list-group prepend-icon="mdi-desktop-mac-dashboard">
+        <template v-slot:activator>
+          <v-list-item-title>Layouts</v-list-item-title>
+        </template>
+      </v-list-group>
+      <v-divider></v-divider>
+      <v-list-group prepend-icon="mdi-group">
+        <template v-slot:activator>
+          <v-list-item-title>Groups</v-list-item-title>
+        </template>
+      </v-list-group>
+      <v-divider></v-divider>
+      <v-list-group prepend-icon="mdi-content-save-edit-outline">
+        <template v-slot:activator>
+          <v-list-item-title>Custom Cmpnnts</v-list-item-title>
+        </template>
+      </v-list-group>
+      <v-divider></v-divider>
+      <v-list-group prepend-icon="mdi-all-inclusive" value="true">
         <template v-slot:activator>
           <v-list-item-title>All Elements</v-list-item-title>
         </template>
 
-        <v-list-item v-for="(item, i) in menu" :key="i" :to="item.route">
+        <v-list-item dense v-for="(item, i) in menu" :key="i" :to="item.route">
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -23,60 +47,6 @@
         </v-list-item>
       </v-list-group>
       <v-divider></v-divider>
-      <!-- <v-list>
-        <v-list-group prepend-icon="account_circle" value="true">
-          <template v-slot:activator>
-            <v-list-item-title>Users</v-list-item-title>
-          </template>
-
-          <v-list-group no-action sub-group value="true">
-            <template v-slot:activator>
-              <v-list-item-content>
-                <v-list-item-title>Admin</v-list-item-title>
-              </v-list-item-content>
-            </template>
-
-            <v-list-item v-for="(admin, i) in admins" :key="i" link>
-              <v-list-item-title v-text="admin[0]"></v-list-item-title>
-              <v-list-item-icon>
-                <v-icon v-text="admin[1]"></v-icon>
-              </v-list-item-icon>
-            </v-list-item>
-          </v-list-group>
-
-          <v-list-group sub-group no-action>
-            <template v-slot:activator>
-              <v-list-item-content>
-                <v-list-item-title>Actions</v-list-item-title>
-              </v-list-item-content>
-            </template>
-            <v-list-item v-for="(crud, i) in cruds" :key="i">
-              <v-list-item-title v-text="crud[0]"></v-list-item-title>
-              <v-list-item-action>
-                <v-icon v-text="crud[1]"></v-icon>
-              </v-list-item-action>
-            </v-list-item>
-          </v-list-group>
-        </v-list-group>
-      </v-list> -->
-      <!-- <v-list dense>
-        <v-list-item link to="/elements/alerts">
-          <v-list-item-action>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item link to="/elements/appbars">
-          <v-list-item-action>
-            <v-icon>mdi-email</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Contact</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list> -->
     </v-navigation-drawer>
     <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
@@ -102,6 +72,23 @@
 
       <v-spacer></v-spacer>
 
+      <v-autocomplete
+        prepend-inner-icon="mdi-magnify"
+        placeholder="Search ('/' to focus)"
+        class="my-auto mt-1"
+        ref="search"
+        id="searchInput"
+        solo
+        rounded
+        :items="searchableMenu"
+        v-model="searchTerm"
+        light
+        align-center
+        @keydown.enter="gotoResult"
+      ></v-autocomplete>
+
+      <v-spacer></v-spacer>
+
       <v-btn
         href="https://github.com/Bankole2000/vuetifyKitchenSink"
         target="_blank"
@@ -122,7 +109,17 @@
 </template>
 
 <script>
+import menuItems from './menu.json';
+
 // import HelloWorld from './components/HelloWorld';
+
+document.addEventListener('keydown', (e) => {
+  if (e.key == '/') {
+    e.preventDefault();
+    console.log(menuItems);
+    document.querySelector('#searchInput').focus();
+  }
+});
 
 export default {
   name: 'App',
@@ -135,6 +132,7 @@ export default {
     //
     return {
       drawer: true,
+      searchTerm: '',
       menu: [
         {
           route: '/elements/alerts',
@@ -312,9 +310,23 @@ export default {
           isUpdate: true
         },
         {
+          route: '/elements/inputs',
+          name: 'Inputs',
+          icon: 'mdi-import',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
           route: '/elements/lists',
           name: 'Lists',
           icon: 'mdi-format-list-bulleted-square',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/linearprogress',
+          name: 'Linear',
+          icon: 'mdi-minus',
           group: 'Elements',
           isUpdate: true
         },
@@ -527,6 +539,33 @@ export default {
         ['Delete', 'delete']
       ]
     };
+  },
+  created() {
+    console.log(this.$route);
+  },
+  computed: {
+    searchableMenu() {
+      return this.menu.map((menu) => menu.name);
+    }
+  },
+  methods: {
+    focusMethod() {
+      console.log('focus');
+    },
+    gotoResult() {
+      console.log(this.$refs.search.value);
+      let menuItem;
+      if (this.searchTerm !== 'undefined' && this.searchTerm !== null) {
+        menuItem = menuItems.find(
+          (menuItem) => menuItem.name === this.searchTerm.trim()
+        );
+      }
+      if (menuItem && this.searchTerm) {
+        this.$route.path !== menuItem.route
+          ? this.$router.push(menuItem.route)
+          : false;
+      }
+    }
   }
 };
 </script>

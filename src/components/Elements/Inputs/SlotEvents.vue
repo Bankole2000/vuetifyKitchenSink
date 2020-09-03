@@ -4,8 +4,8 @@
       <v-col cols="12">
         <v-input
           :messages="['Messages']"
-          append-icon="close"
-          prepend-icon="phone"
+          append-icon="mdi-close"
+          prepend-icon="mdi-phone"
           @click:append="appendIconCallback"
           @click:prepend="prependIconCallback"
         >
@@ -20,15 +20,15 @@
 export default {
   data() {
     return {
-      text: ""
+      text: ''
     };
   },
   methods: {
     appendIconCallback() {
-      alert("click:append");
+      alert('click:append');
     },
     prependIconCallback() {
-      alert("click:prepend");
+      alert('click:prepend');
     }
   }
 };

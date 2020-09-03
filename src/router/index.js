@@ -36,6 +36,7 @@ import Footers from '../components/Elements/Footer/All.vue';
 import Forms from '../components/Elements/Forms/All.vue';
 import Grids from '../components/Elements/Grids/All.vue';
 import Hover from '../components/Elements/Hover/All.vue';
+import Inputs from '../components/Elements/Inputs/All.vue';
 import VirtualScrollers from '../components/Elements/VirtualScrollers/All.vue';
 import Treeview from '../components/Elements/Treeview/All.vue';
 import ToolTips from '../components/Elements/Tooltips/All.vue';
@@ -65,6 +66,7 @@ import OverflowButtons from '../components/Elements/OverflowButtons/All.vue';
 import NavDrawers from '../components/Elements/NavDrawers/All.vue';
 import Menus from '../components/Elements/Menus/All.vue';
 import Lists from '../components/Elements/Lists/All.vue';
+import Linear from '../components/Elements/LinearProgress/All.vue';
 
 Vue.use(VueRouter);
 
@@ -355,7 +357,7 @@ const routes = [
   {
     path: '/elements/inputs',
     name: 'Inputs',
-    component: Home
+    component: Inputs
   },
   {
     path: '/elements/lazy',
@@ -363,9 +365,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/elements/linearProgress',
+    path: '/elements/linearprogress',
     name: 'LinearProgress',
-    component: Home
+    component: Linear
   },
   {
     path: '/elements/lists',

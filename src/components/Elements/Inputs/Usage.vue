@@ -4,8 +4,8 @@
       <v-col cols="12">
         <v-input
           :messages="['Messages']"
-          append-icon="close"
-          prepend-icon="phone"
+          append-icon="mdi-close"
+          prepend-icon="mdi-phone"
         >
           Default Slot
         </v-input>
@@ -18,7 +18,7 @@
 export default {
   data() {
     return {
-      text: ""
+      text: ''
     };
   },
   methods: {

@@ -53,8 +53,8 @@
       :error-count="errorCount"
       hint="I am hint"
       :persistent-hint="persistentHint"
-      append-icon="close"
-      prepend-icon="phone"
+      append-icon="mdi-close"
+      prepend-icon="mdi-phone"
       @click:append="appendIconCallback"
       @click:prepend="prependIconCallback"
     >
@@ -73,25 +73,25 @@ export default {
       messages: false,
       persistentHint: true,
       success: false,
-      text: ""
+      text: ''
     };
   },
   computed: {
     successMsg() {
-      return this.success ? ["Done"] : [];
+      return this.success ? ['Done'] : [];
     },
     errorMsg() {
       return this.error
-        ? ["Error", "Another one", "One more", "All the errors"]
+        ? ['Error', 'Another one', 'One more', 'All the errors']
         : [];
     }
   },
   methods: {
     appendIconCallback() {
-      alert("click:append");
+      alert('click:append');
     },
     prependIconCallback() {
-      alert("click:prepend");
+      alert('click:prepend');
     }
   }
 };

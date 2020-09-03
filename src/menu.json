@@ -1,0 +1,395 @@
+[
+  {
+    "route": "/elements/alerts",
+    "name": "Alerts",
+    "icon": "mdi-alert-circle",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/appbars",
+    "name": "AppBars",
+    "icon": "mdi-application",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/autocomplete",
+    "name": "Autocomplete",
+    "icon": "mdi-more",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/badges",
+    "name": "Badges",
+    "icon": "mdi-bell-outline",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/banners",
+    "name": "Banners",
+    "icon": "mdi-book-variant",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/bottomsheets",
+    "name": "Bottom Sheets",
+    "icon": "mdi-cards-variant",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/breadcrumbs",
+    "name": "Bread Crumbs",
+    "icon": "mdi-dots-horizontal",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/buttons",
+    "name": "Buttons",
+    "icon": "mdi-caps-lock",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/calendars",
+    "name": "Calendars",
+    "icon": "mdi-calendar",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/cards",
+    "name": "Cards",
+    "icon": "mdi-cards-playing-outline",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/carousels",
+    "name": "Carousels",
+    "icon": "mdi-view-carousel",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/chips",
+    "name": "Chips",
+    "icon": "mdi-chip",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/circularprogress",
+    "name": "Circular",
+    "icon": "mdi-cached",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/colorpickers",
+    "name": "Color Picker",
+    "icon": "mdi-palette",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/combobox",
+    "name": "Combo Box",
+    "icon": "mdi-package",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/datepickers",
+    "name": "Date Pickers",
+    "icon": "mdi-calendar-range",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/dialogs",
+    "name": "Dialogs / Modals",
+    "icon": "mdi-picture-in-picture-top-right",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/dividers",
+    "name": "Dividers",
+    "icon": "mdi-division",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/expansionpanels",
+    "name": "Expansion Panels",
+    "icon": "mdi-unfold-more-horizontal",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/fabbuttons",
+    "name": "FAB Buttons ",
+    "icon": "mdi-plus-circle",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/fileinputs",
+    "name": "File Inputs",
+    "icon": "mdi-file",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/footers",
+    "name": "Footers",
+    "icon": "mdi-page-layout-footer",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/forms",
+    "name": "Forms",
+    "icon": "mdi-format-list-checkbox",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/grids",
+    "name": "Grids",
+    "icon": "mdi-grid",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/hover",
+    "name": "Hover",
+    "icon": "mdi-mouse",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/inputs",
+    "name": "Inputs",
+    "icon": "mdi-import",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/lists",
+    "name": "Lists",
+    "icon": "mdi-format-list-bulleted-square",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/linearprogress",
+    "name": "Linear",
+    "icon": "mdi-minus",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/menus",
+    "name": "Menus",
+    "icon": "mdi-menu",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/navdrawers",
+    "name": "Nav Drawers",
+    "icon": "mdi-menu-open",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/overflowbuttons",
+    "name": "Overflow Buttons",
+    "icon": "mdi-chevron-left-box-outline",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/overlays",
+    "name": "Overlays",
+    "icon": "mdi-transition-masked",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/pagination",
+    "name": "Pagination",
+    "icon": "mdi-book-open-page-variant",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/parallax",
+    "name": "Parallax",
+    "icon": "mdi-panorama-horizontal",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/ratings",
+    "name": "Ratings",
+    "icon": "mdi-star",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/selectioncontrols",
+    "name": "Selection Controls",
+    "icon": "mdi-checkbox-marked",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/selects",
+    "name": "Selects",
+    "icon": "mdi-chevron-down-circle-outline",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/sheets",
+    "name": "Sheets",
+    "icon": "mdi-note",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/skeletonloaders",
+    "name": "Skeleton Loaders",
+    "icon": "mdi-desktop-mac-dashboard",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/sliders",
+    "name": "Sliders",
+    "icon": "mdi-signal-distance-variant",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/snackbars",
+    "name": "Snackbars",
+    "icon": "mdi-chart-timeline",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/sparklines",
+    "name": "Sparklines",
+    "icon": "mdi-chart-bell-curve",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/steppers",
+    "name": "Steppers",
+    "icon": "mdi-fast-forward",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/subheaders",
+    "name": "SubHeaders",
+    "icon": "mdi-format-size",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/systembars",
+    "name": "System Bars",
+    "icon": "mdi-desktop-classic",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/datatables",
+    "name": "Data Tables",
+    "icon": "mdi-database",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/tables",
+    "name": "Tables",
+    "icon": "mdi-table",
+    "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/elements/tabs",
+    "name": "Tabs",
+    "icon": "mdi-table-border",
+    "group": "Elements",
+    "isUpdate": false
+  },
+
+  {
+    "route": "/elements/textareas",
+    "name": "Text Areas",
+    "icon": "mdi-checkbook",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/textfields",
+    "name": "Text Fields",
+    "icon": "mdi-cursor-text",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/timelines",
+    "name": "Time lines",
+    "icon": "mdi-timeline-text",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/timepickers",
+    "name": "Time Pickers",
+    "icon": "mdi-clock",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/toolbars",
+    "name": "Toolbars",
+    "icon": "mdi-cellphone-text",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/tooltips",
+    "name": "Tooltips",
+    "icon": "mdi-tooltip",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/treeview",
+    "name": "Tree View",
+    "icon": "mdi-file-tree",
+    "group": "Elements",
+    "isUpdate": false
+  },
+  {
+    "route": "/elements/virtualscrollers",
+    "name": "Virtual Scrollers",
+    "icon": "mdi-arrow-expand-vertical",
+    "group": "Elements",
+    "isUpdate": false
+  }
+]
