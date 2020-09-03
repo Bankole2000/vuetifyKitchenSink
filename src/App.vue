@@ -1,10 +1,30 @@
 <template>
   <v-app>
     <v-navigation-drawer v-model="drawer" app light>
-      <v-list-group prepend-icon="mdi-palette">
+      <v-list-group prepend-icon="mdi-glasses">
         <template v-slot:activator>
           <v-list-item-title>Styles</v-list-item-title>
         </template>
+        <v-list-item
+          dense
+          v-for="(item, i) in styles"
+          :key="i"
+          :to="item.route"
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>{{ item.name }}</v-list-item-title>
+          <div class="text-center">
+            <v-chip
+              v-if="item.isUpdate"
+              class="orange white--text ma-2"
+              x-small
+            >
+              New
+            </v-chip>
+          </div>
+        </v-list-item>
       </v-list-group>
       <v-divider></v-divider>
       <v-list-group prepend-icon="mdi-desktop-mac-dashboard">
@@ -83,8 +103,10 @@
         :items="searchableMenu"
         v-model="searchTerm"
         light
+        hint="Press Enter key to Navigate to Result page"
         align-center
         @keydown.enter="gotoResult"
+        @click:prepend="gotoResult"
       ></v-autocomplete>
 
       <v-spacer></v-spacer>
@@ -228,8 +250,15 @@ export default {
         {
           route: '/elements/colorpickers',
           name: 'Color Picker',
-          icon: 'mdi-palette',
+          icon: 'mdi-eyedropper',
           group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/styles/colors',
+          name: 'Colors',
+          icon: 'mdi-palette',
+          group: 'Styles',
           isUpdate: true
         },
         {
@@ -546,6 +575,9 @@ export default {
   computed: {
     searchableMenu() {
       return this.menu.map((menu) => menu.name);
+    },
+    styles() {
+      return this.menu.filter((menu) => menu.group == 'Styles');
     }
   },
   methods: {
@@ -556,13 +588,16 @@ export default {
       console.log(this.$refs.search.value);
       let menuItem;
       if (this.searchTerm !== 'undefined' && this.searchTerm !== null) {
-        menuItem = menuItems.find(
+        menuItem = this.menu.find(
           (menuItem) => menuItem.name === this.searchTerm.trim()
         );
       }
       if (menuItem && this.searchTerm) {
         this.$route.path !== menuItem.route
-          ? this.$router.push(menuItem.route)
+          ? this.$router.push(menuItem.route).then(() => {
+              this.searchTerm = '';
+              this.$refs.search.blur();
+            })
           : false;
       }
     }

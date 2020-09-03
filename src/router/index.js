@@ -67,6 +67,7 @@ import NavDrawers from '../components/Elements/NavDrawers/All.vue';
 import Menus from '../components/Elements/Menus/All.vue';
 import Lists from '../components/Elements/Lists/All.vue';
 import Linear from '../components/Elements/LinearProgress/All.vue';
+import Colors from '../components/Styles/Colors.vue';
 
 Vue.use(VueRouter);
 
@@ -93,6 +94,11 @@ const routes = [
     path: '/directives',
     name: 'Directives',
     component: Home
+  },
+  {
+    path: '/testarea',
+    name: 'Test Area',
+    component: Colors
   },
   {
     path: '/border',
@@ -258,6 +264,11 @@ const routes = [
     path: '/elements/colorpickers',
     name: 'ColorPickers',
     component: ColorPickers
+  },
+  {
+    path: '/styles/colors',
+    name: 'Colors',
+    component: Colors
   },
   {
     path: '/elements/combobox',

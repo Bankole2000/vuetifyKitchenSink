@@ -98,6 +98,13 @@
     "isUpdate": true
   },
   {
+    "route": "/styles/colors",
+    "name": "Colors",
+    "icon": "mdi-palette",
+    "group": "Styles",
+    "isUpdate": true
+  },
+  {
     "route": "/elements/combobox",
     "name": "Combo Box",
     "icon": "mdi-package",
