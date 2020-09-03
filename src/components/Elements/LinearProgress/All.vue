@@ -149,7 +149,22 @@
 // import Dismissible from './Dismissible';
 
 export default {
-  components: {},
+  components: {
+    Buffer, 
+    CustomColors, 
+    Determinate, 
+    FileLoader, 
+    Indeterminate, 
+    Playground, 
+    QueryIndeterminate, 
+    Reversed, 
+    Rounded, 
+    Slots, 
+    Stream, 
+    Striped, 
+    ToolbarLoader, 
+    Usage,
+  },
   data() {
     return {
       element: {

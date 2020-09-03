@@ -34,7 +34,7 @@
       <v-col cols="12" sm="6" offset-sm="3">
         <v-card>
           <v-list>
-            <v-list-item @click="">
+            <v-list-item>
               <v-list-item-action>
                 <v-icon>mdi-inbox-arrow-down</v-icon>
               </v-list-item-action>
@@ -43,7 +43,7 @@
               </v-list-item-content>
             </v-list-item>
 
-            <v-list-item @click="">
+            <v-list-item>
               <v-list-item-action>
                 <v-icon>mdi-inbox-arrow-down</v-icon>
               </v-list-item-action>
@@ -52,7 +52,7 @@
               </v-list-item-content>
             </v-list-item>
 
-            <v-list-item @click="">
+            <v-list-item>
               <v-list-item-action>
                 <v-icon>mdi-inbox-arrow-down</v-icon>
               </v-list-item-action>
@@ -65,7 +65,7 @@
 
             <v-subheader>Subheader</v-subheader>
 
-            <v-list-item @click="">
+            <v-list-item>
               <v-list-item-action>
                 <v-icon>mdi-folder</v-icon>
               </v-list-item-action>
@@ -76,7 +76,7 @@
 
             <v-divider :inset="inset"></v-divider>
 
-            <v-list-item @click="">
+            <v-list-item>
               <v-list-item-action>
                 <v-icon>mdi-folder</v-icon>
               </v-list-item-action>
@@ -87,7 +87,7 @@
 
             <v-divider :inset="inset"></v-divider>
 
-            <v-list-item @click="">
+            <v-list-item>
               <v-list-item-action>
                 <v-icon>mdi-folder</v-icon>
               </v-list-item-action>
@@ -125,8 +125,8 @@
 export default {
   data: () => ({
     inset: false,
-    items: ["default", "vertical"],
-    variant: "default"
+    items: ['default', 'vertical'],
+    variant: 'default'
   })
 };
 </script>

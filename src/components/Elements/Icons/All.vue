@@ -149,7 +149,14 @@
 // import Dismissible from './Dismissible';
 
 export default {
-  components: {},
+  components: {
+    Buttons, 
+    Clickable, 
+    Color, 
+    FontAwesome, 
+    MaterialDesign, 
+    MDISVG
+  },
   data() {
     return {
       element: {

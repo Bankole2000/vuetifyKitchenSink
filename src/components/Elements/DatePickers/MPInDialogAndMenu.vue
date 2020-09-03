@@ -15,7 +15,7 @@
           <v-text-field
             v-model="date"
             label="Picker in menu"
-            prepend-icon="event"
+            prepend-icon="mdi-calendar"
             readonly
             v-bind="attrs"
             v-on="on"
@@ -41,7 +41,7 @@
           <v-text-field
             v-model="date"
             label="Picker in dialog"
-            prepend-icon="event"
+            prepend-icon="mdi-calendar"
             readonly
             v-bind="attrs"
             v-on="on"

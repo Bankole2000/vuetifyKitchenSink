@@ -17,7 +17,7 @@
               label="Date"
               hint="MM/DD/YYYY format"
               persistent-hint
-              prepend-icon="event"
+              prepend-icon="mdi-calendar"
               v-bind="attrs"
               @blur="date = parseDate(dateFormatted)"
               v-on="on"
@@ -49,7 +49,7 @@
               label="Date (read only text field)"
               hint="MM/DD/YYYY format"
               persistent-hint
-              prepend-icon="event"
+              prepend-icon="mdi-calendar"
               readonly
               v-bind="attrs"
               v-on="on"
@@ -71,7 +71,7 @@
 
 <script>
 export default {
-  data: vm => ({
+  data: (vm) => ({
     date: new Date().toISOString().substr(0, 10),
     dateFormatted: vm.formatDate(new Date().toISOString().substr(0, 10)),
     menu1: false,
@@ -85,6 +85,7 @@ export default {
   },
 
   watch: {
+    // eslint-disable-next-line
     date(val) {
       this.dateFormatted = this.formatDate(this.date);
     }
@@ -94,14 +95,14 @@ export default {
     formatDate(date) {
       if (!date) return null;
 
-      const [year, month, day] = date.split("-");
+      const [year, month, day] = date.split('-');
       return `${month}/${day}/${year}`;
     },
     parseDate(date) {
       if (!date) return null;
 
-      const [month, day, year] = date.split("/");
-      return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+      const [month, day, year] = date.split('/');
+      return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
     }
   }
 };

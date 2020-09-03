@@ -149,7 +149,12 @@
 // import Dismissible from './Dismissible';
 
 export default {
-  components: {},
+  components: {
+    Expand, 
+    Filter, 
+    Slots, 
+    
+  },
   data() {
     return {
       element: {

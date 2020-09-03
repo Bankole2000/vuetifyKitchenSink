@@ -28,6 +28,14 @@ import ColorPickers from '../components/Elements/ColorPickers/All.vue';
 import Combobox from '../components/Elements/Combobox/All.vue';
 import DatePickers from '../components/Elements/DatePickers/All.vue';
 import Dialogs from '../components/Elements/Dialogs/All.vue';
+import Dividers from '../components/Elements/Dividers/All.vue';
+import ExpansionPanels from '../components/Elements/ExpansionPanels/All.vue';
+import FAB from '../components/Elements/FabButtons/All.vue';
+import FileInputs from '../components/Elements/FileInputs/All.vue';
+import Footers from '../components/Elements/Footer/All.vue';
+import Forms from '../components/Elements/Forms/All.vue';
+import Grids from '../components/Elements/Grids/All.vue';
+import Hover from '../components/Elements/Hover/All.vue';
 import VirtualScrollers from '../components/Elements/VirtualScrollers/All.vue';
 import Treeview from '../components/Elements/Treeview/All.vue';
 import ToolTips from '../components/Elements/Tooltips/All.vue';
@@ -265,37 +273,37 @@ const routes = [
   {
     path: '/elements/dividers',
     name: 'Dividers',
-    component: Home
+    component: Dividers
   },
   {
-    path: '/elements/expansionPanels',
+    path: '/elements/expansionpanels',
     name: 'ExpansionPanels',
-    component: Home
+    component: ExpansionPanels
   },
   {
-    path: '/elements/fabButtons',
+    path: '/elements/fabbuttons',
     name: 'FAB',
-    component: Home
+    component: FAB
   },
   {
-    path: '/elements/fileInputs',
-    name: 'FileInputs',
-    component: Home
+    path: '/elements/fileinputs',
+    name: 'File Inputs',
+    component: FileInputs
   },
   {
-    path: '/elements/footer',
-    name: 'Footer',
-    component: Home
+    path: '/elements/footers',
+    name: 'Footers',
+    component: Footers
   },
   {
     path: '/elements/forms',
     name: 'Forms',
-    component: Home
+    component: Forms
   },
   {
     path: '/elements/grids',
     name: 'Grids',
-    component: Home
+    component: Grids
   },
   {
     path: '/elements/groupButtons',
@@ -330,7 +338,7 @@ const routes = [
   {
     path: '/elements/hover',
     name: 'Hover',
-    component: Home
+    component: Hover
   },
   {
     path: '/elements/icons',

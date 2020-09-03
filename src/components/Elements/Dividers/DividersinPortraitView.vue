@@ -21,7 +21,7 @@
         </v-card-title>
 
         <v-list>
-          <v-list-item @click="">
+          <v-list-item>
             <v-list-item-action>
               <v-icon>mdi-phone</v-icon>
             </v-list-item-action>
@@ -36,7 +36,7 @@
 
           <v-divider inset></v-divider>
 
-          <v-list-item @click="">
+          <v-list-item>
             <v-list-item-action>
               <v-icon>mdi-phone</v-icon>
             </v-list-item-action>
@@ -52,7 +52,7 @@
 
           <v-divider inset></v-divider>
 
-          <v-list-item @click="">
+          <v-list-item>
             <v-list-item-action>
               <v-icon>mdi-email</v-icon>
             </v-list-item-action>
@@ -64,7 +64,7 @@
 
           <v-divider inset></v-divider>
 
-          <v-list-item @click="">
+          <v-list-item>
             <v-list-item-action>
               <v-icon>mdi-map-marker</v-icon>
             </v-list-item-action>

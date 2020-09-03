@@ -10,7 +10,7 @@
     </v-col>
     <v-col cols="12" sm="6" class="my-2 px-1">
       <div class="title">
-        Month news ({{ pickerDate || "change month..." }})
+        Month news ({{ pickerDate || 'change month...' }})
       </div>
       <div class="subheading">Change month to see other news</div>
       <ul class="ma-4">
@@ -27,14 +27,15 @@ export default {
     pickerDate: null,
     notes: [],
     allNotes: [
-      "President met with prime minister",
-      "New power plant opened",
-      "Rocket launch announced",
-      "Global warming discussion cancelled",
-      "Company changed its location"
+      'President met with prime minister',
+      'New power plant opened',
+      'Rocket launch announced',
+      'Global warming discussion cancelled',
+      'Company changed its location'
     ]
   }),
   watch: {
+    // eslint-disable-next-line
     pickerDate(val) {
       this.notes = [
         this.allNotes[Math.floor(Math.random() * 5)],

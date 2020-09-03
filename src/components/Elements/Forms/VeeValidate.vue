@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable-next-line -->
   <ValidationObserver ref="observer" v-slot="{ validate, reset }">
     <form>
       <ValidationProvider
@@ -36,6 +37,7 @@
           required
         ></v-select>
       </ValidationProvider>
+      <!-- eslint-disable -->
       <ValidationProvider
         v-slot="{ errors, valid }"
         rules="required"
@@ -58,29 +60,29 @@
 </template>
 
 <script>
-import { required, email, max } from "vee-validate/dist/rules";
+import { required, email, max } from 'vee-validate/dist/rules';
 import {
   extend,
   ValidationObserver,
   ValidationProvider,
   setInteractionMode
-} from "vee-validate";
+} from 'vee-validate';
 
-setInteractionMode("eager");
+setInteractionMode('eager');
 
-extend("required", {
+extend('required', {
   ...required,
-  message: "{_field_} can not be empty"
+  message: '{_field_} can not be empty'
 });
 
-extend("max", {
+extend('max', {
   ...max,
-  message: "{_field_} may not be greater than {length} characters"
+  message: '{_field_} may not be greater than {length} characters'
 });
 
-extend("email", {
+extend('email', {
   ...email,
-  message: "Email must be valid"
+  message: 'Email must be valid'
 });
 
 export default {
@@ -89,10 +91,10 @@ export default {
     ValidationObserver
   },
   data: () => ({
-    name: "",
-    email: "",
+    name: '',
+    email: '',
     select: null,
-    items: ["Item 1", "Item 2", "Item 3", "Item 4"],
+    items: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
     checkbox: null
   }),
 
@@ -101,8 +103,8 @@ export default {
       this.$refs.observer.validate();
     },
     clear() {
-      this.name = "";
-      this.email = "";
+      this.name = '';
+      this.email = '';
       this.select = null;
       this.checkbox = null;
       this.$refs.observer.reset();

@@ -20,7 +20,7 @@
             chips
             small-chips
             label="Multiple picker in menu"
-            prepend-icon="event"
+            prepend-icon="mdi-calendar"
             readonly
             v-bind="attrs"
             v-on="on"
@@ -39,7 +39,7 @@
 <script>
 export default {
   data: () => ({
-    dates: ["2018-09-15", "2018-09-20"],
+    dates: ['2018-09-15', '2018-09-20'],
     menu: false
   })
 };

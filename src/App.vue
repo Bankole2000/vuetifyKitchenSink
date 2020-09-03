@@ -242,9 +242,72 @@ export default {
           isUpdate: true
         },
         {
+          route: '/elements/datepickers',
+          name: 'Date Pickers',
+          icon: 'mdi-calendar-range',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
           route: '/elements/dialogs',
           name: 'Dialogs / Modals',
           icon: 'mdi-picture-in-picture-top-right',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/dividers',
+          name: 'Dividers',
+          icon: 'mdi-division',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/expansionpanels',
+          name: 'Expansion Panels',
+          icon: 'mdi-unfold-more-horizontal',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/fabbuttons',
+          name: 'FAB Buttons ',
+          icon: 'mdi-plus-circle',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/fileinputs',
+          name: 'File Inputs',
+          icon: 'mdi-file',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/footers',
+          name: 'Footers',
+          icon: 'mdi-page-layout-footer',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/forms',
+          name: 'Forms',
+          icon: 'mdi-format-list-checkbox',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/grids',
+          name: 'Grids',
+          icon: 'mdi-grid',
+          group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/elements/hover',
+          name: 'Hover',
+          icon: 'mdi-mouse',
           group: 'Elements',
           isUpdate: true
         },

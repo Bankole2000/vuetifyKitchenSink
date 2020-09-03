@@ -149,7 +149,14 @@
 // import Dismissible from './Dismissible';
 
 export default {
-  components: {},
+  components: {
+    ContainAndCover, 
+    FixedRatio, 
+    Gradients, 
+    Grid, 
+    Height, 
+    Placeholder,
+  },
   data() {
     return {
       element: {

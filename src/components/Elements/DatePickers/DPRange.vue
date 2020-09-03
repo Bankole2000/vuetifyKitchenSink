@@ -7,7 +7,7 @@
       <v-text-field
         v-model="dateRangeText"
         label="Date range"
-        prepend-icon="event"
+        prepend-icon="mdi-calendar"
         readonly
       ></v-text-field>
       model: {{ dates }}
@@ -18,11 +18,11 @@
 <script>
 export default {
   data: () => ({
-    dates: ["2019-09-10", "2019-09-20"]
+    dates: ['2019-09-10', '2019-09-20']
   }),
   computed: {
     dateRangeText() {
-      return this.dates.join(" ~ ");
+      return this.dates.join(' ~ ');
     }
   }
 };
