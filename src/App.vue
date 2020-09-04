@@ -53,6 +53,35 @@
         </v-list-item>
       </v-list-group>
       <v-divider></v-divider>
+      <v-list-group prepend-icon="mdi-play">
+        <template v-slot:activator>
+          <v-list-item-title>Playgrounds</v-list-item-title>
+        </template>
+        <v-list-item
+          dense
+          v-for="(item, i) in playgrounds"
+          :key="i"
+          :to="item.route"
+        >
+          <v-list-item-icon>
+            <v-icon :class="{ 'primary--text': item.hasPlayground }">{{
+              item.icon
+            }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>{{ item.name }}</v-list-item-title>
+          <div class="text-center">
+            <v-chip
+              v-if="item.isUpdate"
+              class="orange white--text ma-2"
+              x-small
+            >
+              New
+            </v-chip>
+          </div>
+        </v-list-item>
+      </v-list-group>
+
+      <v-divider></v-divider>
       <v-list-group prepend-icon="mdi-group">
         <template v-slot:activator>
           <v-list-item-title>Groups</v-list-item-title>
@@ -92,7 +121,9 @@
 
         <v-list-item dense v-for="(item, i) in menu" :key="i" :to="item.route">
           <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon :class="{ 'primary--text': item.hasPlayground }">{{
+              item.icon
+            }}</v-icon>
           </v-list-item-icon>
           <v-list-item-title>{{ item.name }}</v-list-item-title>
           <div class="text-center">
@@ -276,6 +307,7 @@ export default {
           name: 'Calendars',
           icon: 'mdi-calendar',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -304,6 +336,7 @@ export default {
           name: 'Circular',
           icon: 'mdi-cached',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -339,6 +372,7 @@ export default {
           name: 'Date Pickers',
           icon: 'mdi-calendar-range',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -353,6 +387,7 @@ export default {
           name: 'Dividers',
           icon: 'mdi-division',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -367,6 +402,7 @@ export default {
           name: 'Expansion Panels',
           icon: 'mdi-unfold-more-horizontal',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
 
@@ -375,6 +411,7 @@ export default {
           name: 'FAB Buttons ',
           icon: 'mdi-plus-circle',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -396,6 +433,7 @@ export default {
           name: 'Footers',
           icon: 'mdi-page-layout-footer',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -403,6 +441,7 @@ export default {
           name: 'Forms',
           icon: 'mdi-format-list-checkbox',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -410,6 +449,7 @@ export default {
           name: 'Grids',
           icon: 'mdi-grid',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -431,6 +471,7 @@ export default {
           name: 'Group Items',
           icon: 'mdi-format-list-bulleted-type',
           group: 'Groups',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -438,6 +479,7 @@ export default {
           name: 'Group Lists',
           icon: 'mdi-format-list-bulleted-square',
           group: 'Groups',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -445,6 +487,7 @@ export default {
           name: 'Group Slides',
           icon: 'mdi-slope-uphill',
           group: 'Groups',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -452,6 +495,7 @@ export default {
           name: 'Group Windows',
           icon: 'mdi-window-open',
           group: 'Groups',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -466,6 +510,7 @@ export default {
           name: 'Inputs',
           icon: 'mdi-import',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -473,6 +518,7 @@ export default {
           name: 'Lists',
           icon: 'mdi-format-list-bulleted-square',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -480,6 +526,7 @@ export default {
           name: 'Linear',
           icon: 'mdi-minus',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -487,13 +534,15 @@ export default {
           name: 'Menus',
           icon: 'mdi-menu',
           group: 'Elements',
-          isUpdate: true
+          hasPlayground: true,
+          isUpdate: false
         },
         {
           route: '/elements/navdrawers',
           name: 'Nav Drawers',
           icon: 'mdi-menu-open',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -501,6 +550,7 @@ export default {
           name: 'Overflow Buttons',
           icon: 'mdi-chevron-left-box-outline',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -508,6 +558,7 @@ export default {
           name: 'Overlays',
           icon: 'mdi-transition-masked',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -515,6 +566,7 @@ export default {
           name: 'Pagination',
           icon: 'mdi-book-open-page-variant',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -529,6 +581,7 @@ export default {
           name: 'Ratings',
           icon: 'mdi-star',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -536,6 +589,7 @@ export default {
           name: 'Selection Controls',
           icon: 'mdi-checkbox-marked',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -543,6 +597,7 @@ export default {
           name: 'Selects',
           icon: 'mdi-chevron-down-circle-outline',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -550,6 +605,7 @@ export default {
           name: 'Sheets',
           icon: 'mdi-note',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -557,6 +613,7 @@ export default {
           name: 'Skeleton Loaders',
           icon: 'mdi-desktop-mac-dashboard',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -564,6 +621,7 @@ export default {
           name: 'Sliders',
           icon: 'mdi-signal-distance-variant',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -571,6 +629,7 @@ export default {
           name: 'Snackbars',
           icon: 'mdi-chart-timeline',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -585,6 +644,7 @@ export default {
           name: 'Sparklines',
           icon: 'mdi-chart-bell-curve',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -592,6 +652,7 @@ export default {
           name: 'Steppers',
           icon: 'mdi-fast-forward',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -599,6 +660,7 @@ export default {
           name: 'SubHeaders',
           icon: 'mdi-format-size',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -606,6 +668,7 @@ export default {
           name: 'System Bars',
           icon: 'mdi-desktop-classic',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -620,6 +683,7 @@ export default {
           name: 'Tables',
           icon: 'mdi-table',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: true
         },
         {
@@ -627,6 +691,7 @@ export default {
           name: 'Tabs',
           icon: 'mdi-table-border',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: false
         },
 
@@ -635,6 +700,7 @@ export default {
           name: 'Text Areas',
           icon: 'mdi-checkbook',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: false
         },
         {
@@ -642,6 +708,7 @@ export default {
           name: 'Text Fields',
           icon: 'mdi-cursor-text',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: false
         },
         {
@@ -649,6 +716,7 @@ export default {
           name: 'Time lines',
           icon: 'mdi-timeline-text',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: false
         },
         {
@@ -656,6 +724,7 @@ export default {
           name: 'Time Pickers',
           icon: 'mdi-clock',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: false
         },
         {
@@ -677,6 +746,7 @@ export default {
           name: 'Tree View',
           icon: 'mdi-file-tree',
           group: 'Elements',
+          hasPlayground: true,
           isUpdate: false
         },
         {
@@ -760,6 +830,9 @@ export default {
     },
     layouts() {
       return this.menu.filter((menu) => menu.group == 'Layouts');
+    },
+    playgrounds() {
+      return this.menu.filter((menu) => menu.hasPlayground === true);
     },
     groups() {
       return this.menu.filter((menu) => menu.group == 'Groups');
