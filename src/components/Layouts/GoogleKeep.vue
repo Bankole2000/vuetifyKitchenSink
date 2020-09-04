@@ -10,7 +10,7 @@
         flat
         hide-details
         label="Search"
-        prepend-inner-icon="search"
+        prepend-inner-icon="mdi-magnify"
       ></v-text-field>
 
       <v-spacer></v-spacer>
@@ -76,20 +76,20 @@ export default {
   data: () => ({
     drawer: null,
     items: [
-      { icon: "lightbulb_outline", text: "Notes" },
-      { icon: "touch_app", text: "Reminders" },
+      { icon: 'mdi-lightbulb-on-outline', text: 'Notes' },
+      { icon: 'mdi-bell-plus', text: 'Reminders' },
       { divider: true },
-      { heading: "Labels" },
-      { icon: "add", text: "Create new label" },
+      { heading: 'Labels' },
+      { icon: 'mdi-plus', text: 'Create new label' },
       { divider: true },
-      { icon: "archive", text: "Archive" },
-      { icon: "delete", text: "Trash" },
+      { icon: 'mdi-archive', text: 'Archive' },
+      { icon: 'mdi-delete', text: 'Trash' },
       { divider: true },
-      { icon: "settings", text: "Settings" },
-      { icon: "chat_bubble", text: "Trash" },
-      { icon: "help", text: "Help" },
-      { icon: "phonelink", text: "App downloads" },
-      { icon: "keyboard", text: "Keyboard shortcuts" }
+      { icon: 'mdi-cog', text: 'Settings' },
+      { icon: 'mdi-message', text: 'Trash' },
+      { icon: 'mdi-help', text: 'Help' },
+      { icon: 'mdi-download', text: 'App downloads' },
+      { icon: 'mdi-keyboard', text: 'Keyboard shortcuts' }
     ]
   })
 };

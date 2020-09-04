@@ -686,6 +686,9 @@ export default {
   created() {
     console.log(this.$route);
   },
+  beforeUpdate() {
+    this.$vuetify.theme.dark ? (this.$vuetify.theme.dark = false) : false;
+  },
   computed: {
     searchableMenu() {
       return this.menu.map((menu) => menu.name);
