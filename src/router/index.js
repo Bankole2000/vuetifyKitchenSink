@@ -80,6 +80,8 @@ import GroupListItems from '../components/Elements/GroupListItems/All.vue';
 import GroupItems from '../components/Elements/GroupItems/All.vue';
 import GroupChips from '../components/Elements/GroupChip/All.vue';
 import GroupButtons from '../components/Elements/GroupButtons/All.vue';
+import Images from '../components/Elements/Images/All.vue';
+import Icons from '../components/Elements/Icons/All.vue';
 
 Vue.use(VueRouter);
 
@@ -351,12 +353,12 @@ const routes = [
   {
     path: '/elements/icons',
     name: 'Icons',
-    component: Home
+    component: Icons
   },
   {
     path: '/elements/images',
     name: 'Images',
-    component: Home
+    component: Images
   },
   {
     path: '/elements/inputs',

@@ -17,7 +17,7 @@
       <v-list>
         <template v-for="(item, i) in items">
           <v-divider v-if="item.divider" :key="i"></v-divider>
-          <v-list-item v-else :key="item.title" @click>
+          <v-list-item v-else :key="item.title">
             <v-list-item-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
@@ -34,14 +34,14 @@ export default {
   data: () => ({
     width: 300,
     items: [
-      { icon: "inbox", title: "Inbox" },
-      { icon: "star", title: "Starred" },
-      { icon: "send", title: "Sent mail" },
-      { icon: "drafts", title: "Drafts" },
+      { icon: 'mdi-inbox', title: 'Inbox' },
+      { icon: 'mdi-star', title: 'Starred' },
+      { icon: 'mdi-send', title: 'Sent mail' },
+      { icon: 'mdi-email-open', title: 'Drafts' },
       { divider: true },
-      { icon: "mail", title: "All mail" },
-      { icon: "delete", title: "Trash" },
-      { icon: "error", title: "Spam" }
+      { icon: 'mdi-mail', title: 'All mail' },
+      { icon: 'mdi-delete', title: 'Trash' },
+      { icon: 'mdi-alert-circle', title: 'Spam' }
     ]
   })
 };

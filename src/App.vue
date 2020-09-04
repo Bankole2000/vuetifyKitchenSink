@@ -506,11 +506,27 @@ export default {
           isUpdate: true
         },
         {
+          route: '/elements/icons',
+          name: 'Icons',
+          icon: 'mdi-information-outline',
+          group: 'Elements',
+          hasPlayground: false,
+          isUpdate: true
+        },
+        {
           route: '/elements/inputs',
           name: 'Inputs',
           icon: 'mdi-import',
           group: 'Elements',
           hasPlayground: true,
+          isUpdate: true
+        },
+        {
+          route: '/elements/images',
+          name: 'Images',
+          icon: 'mdi-image',
+          group: 'Elements',
+          hasPlayground: false,
           isUpdate: true
         },
         {
