@@ -110,7 +110,7 @@
       <v-divider></v-divider>
       <v-list-group prepend-icon="mdi-content-save-edit-outline">
         <template v-slot:activator>
-          <v-list-item-title>Custom Cmpnnts</v-list-item-title>
+          <v-list-item-title>Custom</v-list-item-title>
         </template>
       </v-list-group>
       <v-divider></v-divider>
