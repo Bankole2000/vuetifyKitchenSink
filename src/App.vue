@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-navigation-drawer v-model="drawer" app light>
-      <v-list-group prepend-icon="mdi-glasses">
+      <v-list-group id="sideNav" prepend-icon="mdi-glasses">
         <template v-slot:activator>
           <v-list-item-title>Styles</v-list-item-title>
         </template>
@@ -31,6 +31,26 @@
         <template v-slot:activator>
           <v-list-item-title>Layouts</v-list-item-title>
         </template>
+        <v-list-item
+          dense
+          v-for="(item, i) in layouts"
+          :key="i"
+          :to="item.route"
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>{{ item.name }}</v-list-item-title>
+          <div class="text-center">
+            <v-chip
+              v-if="item.isUpdate"
+              class="orange white--text ma-2"
+              x-small
+            >
+              New
+            </v-chip>
+          </div>
+        </v-list-item>
       </v-list-group>
       <v-divider></v-divider>
       <v-list-group prepend-icon="mdi-group">
@@ -68,9 +88,17 @@
       </v-list-group>
       <v-divider></v-divider>
     </v-navigation-drawer>
-    <v-app-bar app color="primary" dark>
+    <v-app-bar
+      v-if="!layoutPaths.includes($route.path)"
+      app
+      color="primary"
+      dark
+    >
       <div class="d-flex align-center">
-        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon
+          id="menuIcon"
+          @click="drawer = !drawer"
+        ></v-app-bar-nav-icon>
         <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
@@ -94,7 +122,7 @@
 
       <v-autocomplete
         prepend-inner-icon="mdi-magnify"
-        placeholder="Search ('/' to focus)"
+        placeholder="Search ('/' to focus, '\' to open menu)"
         class="my-auto mt-1"
         ref="search"
         id="searchInput"
@@ -140,6 +168,10 @@ document.addEventListener('keydown', (e) => {
     e.preventDefault();
     console.log(menuItems);
     document.querySelector('#searchInput').focus();
+  }
+  if (e.key == '\\') {
+    document.querySelector('#menuIcon').click();
+    document.querySelector('#sideNav').focus();
   }
 });
 
@@ -190,6 +222,13 @@ export default {
           icon: 'mdi-book-variant',
           group: 'Elements',
           isUpdate: false
+        },
+        {
+          route: '/styles/borderradius',
+          name: 'Border Radius',
+          icon: 'mdi-vector-radius',
+          group: 'Styles',
+          isUpdate: true
         },
         {
           route: '/elements/bottomsheets',
@@ -262,6 +301,13 @@ export default {
           isUpdate: true
         },
         {
+          route: '/styles/content',
+          name: 'Content',
+          icon: 'mdi-table-of-contents',
+          group: 'Styles',
+          isUpdate: true
+        },
+        {
           route: '/elements/combobox',
           name: 'Combo Box',
           icon: 'mdi-package',
@@ -290,12 +336,20 @@ export default {
           isUpdate: true
         },
         {
+          route: '/styles/elevation',
+          name: 'Elevation',
+          icon: 'mdi-elevator',
+          group: 'Styles',
+          isUpdate: true
+        },
+        {
           route: '/elements/expansionpanels',
           name: 'Expansion Panels',
           icon: 'mdi-unfold-more-horizontal',
           group: 'Elements',
           isUpdate: true
         },
+
         {
           route: '/elements/fabbuttons',
           name: 'FAB Buttons ',
@@ -308,6 +362,13 @@ export default {
           name: 'File Inputs',
           icon: 'mdi-file',
           group: 'Elements',
+          isUpdate: true
+        },
+        {
+          route: '/styles/flex',
+          name: 'Flex',
+          icon: 'mdi-stretch-to-page',
+          group: 'Styles',
           isUpdate: true
         },
         {
@@ -451,6 +512,13 @@ export default {
           isUpdate: true
         },
         {
+          route: '/styles/spacing',
+          name: 'Spacing',
+          icon: 'mdi-diameter-outline',
+          group: 'Styles',
+          isUpdate: true
+        },
+        {
           route: '/elements/sparklines',
           name: 'Sparklines',
           icon: 'mdi-chart-bell-curve',
@@ -550,22 +618,68 @@ export default {
           isUpdate: false
         },
         {
+          route: '/styles/typography',
+          name: 'Text - Typography',
+          icon: 'mdi-text-shadow',
+          group: 'Styles',
+          isUpdate: true
+        },
+        {
           route: '/elements/virtualscrollers',
           name: 'Virtual Scrollers',
           icon: 'mdi-arrow-expand-vertical',
           group: 'Elements',
           isUpdate: false
+        },
+        {
+          route: '/layouts/contacts',
+          name: 'Google Contacts',
+          icon: 'mdi-contacts',
+          group: 'Layouts',
+          isUpdate: false
+        },
+        {
+          route: '/layouts/keep',
+          name: 'GoogleKeep',
+          icon: 'mdi-file-plus',
+          group: 'Layouts',
+          isUpdate: false
+        },
+        {
+          route: '/layouts/login',
+          name: 'Login',
+          icon: 'mdi-login',
+          group: 'Layouts',
+          isUpdate: false
+        },
+        {
+          route: '/layouts/simple',
+          name: 'Basic Layout',
+          icon: 'mdi-page-layout-header-footer',
+          group: 'Layouts',
+          isUpdate: false
+        },
+        {
+          route: '/layouts/youtube',
+          name: 'Youtube',
+          icon: 'mdi-youtube',
+          group: 'Layouts',
+          isUpdate: false
+        },
+        {
+          route: '/layouts/sidebars',
+          name: 'Sidebars',
+          icon: 'mdi-shuffle-disabled',
+          group: 'Layouts',
+          isUpdate: false
+        },
+        {
+          route: '/layouts/layoutplayground',
+          name: 'Layouts Playground',
+          icon: 'mdi-file-document-edit',
+          group: 'Layouts',
+          isUpdate: false
         }
-      ],
-      admins: [
-        ['Management', 'people_outline'],
-        ['Settings', 'settings']
-      ],
-      cruds: [
-        ['Create', 'add'],
-        ['Read', 'insert_drive_file'],
-        ['Update', 'update'],
-        ['Delete', 'delete']
       ]
     };
   },
@@ -578,6 +692,12 @@ export default {
     },
     styles() {
       return this.menu.filter((menu) => menu.group == 'Styles');
+    },
+    layouts() {
+      return this.menu.filter((menu) => menu.group == 'Layouts');
+    },
+    layoutPaths() {
+      return this.layouts.map((menu) => menu.route);
     }
   },
   methods: {

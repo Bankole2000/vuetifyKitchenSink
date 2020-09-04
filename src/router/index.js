@@ -1,14 +1,14 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import Youtube from '../views/Youtube.vue';
-import GoogleKeep from '../views/GoogleKeep.vue';
-import MainApp from '../views/MainApp.vue';
-import GoogleContacts from '../views/GoogleContacts.vue';
-import LoginForm from '../views/LoginForm.vue';
+import Youtube from '../components/Layouts/Youtube.vue';
+import GoogleKeep from '../components/Layouts/GoogleKeep.vue';
+import MainApp from '../components/Layouts/MainApp.vue';
+import GoogleContacts from '../components/Layouts/GoogleContacts.vue';
+import LoginForm from '../components/Layouts/LoginForm.vue';
 import Elements from '../views/Elements.vue';
-import DoubleSideBar from '../views/DoubleSideBar.vue';
-import SimpleApp from '../views/SimpleApp.vue';
+import DoubleSideBar from '../components/Layouts/DoubleSideBar.vue';
+import SimpleApp from '../components/Layouts/SimpleApp.vue';
 import Alerts from '../components/Elements/Alerts/All.vue';
 import AppBars from '../components/Elements/AppBars/All.vue';
 import Autocomplete from '../components/Elements/Autocomplete/All.vue';
@@ -68,6 +68,12 @@ import Menus from '../components/Elements/Menus/All.vue';
 import Lists from '../components/Elements/Lists/All.vue';
 import Linear from '../components/Elements/LinearProgress/All.vue';
 import Colors from '../components/Styles/Colors.vue';
+import BorderRadius from '../components/Styles/BorderRadius/All.vue';
+import Content from '../components/Styles/Content/All.vue';
+import Elevation from '../components/Styles/Elevation/All.vue';
+import Flex from '../components/Styles/Flex/All.vue';
+import Spacing from '../components/Styles/Spacing/All.vue';
+import Typography from '../components/Styles/TextAndTypography/All.vue';
 
 Vue.use(VueRouter);
 
@@ -100,46 +106,7 @@ const routes = [
     name: 'Test Area',
     component: Colors
   },
-  {
-    path: '/border',
-    name: 'Border',
-    component: Home
-  },
-  {
-    path: '/content',
-    name: 'Content',
-    component: Home
-  },
-  {
-    path: '/elevation',
-    name: 'Elevation',
-    component: Home
-  },
-  {
-    path: '/flex',
-    name: 'Flex',
-    component: Home
-  },
-  {
-    path: '/float',
-    name: 'Float',
-    component: Home
-  },
-  {
-    path: '/motion',
-    name: 'Motion',
-    component: Home
-  },
-  {
-    path: '/spacing',
-    name: 'Spacing',
-    component: Home
-  },
-  {
-    path: '/text',
-    name: 'Text',
-    component: Home
-  },
+
   {
     path: '/programmaticScrolling',
     name: 'Scrolling',
@@ -153,37 +120,37 @@ const routes = [
   {
     path: '/layouts/contacts',
     name: 'Contacts',
-    component: Home
+    component: GoogleContacts
   },
   {
     path: '/layouts/keep',
     name: 'GoogleKeep',
-    component: Home
+    component: GoogleKeep
   },
   {
     path: '/layouts/login',
     name: 'Login',
-    component: Home
+    component: LoginForm
   },
   {
     path: '/layouts/simple',
     name: 'Simple',
-    component: Home
+    component: SimpleApp
   },
   {
     path: '/layouts/youtube',
     name: 'Youtube',
-    component: Home
+    component: Youtube
   },
   {
     path: '/layouts/sidebars',
     name: 'Sidebars',
-    component: Home
+    component: DoubleSideBar
   },
   {
-    path: '/sandboxes',
-    name: 'Sandbox',
-    component: Home
+    path: '/layouts/layoutplayground',
+    name: 'Layouts Playground',
+    component: MainApp
   },
   {
     path: '/elements/alerts',
@@ -224,6 +191,11 @@ const routes = [
     path: '/elements/bottomsheets',
     name: 'BottomSheets',
     component: BottomSheets
+  },
+  {
+    path: '/styles/borderradius',
+    name: 'Border Radius',
+    component: BorderRadius
   },
   {
     path: '/elements/breadcrumbs',
@@ -271,6 +243,11 @@ const routes = [
     component: Colors
   },
   {
+    path: '/styles/content',
+    name: 'Content',
+    component: Content
+  },
+  {
     path: '/elements/combobox',
     name: 'Combobox',
     component: Combobox
@@ -291,6 +268,11 @@ const routes = [
     component: Dividers
   },
   {
+    path: '/styles/elevation',
+    name: 'Elevation',
+    component: Elevation
+  },
+  {
     path: '/elements/expansionpanels',
     name: 'ExpansionPanels',
     component: ExpansionPanels
@@ -304,6 +286,11 @@ const routes = [
     path: '/elements/fileinputs',
     name: 'File Inputs',
     component: FileInputs
+  },
+  {
+    path: '/styles/flex',
+    name: 'Flex',
+    component: Flex
   },
   {
     path: '/elements/footers',
@@ -451,6 +438,11 @@ const routes = [
     component: Snackbars
   },
   {
+    path: '/styles/spacing',
+    name: 'Spacing',
+    component: Spacing
+  },
+  {
     path: '/elements/sparklines',
     name: 'Sparklines',
     component: Sparklines
@@ -519,6 +511,11 @@ const routes = [
     path: '/elements/treeview',
     name: 'Treeview',
     component: Treeview
+  },
+  {
+    path: '/styles/typography',
+    name: 'Typography',
+    component: Typography
   },
   {
     path: '/elements/virtualscrollers',

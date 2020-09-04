@@ -42,6 +42,13 @@
     "isUpdate": false
   },
   {
+    "route": "/styles/borderradius",
+    "name": "Border Radius",
+    "icon": "mdi-vector-radius",
+    "group": "Styles",
+    "isUpdate": true
+  },
+  {
     "route": "/elements/breadcrumbs",
     "name": "Bread Crumbs",
     "icon": "mdi-dots-horizontal",
@@ -112,6 +119,13 @@
     "isUpdate": true
   },
   {
+    "route": "/styles/content",
+    "name": "Content",
+    "icon": "mdi-table-of-contents",
+    "group": "Styles",
+    "isUpdate": true
+  },
+  {
     "route": "/elements/datepickers",
     "name": "Date Pickers",
     "icon": "mdi-calendar-range",
@@ -133,6 +147,13 @@
     "isUpdate": true
   },
   {
+    "route": "/styles/elevation",
+    "name": "Elevation",
+    "icon": "mdi-elevator",
+    "group": "Styles",
+    "isUpdate": true
+  },
+  {
     "route": "/elements/expansionpanels",
     "name": "Expansion Panels",
     "icon": "mdi-unfold-more-horizontal",
@@ -151,6 +172,13 @@
     "name": "File Inputs",
     "icon": "mdi-file",
     "group": "Elements",
+    "isUpdate": true
+  },
+  {
+    "route": "/styles/flex",
+    "name": "Flex",
+    "icon": "mdi-stretch-to-page",
+    "group": "Styles",
     "isUpdate": true
   },
   {
@@ -294,6 +322,13 @@
     "isUpdate": true
   },
   {
+    "route": "/styles/spacing",
+    "name": "Spacing",
+    "icon": "mdi-diameter-outline",
+    "group": "Styles",
+    "isUpdate": true
+  },
+  {
     "route": "/elements/sparklines",
     "name": "Sparklines",
     "icon": "mdi-chart-bell-curve",
@@ -342,7 +377,6 @@
     "group": "Elements",
     "isUpdate": false
   },
-
   {
     "route": "/elements/textareas",
     "name": "Text Areas",
@@ -391,6 +425,13 @@
     "icon": "mdi-file-tree",
     "group": "Elements",
     "isUpdate": false
+  },
+  {
+    "route": "/styles/typography",
+    "name": "Text - Typography",
+    "icon": "mdi-text-shadow",
+    "group": "Styles",
+    "isUpdate": true
   },
   {
     "route": "/elements/virtualscrollers",
