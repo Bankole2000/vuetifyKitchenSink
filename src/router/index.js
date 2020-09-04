@@ -74,6 +74,12 @@ import Elevation from '../components/Styles/Elevation/All.vue';
 import Flex from '../components/Styles/Flex/All.vue';
 import Spacing from '../components/Styles/Spacing/All.vue';
 import Typography from '../components/Styles/TextAndTypography/All.vue';
+import GroupWindows from '../components/Elements/GroupWindows/All.vue';
+import GroupSlides from '../components/Elements/GroupSlides/All.vue';
+import GroupListItems from '../components/Elements/GroupListItems/All.vue';
+import GroupItems from '../components/Elements/GroupItems/All.vue';
+import GroupChips from '../components/Elements/GroupChip/All.vue';
+import GroupButtons from '../components/Elements/GroupButtons/All.vue';
 
 Vue.use(VueRouter);
 
@@ -308,34 +314,34 @@ const routes = [
     component: Grids
   },
   {
-    path: '/elements/groupButtons',
-    name: 'GroupButtons',
-    component: Home
+    path: '/groups/buttons',
+    name: 'Group Buttons',
+    component: GroupButtons
   },
   {
-    path: '/elements/groupChips',
-    name: 'GroupChips',
-    component: Home
+    path: '/groups/chips',
+    name: 'Group Chips',
+    component: GroupChips
   },
   {
-    path: '/elements/groupItems',
-    name: 'GroupItems',
-    component: Home
+    path: '/groups/items',
+    name: 'Group Items',
+    component: GroupItems
   },
   {
-    path: '/elements/groupListItems',
-    name: 'GroupListItems',
-    component: Home
+    path: '/groups/listitems',
+    name: 'Group Lists',
+    component: GroupListItems
   },
   {
-    path: '/elements/groupSlides',
-    name: 'GroupSlides',
-    component: Home
+    path: '/groups/slides',
+    name: 'Group Slides',
+    component: GroupSlides
   },
   {
-    path: '/elements/groupWindows',
-    name: 'GroupWindows',
-    component: Home
+    path: '/groups/windows',
+    name: 'Group Windows',
+    component: GroupWindows
   },
   {
     path: '/elements/hover',

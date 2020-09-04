@@ -57,6 +57,26 @@
         <template v-slot:activator>
           <v-list-item-title>Groups</v-list-item-title>
         </template>
+        <v-list-item
+          dense
+          v-for="(item, i) in groups"
+          :key="i"
+          :to="item.route"
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>{{ item.name }}</v-list-item-title>
+          <div class="text-center">
+            <v-chip
+              v-if="item.isUpdate"
+              class="orange white--text ma-2"
+              x-small
+            >
+              New
+            </v-chip>
+          </div>
+        </v-list-item>
       </v-list-group>
       <v-divider></v-divider>
       <v-list-group prepend-icon="mdi-content-save-edit-outline">
@@ -393,6 +413,48 @@ export default {
           isUpdate: true
         },
         {
+          route: '/groups/buttons',
+          name: 'Group Buttons',
+          icon: 'mdi-circle-double',
+          group: 'Groups',
+          isUpdate: true
+        },
+        {
+          route: '/groups/chips',
+          name: 'Group Chips',
+          icon: 'mdi-chip',
+          group: 'Groups',
+          isUpdate: true
+        },
+        {
+          route: '/groups/items',
+          name: 'Group Items',
+          icon: 'mdi-format-list-bulleted-type',
+          group: 'Groups',
+          isUpdate: true
+        },
+        {
+          route: '/groups/listitems',
+          name: 'Group Lists',
+          icon: 'mdi-format-list-bulleted-square',
+          group: 'Groups',
+          isUpdate: true
+        },
+        {
+          route: '/groups/slides',
+          name: 'Group Slides',
+          icon: 'mdi-slope-uphill',
+          group: 'Groups',
+          isUpdate: true
+        },
+        {
+          route: '/groups/windows',
+          name: 'Group Windows',
+          icon: 'mdi-window-open',
+          group: 'Groups',
+          isUpdate: true
+        },
+        {
           route: '/elements/hover',
           name: 'Hover',
           icon: 'mdi-mouse',
@@ -698,6 +760,9 @@ export default {
     },
     layouts() {
       return this.menu.filter((menu) => menu.group == 'Layouts');
+    },
+    groups() {
+      return this.menu.filter((menu) => menu.group == 'Groups');
     },
     layoutPaths() {
       return this.layouts.map((menu) => menu.route);
