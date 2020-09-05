@@ -8,7 +8,7 @@
           append-icon="mdi-palette"
           solo
           v-model="searchColor"
-          placeholder="Search Colors ('.' to focus)"
+          placeholder="Search Colors (hit '.' to focus... click on color classname or hexcode to copy)"
           light
         >
         </v-text-field>
@@ -17,13 +17,38 @@
     <v-row>
       <v-col v-for="color in searchColors" :key="color" cols="12" sm="6" md="4">
         <v-card class="pa-0" tile>
-          <v-card-title :class="`${color} px-4 py-6`">{{ color }}</v-card-title>
+          <v-card-title :class="`${color} px-4 py-8`">{{ color }}</v-card-title>
           <v-list-item v-for="shade in shades" :key="shade" class="pa-0 ma-0">
-            <v-list-item-content :class="`${color} ${shade} pa-0 ma-0`">
-              <v-list-item-title class="px-4 py-4 ma-0"
-                >{{ color }} {{ shade }}</v-list-item-title
-              >
-              <!-- <v-list-item-subtitle>Secondary text</v-list-item-subtitle> -->
+            <v-list-item-content
+              :class="`${color} ${shade} pa-0 ma-0`"
+              @click="copyColor($event)"
+            >
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-list-item-title
+                    @mouseleave="tooltipText = 'Copy Code'"
+                    v-bind="attrs"
+                    v-on="on"
+                    class="pa-4 ma-0"
+                    >{{ color }} {{ shade }}
+                  </v-list-item-title>
+                  <!-- <span  >This text has a tooltip</span> -->
+                </template>
+                <span>{{ tooltipText }}</span>
+              </v-tooltip>
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-list-item-subtitle
+                    @mouseleave="tooltipText = 'Copy Code'"
+                    v-bind="attrs"
+                    v-on="on"
+                    class="px-4 pb-4"
+                    >{{ color | colorCode(shade) }}
+                  </v-list-item-subtitle>
+                  <!-- <span  >This text has a tooltip</span> -->
+                </template>
+                <span>{{ tooltipText }}</span>
+              </v-tooltip>
             </v-list-item-content>
           </v-list-item>
         </v-card>
@@ -33,17 +58,40 @@
 </template>
 
 <script>
+import VuetifyColors from 'vuetify/lib/util/colors';
+// VuetifyColors[`${color}`][`${shade.split('-').join('')}`]
 document.addEventListener('keydown', (e) => {
   if (e.key == '.') {
     e.preventDefault();
+    console.log(VuetifyColors);
 
     document.querySelector('#searchColorInput').focus();
   }
 });
 export default {
+  methods: {
+    copy(text) {
+      this.$copyText(text).then(
+        // eslint-disable-next-line
+        (e) => {
+          this.tooltipText = 'Copied!';
+          console.log(`copied to clipboard - ${text}`);
+        },
+        (e) => {
+          console.log(`could not copy`, e);
+        }
+      );
+    },
+    copyColor(e) {
+      // console.log(e.target.textContent);
+      this.copy(e.target.textContent);
+    }
+  },
   data() {
     return {
+      tooltipText: 'Click to copy',
       searchColor: '',
+      VuetifyColors,
       colors: [
         'red',
         'pink',
@@ -74,7 +122,11 @@ export default {
         'darken-1',
         'darken-2',
         'darken-3',
-        'darken-4'
+        'darken-4',
+        'accent-1',
+        'accent-2',
+        'accent-3',
+        'accent-4'
       ]
     };
   },
@@ -87,6 +139,26 @@ export default {
         return this.colors.filter((color) => color.includes(this.searchColor));
       } else {
         return this.colors;
+      }
+    }
+    // colorCode(color, shade) {
+    //   return this.VuetifyColors[color][shade.split('-').join('')];
+    // }
+  },
+  filters: {
+    colorCode(color, shade) {
+      // console.log(VuetifyColors);
+      shade = shade.split('-').join('');
+      color = color.replace(/-([a-z])/g, function(g) {
+        return g[1].toUpperCase();
+      });
+      // console.log(color, typeof color, shade, typeof shade);
+      if (VuetifyColors[color][shade] != 'undefined') {
+        // console.log(VuetifyColors[color][shade], shade);
+        // return VuetifyColors[`"${color}"`][`"${shade.split('-').join('')}"`];
+        return VuetifyColors[color][shade];
+      } else {
+        return '0';
       }
     }
   }

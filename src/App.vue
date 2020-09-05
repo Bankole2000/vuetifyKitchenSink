@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-navigation-drawer v-model="drawer" app light>
+      <!-- Styles Menu -->
       <v-list-group id="sideNav" prepend-icon="mdi-glasses">
         <template v-slot:activator>
           <v-list-item-title>Styles</v-list-item-title>
@@ -27,6 +28,7 @@
         </v-list-item>
       </v-list-group>
       <v-divider></v-divider>
+      <!-- Layouts Menu -->
       <v-list-group prepend-icon="mdi-desktop-mac-dashboard">
         <template v-slot:activator>
           <v-list-item-title>Layouts</v-list-item-title>
@@ -53,6 +55,7 @@
         </v-list-item>
       </v-list-group>
       <v-divider></v-divider>
+      <!-- Playgrounds Menu -->
       <v-list-group prepend-icon="mdi-play">
         <template v-slot:activator>
           <v-list-item-title>Playgrounds</v-list-item-title>
@@ -80,8 +83,8 @@
           </div>
         </v-list-item>
       </v-list-group>
-
       <v-divider></v-divider>
+      <!-- Groups menu -->
       <v-list-group prepend-icon="mdi-group">
         <template v-slot:activator>
           <v-list-item-title>Groups</v-list-item-title>
@@ -108,6 +111,7 @@
         </v-list-item>
       </v-list-group>
       <v-divider></v-divider>
+      <!-- Custom Components Menu -->
       <v-list-group prepend-icon="mdi-content-save-edit-outline">
         <template v-slot:activator>
           <v-list-item-title>Custom</v-list-item-title>
@@ -852,6 +856,12 @@ export default {
     },
     groups() {
       return this.menu.filter((menu) => menu.group == 'Groups');
+    },
+    custom() {
+      return this.menu.filter((menu) => menu.group == 'Custom');
+    },
+    codeSnippets() {
+      return this.menu.filter((menu) => menu.group == 'Snippets');
     },
     layoutPaths() {
       return this.layouts.map((menu) => menu.route);
