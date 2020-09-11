@@ -980,7 +980,7 @@
         </v-sheet>
       </v-expand-transition>
       <v-container>
-        <Filter />
+        <ChipFilter />
       </v-container>
     </v-card>
 
@@ -1142,7 +1142,7 @@ import Colored from './Colored';
 import CustomLists from './CustomLists';
 import Draggable from './Draggable';
 import Expandable from './Expandable';
-import Filter from './Filter';
+import ChipFilter from './Filter';
 import Icon from './Icon';
 import InSelects from './InSelects';
 import Label from './Label';
@@ -1159,7 +1159,7 @@ export default {
     CustomLists,
     Draggable,
     Expandable,
-    Filter,
+    ChipFilter,
     Icon,
     InSelects,
     Label,

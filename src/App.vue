@@ -265,6 +265,13 @@ export default {
           isUpdate: false
         },
         {
+          route: '/elements/avatars',
+          name: 'Avatars',
+          icon: 'mdi-account-circle',
+          group: 'Elements',
+          isUpdate: false
+        },
+        {
           route: '/elements/badges',
           name: 'Badges',
           icon: 'mdi-bell-outline',

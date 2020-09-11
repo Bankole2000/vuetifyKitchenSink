@@ -228,7 +228,7 @@
         <v-tooltip bottom>
           <template v-slot:activator="{ on, attrs }">
             <v-btn
-              @click="iconDividers.showCode = !iconDividers.showCode"
+              @click="iconDivider.showCode = !iconDivider.showCode"
               text
               class="text--primary"
               v-bind="attrs"
@@ -241,20 +241,20 @@
         </v-tooltip>
       </v-card-title>
       <v-expand-transition>
-        <v-sheet v-if="iconDividers.showCode" tile>
+        <v-sheet v-if="iconDivider.showCode" tile>
           <v-card-title tile class="py-2 grey darken-3">
             <v-btn
               text
               class="white--text"
               rounded
-              @click="iconDividers.window = 0"
+              @click="iconDivider.window = 0"
               >Template</v-btn
             >
             <v-btn
               text
               class="white--text"
               rounded
-              @click="iconDividers.window = 1"
+              @click="iconDivider.window = 1"
               >Script</v-btn
             >
             <v-spacer></v-spacer>
@@ -266,7 +266,7 @@
                   v-bind="attrs"
                   v-on="on"
                   @mouseleave="tooltipText = 'Copy Code'"
-                  @click="copy(iconDividers.template + iconDividers.script)"
+                  @click="copy(iconDivider.template + iconDivider.script)"
                 >
                   <v-icon>mdi-content-copy</v-icon>
                 </v-btn>
@@ -280,15 +280,15 @@
             tile
             style="overflow-y: scroll; overflow-x:auto;"
           >
-            <v-window v-model="iconDividers.window">
+            <v-window v-model="iconDivider.window">
               <v-window-item>
                 <prism language="html" class="py-3 my-0">{{
-                  iconDividers.template
+                  iconDivider.template
                 }}</prism>
               </v-window-item>
               <v-window-item>
                 <prism language="js" class="py-3 my-0">{{
-                  iconDividers.script
+                  iconDivider.script
                 }}</prism>
               </v-window-item>
             </v-window>

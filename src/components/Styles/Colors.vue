@@ -17,7 +17,13 @@
     <v-row>
       <v-col v-for="color in searchColors" :key="color" cols="12" sm="6" md="4">
         <v-card class="pa-0" tile>
-          <v-card-title :class="`${color} px-4 py-8`">{{ color }}</v-card-title>
+          <v-card-title @click="copyColor($event)" :class="`${color} px-4 py-8`"
+            ><span class="h4">{{ color }} - </span>
+            <span class="subtitle-1">
+              {{ color | colorCode('base') }}</span
+            ></v-card-title
+          >
+          <!-- <v-card-subtitle :class="`${color}`">{{ color | colorCode('base') }}</v-card-subtitle> -->
           <v-list-item v-for="shade in shades" :key="shade" class="pa-0 ma-0">
             <v-list-item-content
               :class="`${color} ${shade} pa-0 ma-0`"

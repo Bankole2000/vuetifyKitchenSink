@@ -70,7 +70,7 @@
             v-model="start"
             class="mt-3"
             label="Start Date"
-            prepend-icon="event"
+            prepend-icon="mdi-calendar"
             dense
             readonly
             outlined
@@ -105,7 +105,7 @@
             v-model="end"
             class="mt-3"
             label="End Date"
-            prepend-icon="event"
+            prepend-icon="mdi-calendar"
             dense
             readonly
             outlined
@@ -139,7 +139,7 @@
             v-model="now"
             class="mt-3"
             label="Today"
-            prepend-icon="event"
+            prepend-icon="mdi-calendar"
             dense
             readonly
             outlined
