@@ -74,6 +74,7 @@ import Elevation from '../components/Styles/Elevation/All.vue';
 import Flex from '../components/Styles/Flex/All.vue';
 import Spacing from '../components/Styles/Spacing/All.vue';
 import Typography from '../components/Styles/TextAndTypography/All.vue';
+import Transitions from '../components/Styles/MotionAndTransitions/All.vue';
 import GroupWindows from '../components/Elements/GroupWindows/All.vue';
 import GroupSlides from '../components/Elements/GroupSlides/All.vue';
 import GroupListItems from '../components/Elements/GroupListItems/All.vue';
@@ -524,6 +525,11 @@ const routes = [
     path: '/styles/typography',
     name: 'Typography',
     component: Typography
+  },
+  {
+    path: '/styles/transitions',
+    name: 'Transitions',
+    component: Transitions
   },
   {
     path: '/elements/virtualscrollers',

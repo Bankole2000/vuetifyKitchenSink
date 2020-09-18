@@ -777,6 +777,14 @@ export default {
           isUpdate: false
         },
         {
+          route: '/styles/transitions',
+          name: 'Transitions',
+          icon: 'mdi-transition',
+          group: 'Styles',
+          hasPlayground: false,
+          isUpdate: true
+        },
+        {
           route: '/styles/typography',
           name: 'Text - Typography',
           icon: 'mdi-text-shadow',
