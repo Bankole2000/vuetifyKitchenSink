@@ -67,6 +67,7 @@ import NavDrawers from '../components/Elements/NavDrawers/All.vue';
 import Menus from '../components/Elements/Menus/All.vue';
 import Lists from '../components/Elements/Lists/All.vue';
 import Linear from '../components/Elements/LinearProgress/All.vue';
+import LifeCycleHooks from '../components/Vue/LifeCycleHooks/All.vue';
 import Colors from '../components/Styles/Colors.vue';
 import BorderRadius from '../components/Styles/BorderRadius/All.vue';
 import Content from '../components/Styles/Content/All.vue';
@@ -370,6 +371,11 @@ const routes = [
     path: '/elements/lazy',
     name: 'Lazy',
     component: Home
+  },
+  {
+    path: '/vue/lifecyclehooks',
+    name: 'Life Cycle Hooks',
+    component: LifeCycleHooks
   },
   {
     path: '/elements/linearprogress',
