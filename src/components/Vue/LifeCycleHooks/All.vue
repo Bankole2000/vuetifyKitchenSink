@@ -659,6 +659,77 @@
         <BeforeUpdate />
       </v-container>
     </v-card>
+
+    <v-card class="mx-auto my-6" outlined elevation="0">
+      <v-card-title class=" grey lighten-4">
+        Updated - <kbd>updated(){}</kbd>
+        <v-spacer></v-spacer>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              @click="updated.showCode = !updated.showCode"
+              text
+              class="text--primary"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon>mdi-code-tags</v-icon>
+            </v-btn>
+          </template>
+          <span>View Code</span>
+        </v-tooltip>
+      </v-card-title>
+      <v-expand-transition>
+        <v-sheet v-if="updated.showCode" tile>
+          <v-card-title tile class="py-2 grey darken-3">
+            <v-btn text class="white--text" rounded @click="updated.window = 0"
+              >Template</v-btn
+            >
+            <v-btn text class="white--text" rounded @click="updated.window = 1"
+              >Script</v-btn
+            >
+            <v-spacer></v-spacer>
+            <v-tooltip bottom
+              ><template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  text
+                  class="white--text"
+                  v-bind="attrs"
+                  v-on="on"
+                  @mouseleave="tooltipText = 'Copy Code'"
+                  @click="copy(updated.template + updated.script)"
+                >
+                  <v-icon>mdi-content-copy</v-icon>
+                </v-btn>
+              </template>
+              <span>{{ tooltipText }}</span>
+            </v-tooltip>
+          </v-card-title>
+          <v-card
+            max-height="300"
+            elevation="0"
+            tile
+            style="overflow-y: scroll; overflow-x:auto;"
+          >
+            <v-window v-model="updated.window">
+              <v-window-item>
+                <prism language="html" class="py-3 my-0">{{
+                  updated.template
+                }}</prism>
+              </v-window-item>
+              <v-window-item>
+                <prism language="js" class="py-3 my-0">{{
+                  updated.script
+                }}</prism>
+              </v-window-item>
+            </v-window>
+          </v-card>
+        </v-sheet>
+      </v-expand-transition>
+      <v-container>
+        <Updated />
+      </v-container>
+    </v-card>
   </v-container>
 </template>
 
@@ -670,7 +741,7 @@ import BeforeUpdate from './BeforeUpdate';
 import Create from './Create';
 // import Destroyed from './Destroyed';
 import Mounted from './Mounted';
-// import Updated from './Updated';
+import Updated from './Updated';
 import Overview from './Overview';
 import Playground from './Playground';
 
@@ -683,7 +754,7 @@ export default {
     Create,
     // Destroyed,
     Mounted,
-    // Updated,
+    Updated,
     Overview,
     Playground
   },
