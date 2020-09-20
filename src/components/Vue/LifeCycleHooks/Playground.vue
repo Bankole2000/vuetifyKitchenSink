@@ -51,15 +51,29 @@
         </v-row>
         <v-row>
           <v-col cols="12" sm="6">
+            <p>
+              Enable the life Cycle Hooks and refresh the todo list to view them
+              in action - Results can be viewed in the browser console
+            </p>
             <v-btn block color="primary" class="ma-2" @click="refreshTodoList"
               >Refresh TodoList</v-btn
             >
-            <v-btn block color="warning" class="ma-2">Reset Options</v-btn>
-            <v-btn block color="info" class="ma-2">Test with Snackbar</v-btn>
+            <!-- <v-btn block color="warning" class="ma-2">Reset Options</v-btn>
+            <v-btn block color="info" class="ma-2">Test with Snackbar</v-btn> -->
           </v-col>
           <v-col cols="12" sm="6">
             <v-card>
-              <TodoList :key="todoListKey" />
+              <TodoList
+                :beforeCreate="beforeCreate"
+                :beforeMounted="beforeMount"
+                :beforeUpdate="beforeUpdate"
+                :beforeDestroy="beforeDestroy"
+                :created="created"
+                :mounted="mounted"
+                :updated="updated"
+                :destroyed="destroyed"
+                :key="todoListKey"
+              />
             </v-card>
           </v-col>
         </v-row>
@@ -69,7 +83,7 @@
 </template>
 
 <script>
-import TodoList from '../../Styles/MotionAndTransitions/TodoList';
+import TodoList from './TodoList';
 export default {
   components: {
     TodoList
@@ -77,7 +91,7 @@ export default {
   data() {
     return {
       beforeCreate: true,
-      beforeDestroy: true,
+      beforeDestroy: false,
       beforeMount: false,
       beforeUpdate: false,
       created: false,

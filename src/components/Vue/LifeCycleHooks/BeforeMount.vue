@@ -1,9 +1,192 @@
 <template>
-  <v-container></v-container>
+  <v-container>
+    <v-card>
+      <v-card-text>
+        <p>
+          The <code>beforeMount</code> hook runs right before the initial render
+          happens and after the template or render functions have been compiled
+        </p>
+
+        <v-divider></v-divider>
+        <v-list dense>
+          <v-subheader>Attributes and Capabilites</v-subheader>
+
+          <v-list-item
+            v-for="(item, i) in attrs"
+            :key="i"
+            style="min-height: 30px !important;"
+          >
+            <v-list-item-icon>
+              <v-icon v-if="item.canDo" color="success">mdi-check-bold</v-icon>
+              <v-icon v-else color="error">mdi-window-close</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content class="py-0 my-n1">
+              <!-- <span class="success--text" >CAN - </span>
+              <span class="error--text" v-else>CANNOT - </span> -->
+              <v-list-item-title
+                v-if="item.canDo"
+                v-html="
+                  `<span class='success--text'>CAN - </span> ${item.Text}`
+                "
+              ></v-list-item-title>
+              <v-list-item-title
+                v-else
+                v-html="
+                  `<span class='error--text' >CANNOT - </span> ${item.Text}`
+                "
+              ></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+        <v-divider></v-divider>
+        <v-list dense>
+          <v-subheader>Recommended Use Cases & Examples</v-subheader>
+
+          <v-list-item
+            v-for="(item, i) in examples"
+            :key="i"
+            style="min-height: 30px !important;"
+            class="mt-3"
+          >
+            <v-list-item-content class="py-0 my-n1">
+              <p class="text-h6" v-html="`${i + 1} - ${item.desc}`"></p>
+              <v-spacer></v-spacer>
+              <v-btn @click="showCode = !showCode">
+                <v-icon left> mdi-xml</v-icon>
+                <span
+                  ><span v-if="showCode">Hide</span
+                  ><span v-else>Show</span> Code</span
+                >
+              </v-btn>
+              <v-expand-transition>
+                <div v-if="showCode">
+                  <prism language="js" class="py-3 my-0">{{ item.code }}</prism>
+                </div>
+              </v-expand-transition>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-card-text>
+    </v-card>
+  </v-container>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      showCode: false,
+      attrs: [
+        {
+          Text:
+            'Run <strong>regular js code</strong> without Component Data/methods/properties',
+          subtitle: 'Run regular code',
+          canDo: true
+        },
+        {
+          Text:
+            'Access Global Objects like <code>$vuetify</code>, <code>$router</code>, and <code>$store</code>',
+          subtitle: 'Access Global Objects',
+          canDo: true
+        },
+        {
+          Text:
+            "Access Components' reactive data, methods, and computed properties",
+          subtitle: 'Access Component Reactive Data',
+          canDo: true
+        },
+        {
+          Text: 'Fetch Data from external source, api, or file',
+          subtitle: 'Fetch data',
+          canDo: true
+        },
+        {
+          Text: 'Access and edit Virtual and/or Real DOM',
+          subtitle: 'Can access the DOM',
+          canDo: false
+        }
+      ],
+      examples: [
+        {
+          desc: `Last step where api calls can be made before it's too late. (better to make api calls in the <code>created</code> hook)`,
+          code: `<script>
+export default{
+  data () {
+    return {
+      info: null
+    }
+  },
+  beforeMount () {
+    axios
+      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .then(response => (this.info = response))
+  }
+}`
+        },
+        {
+          desc: `Can be used to set and/or alter component data`,
+          code: `<template>
+  <div ref="example-element">{{ propertyComputed }}</div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      property: 'Example property.'
+    }
+  },
+
+  computed: {
+    propertyComputed() {
+      return this.property
+    }
+  },
+
+  beforeMount() {
+    console.log('this.property is now reactive and propertyComputed will update.')
+    this.property = 'Example property updated.'
+  }
+}
+</scrpt>`
+        },
+        {
+          desc: `Can be used to call component methods`,
+          code: `<script>
+export default {
+  data: {
+    users: null // create the variable so Vue knows it exists
+  },
+
+  methods: {
+    getUsers: function() {
+      // go get the users using an HTTP call
+      // fetch('http://my-api-url.com').then(data => this.users = data);
+    }
+  },
+
+  // when our Vue app is beforeMount, go get the list of users
+  beforeMount: function() {
+    this.getUsers();
+  }
+}
+</scrpt>`
+        },
+        {
+          desc: `<span class='error--text'>CANNOT</span> be used to access the DOM`,
+          code: `<script>
+export default {
+  // when our Vue app is beforeMount, try to access a DOM element
+  beforeMount() {     
+      console.log(this.$el); // Will return 'undefined'   
+  }
+}
+</scrpt>`
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style></style>

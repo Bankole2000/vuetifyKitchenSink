@@ -1,6 +1,33 @@
 <template>
   <v-app>
     <v-navigation-drawer v-model="drawer" app light>
+      <!-- Vue Components Menu -->
+      <v-list-group prepend-icon="mdi-vuejs">
+        <template v-slot:activator>
+          <v-list-item-title>Vue Core</v-list-item-title>
+        </template>
+        <v-list-item
+          dense
+          v-for="(item, i) in vueComponents"
+          :key="i"
+          :to="item.route"
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>{{ item.name }}</v-list-item-title>
+          <div class="text-center">
+            <v-chip
+              v-if="item.isUpdate"
+              class="orange white--text ma-2"
+              x-small
+            >
+              New
+            </v-chip>
+          </div>
+        </v-list-item>
+      </v-list-group>
+      <v-divider></v-divider>
       <!-- Styles Menu -->
       <v-list-group id="sideNav" prepend-icon="mdi-glasses">
         <template v-slot:activator>
@@ -55,6 +82,7 @@
         </v-list-item>
       </v-list-group>
       <v-divider></v-divider>
+
       <!-- Playgrounds Menu -->
       <v-list-group prepend-icon="mdi-play">
         <template v-slot:activator>
@@ -177,7 +205,7 @@
 
       <v-autocomplete
         prepend-inner-icon="mdi-magnify"
-        placeholder="Search ('/' to focus, '\' to open menu)"
+        placeholder="Search ('/' to focus, ';' to open menu)"
         class="my-auto mt-1"
         ref="search"
         id="searchInput"
@@ -224,7 +252,7 @@ document.addEventListener('keydown', (e) => {
     console.log(menuItems);
     document.querySelector('#searchInput').focus();
   }
-  if (e.key == '\\') {
+  if (e.key == ';') {
     document.querySelector('#menuIcon').click();
     document.querySelector('#sideNav').focus();
   }
@@ -557,6 +585,14 @@ export default {
           isUpdate: true
         },
         {
+          route: '/vue/lifecyclehooks',
+          name: 'Life Cycle Hooks',
+          icon: 'mdi-hook',
+          group: 'Vue',
+          hasPlayground: true,
+          isUpdate: true
+        },
+        {
           route: '/elements/menus',
           name: 'Menus',
           icon: 'mdi-menu',
@@ -871,6 +907,9 @@ export default {
     },
     groups() {
       return this.menu.filter((menu) => menu.group == 'Groups');
+    },
+    vueComponents() {
+      return this.menu.filter((menu) => menu.group == 'Vue');
     },
     custom() {
       return this.menu.filter((menu) => menu.group == 'Custom');
