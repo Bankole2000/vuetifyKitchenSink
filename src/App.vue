@@ -593,6 +593,14 @@ export default {
           isUpdate: true
         },
         {
+          route: '/vue/vuex',
+          name: 'Vuex Notes',
+          icon: 'mdi-database',
+          group: 'Vue',
+          hasPlayground: false,
+          isUpdate: true
+        },
+        {
           route: '/elements/menus',
           name: 'Menus',
           icon: 'mdi-menu',

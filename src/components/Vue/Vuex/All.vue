@@ -1,5 +1,67 @@
 <template>
   <v-container>
+    <v-card class="mx-auto my-6" outlined elevation="0">
+      <v-card-title class=" grey lighten-4">
+        Basic Usage - Vuex
+        <v-spacer></v-spacer>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              @click="usage.showCode = !usage.showCode"
+              text
+              class="text--primary"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon>mdi-code-tags</v-icon>
+            </v-btn>
+          </template>
+          <span>View Code</span>
+        </v-tooltip>
+      </v-card-title>
+      <v-expand-transition>
+        <v-sheet v-if="usage.showCode" tile>
+          <v-card-title tile class="py-2 grey darken-3">
+            <v-btn text class="white--text" rounded @click="window = 0"
+              >Template</v-btn
+            >
+            <v-spacer></v-spacer>
+            <v-tooltip bottom
+              ><template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  text
+                  class="white--text"
+                  v-bind="attrs"
+                  v-on="on"
+                  @mouseleave="tooltipText = 'Copy Code'"
+                  @click="copy(usage.template)"
+                >
+                  <v-icon>mdi-content-copy</v-icon>
+                </v-btn>
+              </template>
+              <span>{{ tooltipText }}</span>
+            </v-tooltip>
+          </v-card-title>
+          <v-card
+            max-height="300"
+            elevation="0"
+            tile
+            style="overflow-y: scroll; overflow-x:auto;"
+          >
+            <v-window>
+              <v-window-item>
+                <prism language="html" class="py-3 my-0">{{
+                  usage.template
+                }}</prism>
+              </v-window-item>
+            </v-window>
+          </v-card>
+        </v-sheet>
+      </v-expand-transition>
+      <v-container>
+        <Usage />
+      </v-container>
+    </v-card>
     <!-- <v-card class="mx-auto my-6" outlined elevation="0">
       <v-card-title class=" grey lighten-4">
         Dense Alerts
@@ -145,11 +207,28 @@
 </template>
 
 <script>
+// import Actions from './Actions';
+// import Getters from './Getters';
+// import Modules from './Modules';
+// import Mutations from './Mutations';
+// import Store from './StoreObject';
+import Usage from './Usage';
+
 export default {
-  components: {},
+  components: {
+    // Actions,
+    // Getters,
+    // Modules,
+    // Mutations,
+    // Store,
+    Usage
+  },
   data() {
     return {
-      element: {
+      usage: {
+        template: ``,
+        script: ``,
+        window: ``,
         showCode: false
       },
       tooltipText: 'Copy Code'

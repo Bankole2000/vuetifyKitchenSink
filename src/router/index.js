@@ -38,6 +38,7 @@ import Grids from '../components/Elements/Grids/All.vue';
 import Hover from '../components/Elements/Hover/All.vue';
 import Inputs from '../components/Elements/Inputs/All.vue';
 import VirtualScrollers from '../components/Elements/VirtualScrollers/All.vue';
+import VuexNotes from '../components/Vue/Vuex/All.vue';
 import Treeview from '../components/Elements/Treeview/All.vue';
 import ToolTips from '../components/Elements/Tooltips/All.vue';
 import Toolbars from '../components/Elements/Toolbars/All.vue';
@@ -376,6 +377,11 @@ const routes = [
     path: '/vue/lifecyclehooks',
     name: 'Life Cycle Hooks',
     component: LifeCycleHooks
+  },
+  {
+    path: '/vue/vuex',
+    name: 'Vuex',
+    component: VuexNotes
   },
   {
     path: '/elements/linearprogress',
