@@ -13,17 +13,26 @@
       </v-card-title>
       <v-card-text>
         <p>
-          Sometimes we may need to compute derived state based on store state,
-          for example filtering through a list of items and counting them:
+          The only way to actually change state in a Vuex store is by committing
+          a mutation. Vuex mutations are very similar to events: each mutation
+          has a string type and a handler. The handler function is where we
+          perform actual state modifications, and it will receive the state as
+          the first argument:
         </p>
         <prism class="py-3 mt-0 mb-3" language="js">{{ firstCode }}</prism>
         <p>
-          If more than one component needs to make use of this, we have to
-          either duplicate the function, or extract it into a shared helper and
-          import it in multiple places - both are less than ideal.
+          You cannot directly call a mutation handler. Think of it more like
+          event registration:
+          <span class="font-italic"
+            >"When a mutation with type <code>increment</code> is triggered,
+            call this handler."</span
+          >
+          To invoke a mutation handler, you need to call
+          <code>store.commit</code> with its type:
         </p>
+        <prism class="py-3 mt-0 mb-3" language="js">{{ secondCode }}</prism>
         <v-expansion-panels class="mt-2">
-          <v-expansion-panel v-for="(item, i) in usingGetters" :key="i">
+          <v-expansion-panel v-for="(item, i) in usingMutations" :key="i">
             <v-expansion-panel-header
               ><span
                 class="font-weight-light text-h6"
@@ -49,79 +58,72 @@
 export default {
   data() {
     return {
-      firstCode: `computed: {
-  doneTodosCount () {
-    return this.$store.state.todos.filter(todo => todo.done).length
-  }
-}`,
-      usingGetters: [
-        {
-          heading: `Defining Getters`,
-          desc: `Vuex allows us to define "getters" in the store. You can think of them as computed properties for stores. Like computed properties, a getter's result is cached based on its dependencies, and will only re-evaluate when some of its dependencies have changed. <br/><br/> <a class=" text-decoration-none primary white--text py-2 px-3" href="https://scrimba.com/p/pnyzgAP/c2Be7TB" target="_blank">View Video Lesson</a>`,
-          code: `const store = new Vuex.Store({
+      firstCode: `const store = new Vuex.Store({
   state: {
-    todos: [
-      { id: 1, text: '...', done: true },
-      { id: 2, text: '...', done: false }
-    ]
+    count: 1
   },
-  getters: {
-    doneTodos: state => {
-      return state.todos.filter(todo => todo.done)
+  mutations: {
+    increment (state) {
+      // mutate state
+      state.count++
     }
   }
 })
 `,
-          post: `Getters <span class="text-decoration-underline">always receive the <code>state</code> as their 1st argument</span>`
+      secondCode: `store.commit('increment')`,
+      usingMutations: [
+        {
+          heading: `Commit with Payload (single variable)`,
+          desc: `You can pass an additional argument to <code>store.commit</code>, which is called the <em>payload</em> for the mutation. <br/><br/> <a class=" text-decoration-none primary white--text py-2 px-3" href="https://scrimba.com/p/pnyzgAP/ckMZp4HN" target="_blank">View Video Lesson</a>`,
+          code: `// ...
+mutations: {
+  increment (state, n) {
+    state.count += n
+  }
+}
+// Invoking the mutation would look something this (variable as payload)
+store.commit('increment', 10)
+`,
+          post: ``
         },
         {
-          heading: `Accessing <code>getters</code> as Properties`,
-          desc: `<code>getters</code> are exposed on the <code>store.getters</code> object, and you access values as properties
-          eg <br /><kbd>store.getters.doneTodos /* -> [{ id: 1, text: '...', done: true }]*/</kbd><br />
-          Getters can also receive other getters as the 2nd argument e.g <br/> <kbd>getters: {
-  // ...
-  doneTodosCount: (state, getters) => {
-    return getters.doneTodos.length
+          heading: `Commit with Payload (object)`,
+          desc: `In most cases, the payload should be an object so that it can contain multiple fields, and the recorded mutation will also be more descriptive:`,
+          code: `// ...
+mutations: {
+  increment (state, payload) {
+    state.count += payload.amount
   }
-}</kbd><br />We can now easily make use of it inside any component:`,
-          code: `computed: {
-  doneTodosCount () {
-    return this.$store.getters.doneTodosCount
+}
+// Invoking the mutation would look like this (object as payload)
+store.commit('increment', {
+  amount: 10
+})
+`,
+          post: `This enables us to send a lot more data to the store`
+        },
+        {
+          heading: `Object-Style Commit`,
+          desc: `An alternative way to commit a mutation is by directly using an object that has a <code>type</code> property:`,
+          code: `store.commit({
+  type: 'increment',
+  amount: 10
+})
+// The mutation can still remain the same when using object-style commit
+mutations: {
+  increment (state, payload) {
+    state.count += payload.amount
   }
 }`,
-          post: `Note that getters accessed as properties are cached as part of Vue's reactivity system.`
+          post: `When using object-style commit, the entire object will be passed as the payload to mutation handlers, so the handler remains the same`
         },
         {
-          heading: `Accessing <code>getters</code> as Methods`,
-          desc: `You can also pass arguments to <code>getters</code> by returning a function. This is particularly useful when you want to query an array in the store:`,
-          code: `getters: {
-  // ...
-  getTodoById: (state) => (id) => {
-    return state.todos.find(todo => todo.id === id)
-  }
-}
-// You can then call the getter as a method and pass in args
-store.getters.getTodoById(2) // -> { id: 2, text: '...', done: false }`,
-          post: `Note that getters accessed via methods will run each time you call them, and the result is not cached`
-        },
-        {
-          heading: `Using the <code>mapGetters</code> Helper`,
-          desc: `The <code>mapGetters</code> helper simply maps store getters to local computed properties:`,
-          code: `import { mapGetters } from 'vuex'
-
-export default {
-  // ...
-  computed: {
-    // mix the getters into computed with object spread operator
-    ...mapGetters([
-      'doneTodosCount',
-      'anotherGetter',
-      // ...
-    ])
-  }
-}
+          heading: `Mutations follow Vue's Reactivity Rules`,
+          desc: `Since a Vuex store's state is made reactive by Vue, when we mutate the state, Vue components observing the state will update automatically. This also means Vuex mutations are subject to the same reactivity caveats when working with plain Vue:
+          <ol><li>Prefer initializing your store's initial state with all desired fields upfront.</li><li>When adding new properties to an Object, you should either: <br/><ul><li>Use <kbd>Vue.set(obj, 'newProp', 123)</kbd>, or</li><li>Replace that Object with a fresh one. For example, using the object spread syntax we can write it like this:</li><ul></li></ol>`,
+          code: `state.obj = { ...state.obj, newProp: 123 }
 `,
-          post: `This way we can access getters just like any other local computed property`
+          post: `This way we can ensure Mutations follow Vue's Reactivity Rules`
         },
         {
           heading: `Map Getter to a different name`,
