@@ -159,6 +159,25 @@ app.use(store)
           code: `store.commit('increment') // Invoke the increment mutation and changes the state
 
 console.log(store.state.count) // -> 1`
+        },
+        {
+          heading: `Making the store globally accessible`,
+          desc: `In order to have an access to <code>this.$store</code> property in your Vue components, you need to provide the created store to Vue instance. Vuex has a mechanism to "inject" the store into all child components from the root component with the <code>store</code> option:`,
+          code: `new Vue({
+  el: '#app',
+  store
+})
+`
+        },
+        {
+          heading: `Commiting a mutation from a component's method`,
+          desc: `With the <code>store</code> object globally accessible, we can commit a mutation from any components method`,
+          code: `methods: {
+  increment() {
+    this.$store.commit('increment') // will invode 'increment' mutation on store state
+    console.log(this.$store.state.count)
+  }
+}`
         }
       ]
     };
