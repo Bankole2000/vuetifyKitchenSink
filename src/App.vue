@@ -144,6 +144,26 @@
         <template v-slot:activator>
           <v-list-item-title>Custom</v-list-item-title>
         </template>
+        <v-list-item
+          dense
+          v-for="(item, i) in customComponents"
+          :key="i"
+          :to="item.route"
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>{{ item.name }}</v-list-item-title>
+          <div class="text-center">
+            <v-chip
+              v-if="item.isUpdate"
+              class="orange white--text ma-2"
+              x-small
+            >
+              New
+            </v-chip>
+          </div>
+        </v-list-item>
       </v-list-group>
       <v-divider></v-divider>
       <v-list-group prepend-icon="mdi-all-inclusive" value="true">
@@ -430,6 +450,14 @@ export default {
           isUpdate: true
         },
         {
+          route: '/custom/dynamicforms',
+          name: 'Dynamic Forms',
+          icon: 'mdi-pen-plus',
+          group: 'Custom',
+          hasPlayground: true,
+          isUpdate: true
+        },
+        {
           route: '/styles/elevation',
           name: 'Elevation',
           icon: 'mdi-elevator',
@@ -447,7 +475,7 @@ export default {
 
         {
           route: '/elements/fabbuttons',
-          name: 'FAB Buttons ',
+          name: 'FAB Buttons',
           icon: 'mdi-plus-circle',
           group: 'Elements',
           hasPlayground: true,
@@ -919,7 +947,7 @@ export default {
     vueComponents() {
       return this.menu.filter((menu) => menu.group == 'Vue');
     },
-    custom() {
+    customComponents() {
       return this.menu.filter((menu) => menu.group == 'Custom');
     },
     codeSnippets() {

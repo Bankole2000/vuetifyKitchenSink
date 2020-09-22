@@ -1,7 +1,15 @@
 <template>
   <v-container>
     <v-card>
-      <v-card-title>Different ways of using Vuex State</v-card-title>
+      <v-card-title
+        >Different ways of using Vuex State <v-spacer></v-spacer>
+        <v-btn
+          class="primary white--text"
+          href="https://scrimba.com/p/pnyzgAP/cWw3Zhb"
+          target="_blank"
+          ><span>View Video Lesson</span><v-icon right>mdi-play</v-icon></v-btn
+        ></v-card-title
+      >
       <v-card-text>
         <v-expansion-panels class="mt-2">
           <v-expansion-panel v-for="(item, i) in usingState" :key="i">

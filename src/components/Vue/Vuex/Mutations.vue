@@ -126,14 +126,50 @@ mutations: {
           post: `This way we can ensure Mutations follow Vue's Reactivity Rules`
         },
         {
-          heading: `Map Getter to a different name`,
-          desc: `If you want to map a getter to a different name, use an object:`,
-          code: `...mapGetters({
-  // map \`this.doneCount\` to \`this.$store.getters.doneTodosCount\`
-  doneCount: 'doneTodosCount'
-})
+          heading: `Mutations must be Synchronous`,
+          desc: `One important rule to remember is that <span class="text-decoration-underline">mutation handler functions must be synchronous</span>. Why? Consider the following example:`,
+          code: `.mutations: {
+  someBadMutation (state) { 
+    api.callAsyncMethod(() => {
+      state.count++ // ❌ Bad Mutation 
+      // Why? Because the callback will not be called yet when the mutation is committed, 
+      // and there's no way know when the callback will actually be called.
+    })
+  }, 
+}
+// ✅ For Asynchronous changes to state, use "actions" NOT "mutations".
 `,
-          post: `This way you can give getters <span class="text-decoration-underline">different names</span> when mapping them as component computed properties`
+          post: `<span class="text-decoration-underline">Use "actions" to commit changes to state asynchronously, and <span class="error--text">DO NOT</span> run async code in "mutations"</span>`
+        },
+        {
+          heading: `Commiting Mutations in Components`,
+          desc: `You can commit mutations in components with <code>this.$store.commit('xxx')</code>, or use the <code>mapMutations</code> helper which maps component methods to <code>store.commit</code> calls (requires root <code>store</code> injection):`,
+          code: `import { mapMutations } from 'vuex'
+
+export default {
+  // ...
+  methods: {
+    ...mapMutations([
+      'increment', // map \`this.increment()\` to \`this.$store.commit('increment')\`
+
+      // \`mapMutations\` also supports payloads:
+      'incrementBy' // map \`this.incrementBy(amount)\` to \`this.$store.commit('incrementBy', amount)\`
+    ]),
+    ...mapMutations({
+      add: 'increment' // map \`this.add()\` to \`this.$store.commit('increment')\`
+    })
+  }
+}
+`,
+          post: `You can commit mutations in components with <kbd>this.$store.commit('xxx')</kbd>`
+        },
+        {
+          heading: `The Need for Vuex Actions`,
+          desc: `Asynchronicity combined with state mutation can make your program very hard to reason about. For example, when you call two methods both with async callbacks that mutate the state, how do you know when they are called and which callback was called first? This is exactly why we want to separate the two concepts. In Vuex, mutations are synchronous transactions:`,
+          code: `store.commit('increment')
+// any state change that the "increment" mutation may cause
+// should be done at this moment.`,
+          post: `To handle asynchronous operations, Vuex introduces Actions.`
         }
       ]
     };

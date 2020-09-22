@@ -2,6 +2,69 @@
   <v-container>
     <v-card class="mx-auto my-6" outlined elevation="0">
       <v-card-title class=" grey lighten-4">
+        Vuex Overview
+        <v-spacer></v-spacer>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              @click="overview.showCode = !overview.showCode"
+              text
+              class="text--primary"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon>mdi-code-tags</v-icon>
+            </v-btn>
+          </template>
+          <span>View Code</span>
+        </v-tooltip>
+      </v-card-title>
+      <v-expand-transition>
+        <v-sheet v-if="overview.showCode" tile>
+          <v-card-title tile class="py-2 grey darken-3">
+            <v-btn text class="white--text" rounded @click="window = 0"
+              >Template</v-btn
+            >
+            <v-spacer></v-spacer>
+            <v-tooltip bottom
+              ><template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  text
+                  class="white--text"
+                  v-bind="attrs"
+                  v-on="on"
+                  @mouseleave="tooltipText = 'Copy Code'"
+                  @click="copy(overview.template)"
+                >
+                  <v-icon>mdi-content-copy</v-icon>
+                </v-btn>
+              </template>
+              <span>{{ tooltipText }}</span>
+            </v-tooltip>
+          </v-card-title>
+          <v-card
+            max-height="300"
+            elevation="0"
+            tile
+            style="overflow-y: scroll; overflow-x:auto;"
+          >
+            <v-window>
+              <v-window-item>
+                <prism language="html" class="py-3 my-0">{{
+                  overview.template
+                }}</prism>
+              </v-window-item>
+            </v-window>
+          </v-card>
+        </v-sheet>
+      </v-expand-transition>
+      <v-container>
+        <Overview />
+      </v-container>
+    </v-card>
+
+    <v-card class="mx-auto my-6" outlined elevation="0">
+      <v-card-title class=" grey lighten-4">
         Basic Usage - Vuex
         <v-spacer></v-spacer>
         <v-tooltip bottom>
@@ -317,6 +380,261 @@
       </v-container>
     </v-card>
 
+    <v-card class="mx-auto my-6" outlined elevation="0">
+      <v-card-title class=" grey lighten-4">
+        Using Vuex Actions &nbsp; &nbsp; -
+        <kbd class="ml-2">Vuex <code>Actions</code></kbd>
+        <v-spacer></v-spacer>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              @click="actions.showCode = !actions.showCode"
+              text
+              class="text--primary"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon>mdi-code-tags</v-icon>
+            </v-btn>
+          </template>
+          <span>View Code</span>
+        </v-tooltip>
+      </v-card-title>
+      <v-expand-transition>
+        <v-sheet v-if="actions.showCode" tile>
+          <v-card-title tile class="py-2 grey darken-3">
+            <v-btn text class="white--text" rounded @click="window = 0"
+              >Template</v-btn
+            >
+            <v-spacer></v-spacer>
+            <v-tooltip bottom
+              ><template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  text
+                  class="white--text"
+                  v-bind="attrs"
+                  v-on="on"
+                  @mouseleave="tooltipText = 'Copy Code'"
+                  @click="copy(actions.template)"
+                >
+                  <v-icon>mdi-content-copy</v-icon>
+                </v-btn>
+              </template>
+              <span>{{ tooltipText }}</span>
+            </v-tooltip>
+          </v-card-title>
+          <v-card
+            max-height="300"
+            elevation="0"
+            tile
+            style="overflow-y: scroll; overflow-x:auto;"
+          >
+            <v-window>
+              <v-window-item>
+                <prism language="html" class="py-3 my-0">{{
+                  actions.template
+                }}</prism>
+              </v-window-item>
+            </v-window>
+          </v-card>
+        </v-sheet>
+      </v-expand-transition>
+      <v-container>
+        <Actions />
+      </v-container>
+    </v-card>
+
+    <v-card class="mx-auto my-6" outlined elevation="0">
+      <v-card-title class=" grey lighten-4">
+        Using Vuex Modules &nbsp; &nbsp; -
+        <kbd class="ml-2">Vuex <code>Modules</code></kbd>
+        <v-spacer></v-spacer>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              @click="modules.showCode = !modules.showCode"
+              text
+              class="text--primary"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon>mdi-code-tags</v-icon>
+            </v-btn>
+          </template>
+          <span>View Code</span>
+        </v-tooltip>
+      </v-card-title>
+      <v-expand-transition>
+        <v-sheet v-if="modules.showCode" tile>
+          <v-card-title tile class="py-2 grey darken-3">
+            <v-btn text class="white--text" rounded @click="window = 0"
+              >Template</v-btn
+            >
+            <v-spacer></v-spacer>
+            <v-tooltip bottom
+              ><template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  text
+                  class="white--text"
+                  v-bind="attrs"
+                  v-on="on"
+                  @mouseleave="tooltipText = 'Copy Code'"
+                  @click="copy(modules.template)"
+                >
+                  <v-icon>mdi-content-copy</v-icon>
+                </v-btn>
+              </template>
+              <span>{{ tooltipText }}</span>
+            </v-tooltip>
+          </v-card-title>
+          <v-card
+            max-height="300"
+            elevation="0"
+            tile
+            style="overflow-y: scroll; overflow-x:auto;"
+          >
+            <v-window>
+              <v-window-item>
+                <prism language="html" class="py-3 my-0">{{
+                  modules.template
+                }}</prism>
+              </v-window-item>
+            </v-window>
+          </v-card>
+        </v-sheet>
+      </v-expand-transition>
+      <v-container>
+        <Modules />
+      </v-container>
+    </v-card>
+
+    <v-card class="mx-auto my-6" outlined elevation="0">
+      <v-card-title class=" grey lighten-4">
+        Using Vuex Application &nbsp; &nbsp; -
+        <kbd class="ml-2">Vuex <code>Application</code></kbd>
+        <v-spacer></v-spacer>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              @click="application.showCode = !application.showCode"
+              text
+              class="text--primary"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon>mdi-code-tags</v-icon>
+            </v-btn>
+          </template>
+          <span>View Code</span>
+        </v-tooltip>
+      </v-card-title>
+      <v-expand-transition>
+        <v-sheet v-if="application.showCode" tile>
+          <v-card-title tile class="py-2 grey darken-3">
+            <v-btn text class="white--text" rounded @click="window = 0"
+              >Template</v-btn
+            >
+            <v-spacer></v-spacer>
+            <v-tooltip bottom
+              ><template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  text
+                  class="white--text"
+                  v-bind="attrs"
+                  v-on="on"
+                  @mouseleave="tooltipText = 'Copy Code'"
+                  @click="copy(application.template)"
+                >
+                  <v-icon>mdi-content-copy</v-icon>
+                </v-btn>
+              </template>
+              <span>{{ tooltipText }}</span>
+            </v-tooltip>
+          </v-card-title>
+          <v-card
+            max-height="300"
+            elevation="0"
+            tile
+            style="overflow-y: scroll; overflow-x:auto;"
+          >
+            <v-window>
+              <v-window-item>
+                <prism language="html" class="py-3 my-0">{{
+                  application.template
+                }}</prism>
+              </v-window-item>
+            </v-window>
+          </v-card>
+        </v-sheet>
+      </v-expand-transition>
+      <v-container>
+        <Application />
+      </v-container>
+    </v-card>
+
+    <v-card class="mx-auto my-6" outlined elevation="0">
+      <v-card-title class=" grey lighten-4">
+        Form Handling in Vuex
+        <v-spacer></v-spacer>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              @click="formHandling.showCode = !formHandling.showCode"
+              text
+              class="text--primary"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon>mdi-code-tags</v-icon>
+            </v-btn>
+          </template>
+          <span>View Code</span>
+        </v-tooltip>
+      </v-card-title>
+      <v-expand-transition>
+        <v-sheet v-if="formHandling.showCode" tile>
+          <v-card-title tile class="py-2 grey darken-3">
+            <v-btn text class="white--text" rounded @click="window = 0"
+              >Template</v-btn
+            >
+            <v-spacer></v-spacer>
+            <v-tooltip bottom
+              ><template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  text
+                  class="white--text"
+                  v-bind="attrs"
+                  v-on="on"
+                  @mouseleave="tooltipText = 'Copy Code'"
+                  @click="copy(formHandling.template)"
+                >
+                  <v-icon>mdi-content-copy</v-icon>
+                </v-btn>
+              </template>
+              <span>{{ tooltipText }}</span>
+            </v-tooltip>
+          </v-card-title>
+          <v-card
+            max-height="300"
+            elevation="0"
+            tile
+            style="overflow-y: scroll; overflow-x:auto;"
+          >
+            <v-window>
+              <v-window-item>
+                <prism language="html" class="py-3 my-0">{{
+                  formHandling.template
+                }}</prism>
+              </v-window-item>
+            </v-window>
+          </v-card>
+        </v-sheet>
+      </v-expand-transition>
+      <v-container>
+        <FormHandling />
+      </v-container>
+    </v-card>
+
     <!-- <v-card class="mx-auto my-6" outlined elevation="0">
       <v-card-title class=" grey lighten-4">
         Dismissible Alerts
@@ -400,24 +718,60 @@
 
 <script>
 import 'prismjs/components/prism-bash';
-// import Actions from './Actions';
+import Overview from './Overview';
+import FormHandling from './FormHandling';
+import Application from './Application';
+import Actions from './Actions';
 import Getters from './Getters';
-// import Modules from './Modules';
+import Modules from './Modules';
 import Mutations from './Mutations';
 import State from './State';
 import Usage from './Usage';
 
 export default {
   components: {
-    // Actions,
+    Overview,
+    FormHandling,
+    Application,
+    Actions,
     Getters,
-    // Modules,
+    Modules,
     Mutations,
     State,
     Usage
   },
   data() {
     return {
+      overview: {
+        template: ``,
+        script: ``,
+        window: ``,
+        showCode: false
+      },
+      formHandling: {
+        template: ``,
+        script: ``,
+        window: ``,
+        showCode: false
+      },
+      application: {
+        template: ``,
+        script: ``,
+        window: ``,
+        showCode: false
+      },
+      modules: {
+        template: ``,
+        script: ``,
+        window: ``,
+        showCode: false
+      },
+      actions: {
+        template: ``,
+        script: ``,
+        window: ``,
+        showCode: false
+      },
       mutations: {
         template: ``,
         script: ``,

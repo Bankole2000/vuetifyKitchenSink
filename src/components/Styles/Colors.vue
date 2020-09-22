@@ -68,10 +68,16 @@ import VuetifyColors from 'vuetify/lib/util/colors';
 // VuetifyColors[`${color}`][`${shade.split('-').join('')}`]
 document.addEventListener('keydown', (e) => {
   if (e.key == '.') {
-    e.preventDefault();
-    console.log(VuetifyColors);
+    const fullPath = new URL(window.location.href);
+    if (fullPath.pathname === '/styles/colors') {
+      e.preventDefault();
+      console.log(VuetifyColors);
+      console.log(fullPath);
 
-    document.querySelector('#searchColorInput').focus();
+      document.querySelector('#searchColorInput').focus();
+    } else {
+      return false;
+    }
   }
 });
 export default {

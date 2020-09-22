@@ -24,7 +24,15 @@
       </v-card-text>
     </v-card>
     <v-card class="mt-4">
-      <v-card-title>Getting Started</v-card-title>
+      <v-card-title
+        >Getting Started <v-spacer></v-spacer>
+        <v-btn
+          class="primary white--text"
+          href="https://scrimba.com/p/pnyzgAP/cMPa2Uk"
+          target="_blank"
+          ><span>View Video Lesson</span><v-icon right>mdi-play</v-icon></v-btn
+        ></v-card-title
+      >
       <v-card-text>
         <span class="font-weight-light subtitle-1"
           >At the center of every Vuex application is the store. A "store" is
@@ -117,7 +125,7 @@ app.use(store)
       started: [
         {
           heading: `Creating a store in <code>Vuex 3.x</code> (for <code>Vue 2</code>)`,
-          desc: `Add the following code to the <kbd>main.js</kbd> file`,
+          desc: `Add the following code to the <kbd>main.js</kbd> file.<br/><br/> <a class=" text-decoration-none primary white--text py-2 px-3" href="https://scrimba.com/p/pnyzgAP/cMPa2Uk" target="_blank">View Video Lesson</a>`,
           code: `import Vue from 'vue'
 import Vuex from 'vuex'
 

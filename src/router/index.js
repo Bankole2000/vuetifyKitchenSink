@@ -29,6 +29,7 @@ import Combobox from '../components/Elements/Combobox/All.vue';
 import DatePickers from '../components/Elements/DatePickers/All.vue';
 import Dialogs from '../components/Elements/Dialogs/All.vue';
 import Dividers from '../components/Elements/Dividers/All.vue';
+import DynamicForms from '../components/CodeSnips/DynamicForms/All.vue';
 import ExpansionPanels from '../components/Elements/ExpansionPanels/All.vue';
 import FAB from '../components/Elements/FabButtons/All.vue';
 import FileInputs from '../components/Elements/FileInputs/All.vue';
@@ -277,6 +278,11 @@ const routes = [
     path: '/elements/dividers',
     name: 'Dividers',
     component: Dividers
+  },
+  {
+    path: '/custom/dynamicforms',
+    name: 'Dynamic Forms',
+    component: DynamicForms
   },
   {
     path: '/styles/elevation',
