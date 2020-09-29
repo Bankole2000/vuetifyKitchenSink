@@ -82,7 +82,6 @@
         </v-list-item>
       </v-list-group>
       <v-divider></v-divider>
-
       <!-- Playgrounds Menu -->
       <v-list-group prepend-icon="mdi-play">
         <template v-slot:activator>
@@ -262,24 +261,24 @@
 </template>
 
 <script>
-import menuItems from './menu.json';
+import menuItems from "./menu.json";
 
 // import HelloWorld from './components/HelloWorld';
 
-document.addEventListener('keydown', (e) => {
-  if (e.key == '/') {
+document.addEventListener("keydown", (e) => {
+  if (e.key == "/") {
     e.preventDefault();
     console.log(menuItems);
-    document.querySelector('#searchInput').focus();
+    document.querySelector("#searchInput").focus();
   }
-  if (e.key == ';') {
-    document.querySelector('#menuIcon').click();
-    document.querySelector('#sideNav').focus();
+  if (e.key == ";") {
+    document.querySelector("#menuIcon").click();
+    document.querySelector("#sideNav").focus();
   }
 });
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     // HelloWorld
@@ -289,634 +288,641 @@ export default {
     //
     return {
       drawer: true,
-      searchTerm: '',
+      searchTerm: "",
       menu: [
         {
-          route: '/elements/alerts',
-          name: 'Alerts',
-          icon: 'mdi-alert-circle',
-          group: 'Elements',
+          route: "/elements/alerts",
+          name: "Alerts",
+          icon: "mdi-alert-circle",
+          group: "Elements",
           isUpdate: false
         },
         {
-          route: '/elements/appbars',
-          name: 'AppBars',
-          icon: 'mdi-application',
-          group: 'Elements',
+          route: "/elements/appbars",
+          name: "AppBars",
+          icon: "mdi-application",
+          group: "Elements",
           isUpdate: false
         },
         {
-          route: '/elements/autocomplete',
-          name: 'Autocomplete',
-          icon: 'mdi-more',
-          group: 'Elements',
+          route: "/elements/autocomplete",
+          name: "Autocomplete",
+          icon: "mdi-more",
+          group: "Elements",
           isUpdate: false
         },
         {
-          route: '/elements/avatars',
-          name: 'Avatars',
-          icon: 'mdi-account-circle',
-          group: 'Elements',
+          route: "/elements/avatars",
+          name: "Avatars",
+          icon: "mdi-account-circle",
+          group: "Elements",
           isUpdate: false
         },
         {
-          route: '/elements/badges',
-          name: 'Badges',
-          icon: 'mdi-bell-outline',
-          group: 'Elements',
+          route: "/elements/badges",
+          name: "Badges",
+          icon: "mdi-bell-outline",
+          group: "Elements",
           isUpdate: false
         },
         {
-          route: '/elements/banners',
-          name: 'Banners',
-          icon: 'mdi-book-variant',
-          group: 'Elements',
+          route: "/elements/banners",
+          name: "Banners",
+          icon: "mdi-book-variant",
+          group: "Elements",
           isUpdate: false
         },
         {
-          route: '/styles/borderradius',
-          name: 'Border Radius',
-          icon: 'mdi-vector-radius',
-          group: 'Styles',
+          route: "/styles/borderradius",
+          name: "Border Radius",
+          icon: "mdi-vector-radius",
+          group: "Styles",
           isUpdate: true
         },
         {
-          route: '/elements/bottomsheets',
-          name: 'Bottom Sheets',
-          icon: 'mdi-cards-variant',
-          group: 'Elements',
+          route: "/elements/bottomnavs",
+          name: "Bottom Navs",
+          icon: "mdi-page-layout-footer",
+          group: "Elements",
           isUpdate: false
         },
         {
-          route: '/elements/breadcrumbs',
-          name: 'Bread Crumbs',
-          icon: 'mdi-dots-horizontal',
-          group: 'Elements',
+          route: "/elements/bottomsheets",
+          name: "Bottom Sheets",
+          icon: "mdi-cards-variant",
+          group: "Elements",
           isUpdate: false
         },
         {
-          route: '/elements/buttons',
-          name: 'Buttons',
-          icon: 'mdi-caps-lock',
-          group: 'Elements',
+          route: "/elements/breadcrumbs",
+          name: "Bread Crumbs",
+          icon: "mdi-dots-horizontal",
+          group: "Elements",
+          isUpdate: false
+        },
+        {
+          route: "/elements/buttons",
+          name: "Buttons",
+          icon: "mdi-caps-lock",
+          group: "Elements",
           isUpdate: true
         },
         {
-          route: '/elements/calendars',
-          name: 'Calendars',
-          icon: 'mdi-calendar',
-          group: 'Elements',
+          route: "/elements/calendars",
+          name: "Calendars",
+          icon: "mdi-calendar",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/cards',
-          name: 'Cards',
-          icon: 'mdi-cards-playing-outline',
-          group: 'Elements',
+          route: "/elements/cards",
+          name: "Cards",
+          icon: "mdi-cards-playing-outline",
+          group: "Elements",
           isUpdate: true
         },
         {
-          route: '/elements/carousels',
-          name: 'Carousels',
-          icon: 'mdi-view-carousel',
-          group: 'Elements',
+          route: "/elements/carousels",
+          name: "Carousels",
+          icon: "mdi-view-carousel",
+          group: "Elements",
           isUpdate: true
         },
         {
-          route: '/elements/chips',
-          name: 'Chips',
-          icon: 'mdi-chip',
-          group: 'Elements',
+          route: "/elements/chips",
+          name: "Chips",
+          icon: "mdi-chip",
+          group: "Elements",
           isUpdate: true
         },
         {
-          route: '/elements/circularprogress',
-          name: 'Circular',
-          icon: 'mdi-cached',
-          group: 'Elements',
+          route: "/elements/circularprogress",
+          name: "Circular",
+          icon: "mdi-cached",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/colorpickers',
-          name: 'Color Picker',
-          icon: 'mdi-eyedropper',
-          group: 'Elements',
+          route: "/elements/colorpickers",
+          name: "Color Picker",
+          icon: "mdi-eyedropper",
+          group: "Elements",
           isUpdate: true
         },
         {
-          route: '/styles/colors',
-          name: 'Colors',
-          icon: 'mdi-palette',
-          group: 'Styles',
+          route: "/styles/colors",
+          name: "Colors",
+          icon: "mdi-palette",
+          group: "Styles",
           isUpdate: true
         },
         {
-          route: '/styles/content',
-          name: 'Content',
-          icon: 'mdi-table-of-contents',
-          group: 'Styles',
+          route: "/styles/content",
+          name: "Content",
+          icon: "mdi-table-of-contents",
+          group: "Styles",
           isUpdate: true
         },
         {
-          route: '/elements/combobox',
-          name: 'Combo Box',
-          icon: 'mdi-package',
-          group: 'Elements',
+          route: "/elements/combobox",
+          name: "Combo Box",
+          icon: "mdi-package",
+          group: "Elements",
           isUpdate: true
         },
         {
-          route: '/elements/datepickers',
-          name: 'Date Pickers',
-          icon: 'mdi-calendar-range',
-          group: 'Elements',
+          route: "/elements/datepickers",
+          name: "Date Pickers",
+          icon: "mdi-calendar-range",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/dialogs',
-          name: 'Dialogs / Modals',
-          icon: 'mdi-picture-in-picture-top-right',
-          group: 'Elements',
+          route: "/elements/dialogs",
+          name: "Dialogs / Modals",
+          icon: "mdi-picture-in-picture-top-right",
+          group: "Elements",
           isUpdate: true
         },
         {
-          route: '/elements/dividers',
-          name: 'Dividers',
-          icon: 'mdi-division',
-          group: 'Elements',
+          route: "/elements/dividers",
+          name: "Dividers",
+          icon: "mdi-division",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/custom/dynamicforms',
-          name: 'Dynamic Forms',
-          icon: 'mdi-pen-plus',
-          group: 'Custom',
+          route: "/custom/dynamicforms",
+          name: "Dynamic Forms",
+          icon: "mdi-pen-plus",
+          group: "Custom",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/styles/elevation',
-          name: 'Elevation',
-          icon: 'mdi-elevator',
-          group: 'Styles',
+          route: "/styles/elevation",
+          name: "Elevation",
+          icon: "mdi-elevator",
+          group: "Styles",
           isUpdate: true
         },
         {
-          route: '/elements/expansionpanels',
-          name: 'Expansion Panels',
-          icon: 'mdi-unfold-more-horizontal',
-          group: 'Elements',
+          route: "/elements/expansionpanels",
+          name: "Expansion Panels",
+          icon: "mdi-unfold-more-horizontal",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
 
         {
-          route: '/elements/fabbuttons',
-          name: 'FAB Buttons',
-          icon: 'mdi-plus-circle',
-          group: 'Elements',
+          route: "/elements/fabbuttons",
+          name: "FAB Buttons",
+          icon: "mdi-plus-circle",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/fileinputs',
-          name: 'File Inputs',
-          icon: 'mdi-file',
-          group: 'Elements',
+          route: "/elements/fileinputs",
+          name: "File Inputs",
+          icon: "mdi-file",
+          group: "Elements",
           isUpdate: true
         },
         {
-          route: '/styles/flex',
-          name: 'Flex',
-          icon: 'mdi-stretch-to-page',
-          group: 'Styles',
+          route: "/styles/flex",
+          name: "Flex",
+          icon: "mdi-stretch-to-page",
+          group: "Styles",
           isUpdate: true
         },
         {
-          route: '/elements/footers',
-          name: 'Footers',
-          icon: 'mdi-page-layout-footer',
-          group: 'Elements',
+          route: "/elements/footers",
+          name: "Footers",
+          icon: "mdi-page-layout-footer",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/forms',
-          name: 'Forms',
-          icon: 'mdi-format-list-checkbox',
-          group: 'Elements',
+          route: "/elements/forms",
+          name: "Forms",
+          icon: "mdi-format-list-checkbox",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/grids',
-          name: 'Grids',
-          icon: 'mdi-grid',
-          group: 'Elements',
+          route: "/elements/grids",
+          name: "Grids",
+          icon: "mdi-grid",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/groups/buttons',
-          name: 'Group Buttons',
-          icon: 'mdi-circle-double',
-          group: 'Groups',
+          route: "/groups/buttons",
+          name: "Group Buttons",
+          icon: "mdi-circle-double",
+          group: "Groups",
           isUpdate: true
         },
         {
-          route: '/groups/chips',
-          name: 'Group Chips',
-          icon: 'mdi-chip',
-          group: 'Groups',
+          route: "/groups/chips",
+          name: "Group Chips",
+          icon: "mdi-chip",
+          group: "Groups",
           isUpdate: true
         },
         {
-          route: '/groups/items',
-          name: 'Group Items',
-          icon: 'mdi-format-list-bulleted-type',
-          group: 'Groups',
+          route: "/groups/items",
+          name: "Group Items",
+          icon: "mdi-format-list-bulleted-type",
+          group: "Groups",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/groups/listitems',
-          name: 'Group Lists',
-          icon: 'mdi-format-list-bulleted-square',
-          group: 'Groups',
+          route: "/groups/listitems",
+          name: "Group Lists",
+          icon: "mdi-format-list-bulleted-square",
+          group: "Groups",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/groups/slides',
-          name: 'Group Slides',
-          icon: 'mdi-slope-uphill',
-          group: 'Groups',
+          route: "/groups/slides",
+          name: "Group Slides",
+          icon: "mdi-slope-uphill",
+          group: "Groups",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/groups/windows',
-          name: 'Group Windows',
-          icon: 'mdi-window-open',
-          group: 'Groups',
+          route: "/groups/windows",
+          name: "Group Windows",
+          icon: "mdi-window-open",
+          group: "Groups",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/hover',
-          name: 'Hover',
-          icon: 'mdi-mouse',
-          group: 'Elements',
+          route: "/elements/hover",
+          name: "Hover",
+          icon: "mdi-mouse",
+          group: "Elements",
           isUpdate: true
         },
         {
-          route: '/elements/icons',
-          name: 'Icons',
-          icon: 'mdi-information-outline',
-          group: 'Elements',
+          route: "/elements/icons",
+          name: "Icons",
+          icon: "mdi-information-outline",
+          group: "Elements",
           hasPlayground: false,
           isUpdate: true
         },
         {
-          route: '/elements/inputs',
-          name: 'Inputs',
-          icon: 'mdi-import',
-          group: 'Elements',
+          route: "/elements/inputs",
+          name: "Inputs",
+          icon: "mdi-import",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/images',
-          name: 'Images',
-          icon: 'mdi-image',
-          group: 'Elements',
+          route: "/elements/images",
+          name: "Images",
+          icon: "mdi-image",
+          group: "Elements",
           hasPlayground: false,
           isUpdate: true
         },
         {
-          route: '/elements/lists',
-          name: 'Lists',
-          icon: 'mdi-format-list-bulleted-square',
-          group: 'Elements',
+          route: "/elements/lists",
+          name: "Lists",
+          icon: "mdi-format-list-bulleted-square",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/linearprogress',
-          name: 'Linear',
-          icon: 'mdi-minus',
-          group: 'Elements',
+          route: "/elements/linearprogress",
+          name: "Linear",
+          icon: "mdi-minus",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/vue/lifecyclehooks',
-          name: 'Life Cycle Hooks',
-          icon: 'mdi-hook',
-          group: 'Vue',
+          route: "/vue/lifecyclehooks",
+          name: "Life Cycle Hooks",
+          icon: "mdi-hook",
+          group: "Vue",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/vue/vuex',
-          name: 'Vuex Notes',
-          icon: 'mdi-database',
-          group: 'Vue',
+          route: "/vue/vuex",
+          name: "Vuex Notes",
+          icon: "mdi-database",
+          group: "Vue",
           hasPlayground: false,
           isUpdate: true
         },
         {
-          route: '/elements/menus',
-          name: 'Menus',
-          icon: 'mdi-menu',
-          group: 'Elements',
+          route: "/elements/menus",
+          name: "Menus",
+          icon: "mdi-menu",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: false
         },
         {
-          route: '/elements/navdrawers',
-          name: 'Nav Drawers',
-          icon: 'mdi-menu-open',
-          group: 'Elements',
+          route: "/elements/navdrawers",
+          name: "Nav Drawers",
+          icon: "mdi-menu-open",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/overflowbuttons',
-          name: 'Overflow Buttons',
-          icon: 'mdi-chevron-left-box-outline',
-          group: 'Elements',
+          route: "/elements/overflowbuttons",
+          name: "Overflow Buttons",
+          icon: "mdi-chevron-left-box-outline",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/overlays',
-          name: 'Overlays',
-          icon: 'mdi-transition-masked',
-          group: 'Elements',
+          route: "/elements/overlays",
+          name: "Overlays",
+          icon: "mdi-transition-masked",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/pagination',
-          name: 'Pagination',
-          icon: 'mdi-book-open-page-variant',
-          group: 'Elements',
+          route: "/elements/pagination",
+          name: "Pagination",
+          icon: "mdi-book-open-page-variant",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/parallax',
-          name: 'Parallax',
-          icon: 'mdi-panorama-horizontal',
-          group: 'Elements',
+          route: "/elements/parallax",
+          name: "Parallax",
+          icon: "mdi-panorama-horizontal",
+          group: "Elements",
           isUpdate: true
         },
         {
-          route: '/elements/ratings',
-          name: 'Ratings',
-          icon: 'mdi-star',
-          group: 'Elements',
+          route: "/elements/ratings",
+          name: "Ratings",
+          icon: "mdi-star",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/selectioncontrols',
-          name: 'Selection Controls',
-          icon: 'mdi-checkbox-marked',
-          group: 'Elements',
+          route: "/elements/selectioncontrols",
+          name: "Selection Controls",
+          icon: "mdi-checkbox-marked",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/selects',
-          name: 'Selects',
-          icon: 'mdi-chevron-down-circle-outline',
-          group: 'Elements',
+          route: "/elements/selects",
+          name: "Selects",
+          icon: "mdi-chevron-down-circle-outline",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/sheets',
-          name: 'Sheets',
-          icon: 'mdi-note',
-          group: 'Elements',
+          route: "/elements/sheets",
+          name: "Sheets",
+          icon: "mdi-note",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/skeletonloaders',
-          name: 'Skeleton Loaders',
-          icon: 'mdi-desktop-mac-dashboard',
-          group: 'Elements',
+          route: "/elements/skeletonloaders",
+          name: "Skeleton Loaders",
+          icon: "mdi-desktop-mac-dashboard",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/sliders',
-          name: 'Sliders',
-          icon: 'mdi-signal-distance-variant',
-          group: 'Elements',
+          route: "/elements/sliders",
+          name: "Sliders",
+          icon: "mdi-signal-distance-variant",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/snackbars',
-          name: 'Snackbars',
-          icon: 'mdi-chart-timeline',
-          group: 'Elements',
+          route: "/elements/snackbars",
+          name: "Snackbars",
+          icon: "mdi-chart-timeline",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/styles/spacing',
-          name: 'Spacing',
-          icon: 'mdi-diameter-outline',
-          group: 'Styles',
+          route: "/styles/spacing",
+          name: "Spacing",
+          icon: "mdi-diameter-outline",
+          group: "Styles",
           isUpdate: true
         },
         {
-          route: '/elements/sparklines',
-          name: 'Sparklines',
-          icon: 'mdi-chart-bell-curve',
-          group: 'Elements',
+          route: "/elements/sparklines",
+          name: "Sparklines",
+          icon: "mdi-chart-bell-curve",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/steppers',
-          name: 'Steppers',
-          icon: 'mdi-fast-forward',
-          group: 'Elements',
+          route: "/elements/steppers",
+          name: "Steppers",
+          icon: "mdi-fast-forward",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/subheaders',
-          name: 'SubHeaders',
-          icon: 'mdi-format-size',
-          group: 'Elements',
+          route: "/elements/subheaders",
+          name: "SubHeaders",
+          icon: "mdi-format-size",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/systembars',
-          name: 'System Bars',
-          icon: 'mdi-desktop-classic',
-          group: 'Elements',
+          route: "/elements/systembars",
+          name: "System Bars",
+          icon: "mdi-desktop-classic",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/datatables',
-          name: 'Data Tables',
-          icon: 'mdi-database',
-          group: 'Elements',
+          route: "/elements/datatables",
+          name: "Data Tables",
+          icon: "mdi-database",
+          group: "Elements",
           isUpdate: true
         },
         {
-          route: '/elements/tables',
-          name: 'Tables',
-          icon: 'mdi-table',
-          group: 'Elements',
+          route: "/elements/tables",
+          name: "Tables",
+          icon: "mdi-table",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: true
         },
         {
-          route: '/elements/tabs',
-          name: 'Tabs',
-          icon: 'mdi-table-border',
-          group: 'Elements',
+          route: "/elements/tabs",
+          name: "Tabs",
+          icon: "mdi-table-border",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: false
         },
 
         {
-          route: '/elements/textareas',
-          name: 'Text Areas',
-          icon: 'mdi-checkbook',
-          group: 'Elements',
+          route: "/elements/textareas",
+          name: "Text Areas",
+          icon: "mdi-checkbook",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: false
         },
         {
-          route: '/elements/textfields',
-          name: 'Text Fields',
-          icon: 'mdi-cursor-text',
-          group: 'Elements',
+          route: "/elements/textfields",
+          name: "Text Fields",
+          icon: "mdi-cursor-text",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: false
         },
         {
-          route: '/elements/timelines',
-          name: 'Time lines',
-          icon: 'mdi-timeline-text',
-          group: 'Elements',
+          route: "/elements/timelines",
+          name: "Time lines",
+          icon: "mdi-timeline-text",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: false
         },
         {
-          route: '/elements/timepickers',
-          name: 'Time Pickers',
-          icon: 'mdi-clock',
-          group: 'Elements',
+          route: "/elements/timepickers",
+          name: "Time Pickers",
+          icon: "mdi-clock",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: false
         },
         {
-          route: '/elements/toolbars',
-          name: 'Toolbars',
-          icon: 'mdi-cellphone-text',
-          group: 'Elements',
+          route: "/elements/toolbars",
+          name: "Toolbars",
+          icon: "mdi-cellphone-text",
+          group: "Elements",
           isUpdate: false
         },
         {
-          route: '/elements/tooltips',
-          name: 'Tooltips',
-          icon: 'mdi-tooltip',
-          group: 'Elements',
+          route: "/elements/tooltips",
+          name: "Tooltips",
+          icon: "mdi-tooltip",
+          group: "Elements",
           isUpdate: false
         },
         {
-          route: '/elements/treeview',
-          name: 'Tree View',
-          icon: 'mdi-file-tree',
-          group: 'Elements',
+          route: "/elements/treeview",
+          name: "Tree View",
+          icon: "mdi-file-tree",
+          group: "Elements",
           hasPlayground: true,
           isUpdate: false
         },
         {
-          route: '/styles/transitions',
-          name: 'Transitions',
-          icon: 'mdi-transition',
-          group: 'Styles',
+          route: "/styles/transitions",
+          name: "Transitions",
+          icon: "mdi-transition",
+          group: "Styles",
           hasPlayground: false,
           isUpdate: true
         },
         {
-          route: '/styles/typography',
-          name: 'Text - Typography',
-          icon: 'mdi-text-shadow',
-          group: 'Styles',
+          route: "/styles/typography",
+          name: "Text - Typography",
+          icon: "mdi-text-shadow",
+          group: "Styles",
           isUpdate: true
         },
         {
-          route: '/elements/virtualscrollers',
-          name: 'Virtual Scrollers',
-          icon: 'mdi-arrow-expand-vertical',
-          group: 'Elements',
+          route: "/elements/virtualscrollers",
+          name: "Virtual Scrollers",
+          icon: "mdi-arrow-expand-vertical",
+          group: "Elements",
           isUpdate: false
         },
         {
-          route: '/layouts/contacts',
-          name: 'Google Contacts',
-          icon: 'mdi-contacts',
-          group: 'Layouts',
+          route: "/layouts/contacts",
+          name: "Google Contacts",
+          icon: "mdi-contacts",
+          group: "Layouts",
           isUpdate: false
         },
         {
-          route: '/layouts/keep',
-          name: 'GoogleKeep',
-          icon: 'mdi-file-plus',
-          group: 'Layouts',
+          route: "/layouts/keep",
+          name: "GoogleKeep",
+          icon: "mdi-file-plus",
+          group: "Layouts",
           isUpdate: false
         },
         {
-          route: '/layouts/login',
-          name: 'Login',
-          icon: 'mdi-login',
-          group: 'Layouts',
+          route: "/layouts/login",
+          name: "Login",
+          icon: "mdi-login",
+          group: "Layouts",
           isUpdate: false
         },
         {
-          route: '/layouts/simple',
-          name: 'Basic Layout',
-          icon: 'mdi-page-layout-header-footer',
-          group: 'Layouts',
+          route: "/layouts/simple",
+          name: "Basic Layout",
+          icon: "mdi-page-layout-header-footer",
+          group: "Layouts",
           isUpdate: false
         },
         {
-          route: '/layouts/youtube',
-          name: 'Youtube',
-          icon: 'mdi-youtube',
-          group: 'Layouts',
+          route: "/layouts/youtube",
+          name: "Youtube",
+          icon: "mdi-youtube",
+          group: "Layouts",
           isUpdate: false
         },
         {
-          route: '/layouts/sidebars',
-          name: 'Sidebars',
-          icon: 'mdi-shuffle-disabled',
-          group: 'Layouts',
+          route: "/layouts/sidebars",
+          name: "Sidebars",
+          icon: "mdi-shuffle-disabled",
+          group: "Layouts",
           isUpdate: false
         },
         {
-          route: '/layouts/layoutplayground',
-          name: 'Layouts Playground',
-          icon: 'mdi-file-document-edit',
-          group: 'Layouts',
+          route: "/layouts/layoutplayground",
+          name: "Layouts Playground",
+          icon: "mdi-file-document-edit",
+          group: "Layouts",
           isUpdate: false
         }
       ]
@@ -933,25 +939,25 @@ export default {
       return this.menu.map((menu) => menu.name);
     },
     styles() {
-      return this.menu.filter((menu) => menu.group == 'Styles');
+      return this.menu.filter((menu) => menu.group == "Styles");
     },
     layouts() {
-      return this.menu.filter((menu) => menu.group == 'Layouts');
+      return this.menu.filter((menu) => menu.group == "Layouts");
     },
     playgrounds() {
       return this.menu.filter((menu) => menu.hasPlayground === true);
     },
     groups() {
-      return this.menu.filter((menu) => menu.group == 'Groups');
+      return this.menu.filter((menu) => menu.group == "Groups");
     },
     vueComponents() {
-      return this.menu.filter((menu) => menu.group == 'Vue');
+      return this.menu.filter((menu) => menu.group == "Vue");
     },
     customComponents() {
-      return this.menu.filter((menu) => menu.group == 'Custom');
+      return this.menu.filter((menu) => menu.group == "Custom");
     },
     codeSnippets() {
-      return this.menu.filter((menu) => menu.group == 'Snippets');
+      return this.menu.filter((menu) => menu.group == "Snippets");
     },
     layoutPaths() {
       return this.layouts.map((menu) => menu.route);
@@ -959,12 +965,12 @@ export default {
   },
   methods: {
     focusMethod() {
-      console.log('focus');
+      console.log("focus");
     },
     gotoResult() {
       console.log(this.$refs.search.value);
       let menuItem;
-      if (this.searchTerm !== 'undefined' && this.searchTerm !== null) {
+      if (this.searchTerm !== "undefined" && this.searchTerm !== null) {
         menuItem = this.menu.find(
           (menuItem) => menuItem.name === this.searchTerm.trim()
         );
@@ -972,7 +978,7 @@ export default {
       if (menuItem && this.searchTerm) {
         this.$route.path !== menuItem.route
           ? this.$router.push(menuItem.route).then(() => {
-              this.searchTerm = '';
+              this.searchTerm = "";
               this.$refs.search.blur();
             })
           : false;
